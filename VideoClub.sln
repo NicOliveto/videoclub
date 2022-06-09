@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub", "VideoClub\VideoClub.csproj", "{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub.Entidades", "VideoClub\VideoClub.Entidades.csproj", "{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub.AccesoDatos", "VideoClub.AccesoDatos\VideoClub.AccesoDatos.csproj", "{87FAC555-F3C2-4B08-B08B-50546D01EA14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub.Consola", "VideoClub.Consola\VideoClub.Consola.csproj", "{20BA62CE-9E2D-426A-B712-A1217EB1E6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub.Negocio", "VideoClub.Negocio\VideoClub.Negocio.csproj", "{7BB29667-D038-4625-AFD3-808E0E7B1B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClub.IntefazForm", "VideoClub.IntefazForm\VideoClub.IntefazForm.csproj", "{261B42C6-64AB-40A0-B688-61BF54E7EC17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FAC555-F3C2-4B08-B08B-50546D01EA14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FAC555-F3C2-4B08-B08B-50546D01EA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FAC555-F3C2-4B08-B08B-50546D01EA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FAC555-F3C2-4B08-B08B-50546D01EA14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20BA62CE-9E2D-426A-B712-A1217EB1E6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20BA62CE-9E2D-426A-B712-A1217EB1E6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20BA62CE-9E2D-426A-B712-A1217EB1E6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20BA62CE-9E2D-426A-B712-A1217EB1E6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB29667-D038-4625-AFD3-808E0E7B1B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB29667-D038-4625-AFD3-808E0E7B1B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB29667-D038-4625-AFD3-808E0E7B1B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB29667-D038-4625-AFD3-808E0E7B1B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261B42C6-64AB-40A0-B688-61BF54E7EC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261B42C6-64AB-40A0-B688-61BF54E7EC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261B42C6-64AB-40A0-B688-61BF54E7EC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261B42C6-64AB-40A0-B688-61BF54E7EC17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

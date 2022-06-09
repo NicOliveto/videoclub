@@ -15,29 +15,17 @@ namespace VideoClub
         private string _host;
         private string _usuario;
 
+      
+        public string Id { get => _idCliente; set => _idCliente = value; }
+        public string FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
+        public bool ClienteActivo { get => _cliActivo; set => _cliActivo = value; }
+        public string Host { get => _host; set => _host = value; }
+        public string Usuario { get => _usuario; set => _usuario = value; }
 
-        public Cliente(string idCliente, string fechaAlta, bool cliActivo, string host, string usuario,
-            string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechaNac )
-            : base (nombre, apellido, direccion, dni, telefono, mail, fechaNac)
-            
-            
-            {
-            _idCliente = idCliente;
-            _fechaAlta = fechaAlta;
-            _cliActivo = cliActivo;
-            _host = host;
-            _usuario = usuario;
-
-             }
-
-
-       
 
     }
 
-
-
-
+ 
 
 
     }

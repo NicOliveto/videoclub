@@ -1,0 +1,11 @@
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.AssemblyReference.cache
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.CoreCompileInputs.cache
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\VideoClub.AccesoDatos.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\VideoClub.AccesoDatos.pdb
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\VideoClub.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\VideoClub.pdb
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.CopyComplete
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.pdb

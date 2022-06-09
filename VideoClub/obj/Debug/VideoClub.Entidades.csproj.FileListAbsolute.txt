@@ -1,0 +1,6 @@
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\bin\Debug\VideoClub.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\bin\Debug\VideoClub.pdb
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.Entidades.csproj.AssemblyReference.cache
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.dll
+D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.pdb
