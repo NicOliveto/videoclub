@@ -22,10 +22,6 @@ namespace VideoClub
         public string Director { get { return _director; } set { _director = value; } }
         public string Productora { get { return _productora; } set { _productora = value; } }
         public string Genero { get { return _genero; } set { _genero = value; } }
-        public int IdPelicula { get { return _idPelicula; } set { _idPelicula = value;} }
-
-
-
-
+        public int IdPelicula { get { return _idPelicula; } set { _idPelicula = value;}
     }
 }
