@@ -8,21 +8,31 @@ namespace VideoClub
 {
     public class Cliente : Persona
     {
-        private string _idCliente;
-        private string _fechaAlta;
-        private bool _cliActivo;
-        private string _host;
-        private string _usuario;
+        protected string _idCliente;
+        protected string _fechaAlta;
+        protected bool _cliActivo;
+        protected string _host;
+        protected string _usuario;
 
-        public string Id { get => _idCliente; set => _idCliente = value; }
-        public string FechaAlta { get => _fechaAlta; set => _fechaAlta = value; }
-        public bool CliActivo { get => _cliActivo; set => _cliActivo = value; }
-        public string Host { get => _host; set => _host = value; }
-        public string Usuario { get => _usuario; set => _usuario = value; }
+        public Cliente(string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechanac, 
+            string idcliente, bool cliactivo, string host, string usuario)
+        {
+            _nombre = nombre;
+            _apellido = apellido;
+            _direccion = direccion;
+            _dni = dni;
+            _telefono = telefono;
+            _mail = mail;
+            _fechaNac = fechanac;
+            _idCliente = idcliente;
+            _cliActivo = cliactivo;
+            _host = host;
+            _usuario = usuario;
+        }
 
         internal override string Display()
         {
-            return string.Format("{0} ({1})", this.Nombre, this.Apellido, this.Id);
+            return string.Format("{0} ({1})", this._nombre, this._apellido, this._idCliente);
         }
     }
 }

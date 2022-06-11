@@ -93,10 +93,6 @@
       <Project>{7bb29667-d038-4625-afd3-808e0e7b1b0c}</Project>
       <Name>VideoClub.Negocio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VideoClub\VideoClub.Entidades.csproj">
-      <Project>{b308d74f-2ac7-45da-9497-d8e2461ecee8}</Project>
-      <Name>VideoClub.Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
