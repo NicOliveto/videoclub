@@ -41,7 +41,7 @@ namespace VideoClub.AccesoDatos.Utilidades
                 var responseString = Encoding.Default.GetString(response);
                 return responseString;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
             }
@@ -57,7 +57,7 @@ namespace VideoClub.AccesoDatos.Utilidades
                 var responseString = Encoding.Default.GetString(response);
                 return responseString;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
             }
@@ -73,7 +73,7 @@ namespace VideoClub.AccesoDatos.Utilidades
                 var responseString = Encoding.Default.GetString(response);
                 return responseString;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
             }

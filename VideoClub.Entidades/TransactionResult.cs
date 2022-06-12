@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub.AccesoDatos.Utilidades
+namespace VideoClub.Entidades
 {
     public class TransactionResult
     {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub
+namespace VideoClub.Entidades
 {
-    internal class Prestamo
+    public class Prestamo
     {
         private int _idCliente;
         private int _idCopia;

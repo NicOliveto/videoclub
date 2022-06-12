@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VideoClubDatos.cs" />
+    <Compile Include="ClienteDatos.cs" />
+    <Compile Include="CopiaDatos.cs" />
+    <Compile Include="PeliculaDatos.cs" />
+    <Compile Include="PrestamoDatos.cs" />
     <Compile Include="Utilidades\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

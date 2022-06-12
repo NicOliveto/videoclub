@@ -12,7 +12,7 @@ namespace VideoClub.Consola
         static void Main(string[] args)
         {
 
-            var datos = new VideoClubDatos();
+            var datos = new ClienteDatos();
             var result = datos.TraerTodos();
 
 
