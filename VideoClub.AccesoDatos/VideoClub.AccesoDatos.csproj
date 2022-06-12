@@ -45,12 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="VideoClubDatos.cs" />
-    <Compile Include="Utilidades\TransactionResult.cs" />
     <Compile Include="Utilidades\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VideoClub.Entidades\VideoClub.Entidades.csproj">
+      <Project>{b308d74f-2ac7-45da-9497-d8e2461ecee8}</Project>
+      <Name>VideoClub.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

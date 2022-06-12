@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub
+namespace VideoClub.AccesoDatos.Utilidades
 {
-    internal class TransactionResult
+    public class TransactionResult
     {
-        public bool IsOk { get; set; }
-        public int Id { get; set; }
-        public string Error { get; set; }
+        public bool isOk { get; set; }
+        public int id { get; set; }
+        public string error { get; set; }
     }
 }

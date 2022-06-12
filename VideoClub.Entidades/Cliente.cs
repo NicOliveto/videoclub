@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub
+namespace VideoClub.Entidades
 {
     public class Cliente : Persona
     {
@@ -14,7 +14,7 @@ namespace VideoClub
         protected string _host;
         protected string _usuario;
 
-        public Cliente(string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechanac, 
+        public Cliente(string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechanac,
             string idcliente, bool cliactivo, string host, string usuario)
         {
             _nombre = nombre;
@@ -29,6 +29,12 @@ namespace VideoClub
             _host = host;
             _usuario = usuario;
         }
+
+        public string IdCliente { get { return _idCliente; } set { _idCliente = value; } }
+        public string FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
+        public bool CliActivo { get { return _cliActivo; } set { _cliActivo = value;} }
+        public string Host { get { return _host; } set { _host = value; } }
+        public string Usuario { get { return _usuario; } set { _usuario = value; } }
 
         internal override string Display()
         {

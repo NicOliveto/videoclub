@@ -27,9 +27,7 @@ namespace VideoClub.AccesoDatos.Utilidades
         public static string Get(string url)
         {
             var uri = rutaBase + url;
-
             var responseString = client.DownloadString(uri);
-
             return responseString;
         }
 
@@ -40,9 +38,7 @@ namespace VideoClub.AccesoDatos.Utilidades
             try
             {
                 var response = client.UploadValues(uri, parametros);
-
                 var responseString = Encoding.Default.GetString(response);
-
                 return responseString;
             }
             catch (Exception ex)
@@ -58,9 +54,7 @@ namespace VideoClub.AccesoDatos.Utilidades
             try
             {
                 var response = client.UploadValues(uri, "PUT", parametros);
-
                 var responseString = Encoding.Default.GetString(response);
-
                 return responseString;
             }
             catch (Exception ex)
@@ -76,9 +70,7 @@ namespace VideoClub.AccesoDatos.Utilidades
             try
             {
                 var response = client.UploadValues(uri, "DELETE", parametros);
-
                 var responseString = Encoding.Default.GetString(response);
-
                 return responseString;
             }
             catch (Exception ex)
@@ -86,8 +78,5 @@ namespace VideoClub.AccesoDatos.Utilidades
                 return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
             }
         }
-
-
-
     }
 }

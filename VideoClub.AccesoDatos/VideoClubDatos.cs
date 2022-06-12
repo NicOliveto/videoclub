@@ -1,14 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Newtonsoft.Json;
 using System.Collections.Specialized;
-using VideoClub;
 using VideoClub.AccesoDatos.Utilidades;
+using VideoClub.Entidades;
 
 namespace EjercicioClientes.AccesoDatos
 {
@@ -27,13 +25,13 @@ namespace EjercicioClientes.AccesoDatos
             List<Cliente> resultado = MapList(json2);
             return resultado;
         }
+
         public Cliente TraerPorTelefono(string telefono)
         {
             string json2 = WebHelper.Get("cliente/" + telefono + "/telefono"); // trae un texto en formato json de una web
             Cliente resultado = MapObj(json2);
             return resultado;
         }
-
 
         private List<Cliente> MapList(string json)
         {
@@ -50,35 +48,30 @@ namespace EjercicioClientes.AccesoDatos
         public TransactionResult Insertar(Cliente cliente)
         {
             NameValueCollection obj = ReverseMap(cliente); //serializacion -> json
-
             string json = WebHelper.Post("cliente", obj);
-
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
-
             return lst;
         }
 
         public TransactionResult Actualizar(Cliente cliente)
         {
             NameValueCollection obj = ReverseMap(cliente);
-
             string json = WebHelper.Put("cliente", obj);
-
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
-
             return lst;
         }
+
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("id", cliente.Id);
+            n.Add("id", cliente.IdCliente);
             n.Add("Nombre", cliente.Nombre);
             n.Add("Apellido", cliente.Apellido);
             n.Add("Direccion", cliente.Direccion);
             n.Add("Telefono", cliente.Telefono);
             n.Add("Email", cliente.Mail);
             n.Add("DNI", cliente.DNI.ToString());
-            n.Add("Activo", cliente.ClienteActivo.ToString());
+            n.Add("Activo", cliente.CliActivo.ToString());
             n.Add("FechaNacimiento", cliente.FechaNac.ToString("yyyy-MM-dd"));
             n.Add("Usuario", "881188"); // Nro regsitro FCE-UBA Wepfer
             return n;
