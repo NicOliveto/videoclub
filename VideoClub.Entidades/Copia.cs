@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub
+namespace VideoClub.Entidades
 {
     public class Copia
     {
@@ -14,17 +14,19 @@ namespace VideoClub
         private DateTime _fechaAlta;
         private int _idCopia;
 
+        public Copia (int idpelicula, string observaciones, double precio, DateTime fechaalta, int idcopia)
+        {
+            _idPelicula = idpelicula;
+            _observaciones = observaciones; 
+            _precio = precio;
+            _fechaAlta = fechaalta;
+            _idCopia = idcopia;
+        }
 
         public int IdPelicula { get { return _idPelicula; } set { _idPelicula = value; } }
         public string Observaciones { get { return _observaciones; } set { _observaciones = value; } }
-        
         public double Precio { get { return _precio; } set { _precio = value; } }
         public DateTime FechaAlta { get { return _fechaAlta; } set { }  }
         public int IdCopia { get { return _idCopia; } set { _idCopia = value; } } 
-
-
-
-
-
     }
 }

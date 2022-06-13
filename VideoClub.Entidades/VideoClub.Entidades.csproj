@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87FAC555-F3C2-4B08-B08B-50546D01EA14}</ProjectGuid>
+    <ProjectGuid>{B308D74F-2AC7-45DA-9497-D8E2461ECEE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VideoClub.AccesoDatos</RootNamespace>
-    <AssemblyName>VideoClub.AccesoDatos</AssemblyName>
+    <RootNamespace>VideoClub</RootNamespace>
+    <AssemblyName>VideoClub</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,21 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteDatos.cs" />
-    <Compile Include="CopiaDatos.cs" />
-    <Compile Include="PeliculaDatos.cs" />
-    <Compile Include="PrestamoDatos.cs" />
-    <Compile Include="Utilidades\WebHelper.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Copia.cs" />
+    <Compile Include="Pelicula.cs" />
+    <Compile Include="Abstractas\Persona.cs" />
+    <Compile Include="Prestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\VideoClub.Entidades\VideoClub.Entidades.csproj">
-      <Project>{b308d74f-2ac7-45da-9497-d8e2461ecee8}</Project>
-      <Name>VideoClub.Entidades</Name>
-    </ProjectReference>
+    <Compile Include="TransactionResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

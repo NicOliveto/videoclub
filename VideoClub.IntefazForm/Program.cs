@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace VideoClub.IntefazForm
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -16,7 +16,10 @@ namespace VideoClub.IntefazForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            FrmPrincipal frm = new FrmPrincipal();
+
+            Application.Run(frm);
         }
     }
 }

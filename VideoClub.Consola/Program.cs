@@ -11,13 +11,8 @@ namespace VideoClub.Consola
     {
         static void Main(string[] args)
         {
-
-            var datos = new VideoClubDatos();
-            var result = datos.TraerTodos();
-
-
-
-
+            var datos = new ClienteDatos();
+            var result = datos.TraerClientes();
         }
     }
 }
