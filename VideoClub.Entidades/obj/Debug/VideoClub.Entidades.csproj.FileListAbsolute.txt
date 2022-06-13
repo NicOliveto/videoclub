@@ -10,3 +10,9 @@ D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.dll
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\bin\Debug\VideoClub.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\bin\Debug\VideoClub.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.Entidades.csproj.AssemblyReference.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.pdb

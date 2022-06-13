@@ -68,7 +68,7 @@ namespace VideoClub.IntefazForm
         {
             {
                 int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
-                Cliente cliente = _videoClubNegocio.GetById(idCliente);
+                Cliente cliente = _videoClubNegocio.GetClienteByIdCliente(idCliente);
                 
                 if (cliente != null)
                 {

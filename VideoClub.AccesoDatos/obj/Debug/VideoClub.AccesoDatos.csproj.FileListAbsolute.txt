@@ -20,3 +20,14 @@ D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.AccesoDato
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.CopyComplete
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.dll
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\VideoClub.AccesoDatos.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\VideoClub.AccesoDatos.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\VideoClub.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\VideoClub.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.csproj.CopyComplete
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.AccesoDatos\obj\Debug\VideoClub.AccesoDatos.pdb

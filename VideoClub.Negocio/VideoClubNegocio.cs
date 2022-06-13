@@ -57,20 +57,28 @@ namespace VideoClub.Negocio
             List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
             return copias;
         }
-        public Cliente GetById(int idCliente)
+
+        public Cliente GetClienteByIdCliente(int idCliente)
         {
                                              
-            foreach (var item in GetListClientes())
+            foreach (Cliente cliente in GetListClientes())
             {
-                if (idCliente.ToString() == item.Id)
-                    return item;
+                if (idCliente.ToString() == cliente.Id)
+                    return cliente;
             }
 
             return null;
         }
 
-        public void AltaCliente(string nombre, string apellido, int dni, string email,
-           string domicilio, string telefono, DateTime fnac)
+
+        /*********Metodos de reportes**********/
+
+
+
+
+        /*********Metodos de insertado de datos**********/
+        public void AltaCliente(string nombre, string apellido, int dni, string email, 
+            string domicilio, string telefono, DateTime fnac)
         {
             Cliente cliente = new Cliente();
             cliente.Nombre = nombre;
@@ -87,17 +95,32 @@ namespace VideoClub.Negocio
                 throw new Exception(transaction.error);
         }
 
+        public void AltaPrestamo(int idCliente, int idCopia, int plazo, bool abierto, DateTime fechaPrestamo, DateTime fechaDevTentativa, 
+            DateTime fechaDevReal, int idPrestamo)
+        {
+            Prestamo prestamo = new Prestamo(idCliente, idCopia, plazo, abierto, fechaPrestamo, fechaDevTentativa, fechaDevReal, idPrestamo);
+            TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
 
-        /*********Metodos de reportes**********/
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
 
+        public void AltaPelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idPelicula)
+        {
+            Pelicula pelicula = new Pelicula(anio, duracion, titulo, director, productora, genero, idPelicula);
+            TransactionResult transaction = _peliculaDatos.Insertar(pelicula);
 
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
 
+        public void AltaCopia(int idPelicula, string observaciones, double precio, DateTime fechaAlta, int idCopia)
+        {
+            Copia copia = new Copia(idPelicula, observaciones, precio, fechaAlta, idCopia);
+            TransactionResult transaction = _copiaDatos.Insertar(copia);
 
-        /*********Metodos de insertado de datos**********/
-
-
-
-
-
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
     }
 }

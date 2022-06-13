@@ -20,3 +20,25 @@ D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazFor
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.exe
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.pdb
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.FrmIngresoCliente.resources
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.IntefazForm.exe.config
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.IntefazForm.exe
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.IntefazForm.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.Negocio.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.AccesoDatos.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.Negocio.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\VideoClub.AccesoDatos.pdb
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.AssemblyReference.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.FrmClientes.resources
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.FrmIngresoCliente.resources
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.FrmPrincipal.resources
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.Properties.Resources.resources
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.GenerateResource.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.CoreCompileInputs.cache
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.CopyComplete
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.exe
+C:\Users\Nico\Documents\GitHub\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.pdb
