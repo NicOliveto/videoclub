@@ -28,59 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._lblVideoClub = new System.Windows.Forms.Label();
+            this._btnClientes = new System.Windows.Forms.Button();
+            this._btnPrestamos = new System.Windows.Forms.Button();
+            this._btnpeliculas = new System.Windows.Forms.Button();
+            this._btnCopias = new System.Windows.Forms.Button();
+            this._btnReportes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // _lblVideoClub
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this._lblVideoClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblVideoClub.Location = new System.Drawing.Point(31, 9);
+            this._lblVideoClub.Name = "_lblVideoClub";
+            this._lblVideoClub.Size = new System.Drawing.Size(253, 64);
+            this._lblVideoClub.TabIndex = 0;
+            this._lblVideoClub.Text = "Video Club";
             // 
-            // button1
+            // _btnClientes
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(164, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this._btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnClientes.Location = new System.Drawing.Point(66, 96);
+            this._btnClientes.Name = "_btnClientes";
+            this._btnClientes.Size = new System.Drawing.Size(159, 62);
+            this._btnClientes.TabIndex = 1;
+            this._btnClientes.Text = "Clientes";
+            this._btnClientes.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // _btnPrestamos
             // 
-            this.textBox1.Location = new System.Drawing.Point(303, 74);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 161);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this._btnPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnPrestamos.Location = new System.Drawing.Point(66, 164);
+            this._btnPrestamos.Name = "_btnPrestamos";
+            this._btnPrestamos.Size = new System.Drawing.Size(159, 62);
+            this._btnPrestamos.TabIndex = 2;
+            this._btnPrestamos.Text = "Préstamos";
+            this._btnPrestamos.UseVisualStyleBackColor = true;
+            // 
+            // _btnpeliculas
+            // 
+            this._btnpeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnpeliculas.Location = new System.Drawing.Point(66, 232);
+            this._btnpeliculas.Name = "_btnpeliculas";
+            this._btnpeliculas.Size = new System.Drawing.Size(159, 62);
+            this._btnpeliculas.TabIndex = 3;
+            this._btnpeliculas.Text = "Películas";
+            this._btnpeliculas.UseVisualStyleBackColor = true;
+            // 
+            // _btnCopias
+            // 
+            this._btnCopias.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnCopias.Location = new System.Drawing.Point(66, 300);
+            this._btnCopias.Name = "_btnCopias";
+            this._btnCopias.Size = new System.Drawing.Size(159, 62);
+            this._btnCopias.TabIndex = 4;
+            this._btnCopias.Text = "Copias";
+            this._btnCopias.UseVisualStyleBackColor = true;
+            // 
+            // _btnReportes
+            // 
+            this._btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnReportes.Location = new System.Drawing.Point(66, 368);
+            this._btnReportes.Name = "_btnReportes";
+            this._btnReportes.Size = new System.Drawing.Size(159, 62);
+            this._btnReportes.TabIndex = 5;
+            this._btnReportes.Text = "Reportes";
+            this._btnReportes.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(295, 484);
+            this.Controls.Add(this._btnReportes);
+            this.Controls.Add(this._btnCopias);
+            this.Controls.Add(this._btnpeliculas);
+            this.Controls.Add(this._btnPrestamos);
+            this.Controls.Add(this._btnClientes);
+            this.Controls.Add(this._lblVideoClub);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label _lblVideoClub;
+        private System.Windows.Forms.Button _btnClientes;
+        private System.Windows.Forms.Button _btnPrestamos;
+        private System.Windows.Forms.Button _btnpeliculas;
+        private System.Windows.Forms.Button _btnCopias;
+        private System.Windows.Forms.Button _btnReportes;
     }
 }
