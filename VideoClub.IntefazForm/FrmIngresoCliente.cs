@@ -29,5 +29,7 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+      
     }
 }

@@ -57,7 +57,17 @@ namespace VideoClub.Negocio
             List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
             return copias;
         }
+        public Cliente GetById(int idCliente)
+        {
+                                             
+            foreach (var item in GetListClientes())
+            {
+                if (idCliente.ToString() == item.IdCliente)
+                    return item;
+            }
 
+            return null;
+        }
 
         /*********Metodos de reportes**********/
 

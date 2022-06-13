@@ -57,6 +57,7 @@
             // 
             // _cmbClientes
             // 
+            this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientes.FormattingEnabled = true;
             this._cmbClientes.Location = new System.Drawing.Point(293, 147);
             this._cmbClientes.Name = "_cmbClientes";
@@ -79,6 +80,7 @@
             this._btnConsultarCliente.TabIndex = 6;
             this._btnConsultarCliente.Text = "Consultar Cliente";
             this._btnConsultarCliente.UseVisualStyleBackColor = true;
+            this._btnConsultarCliente.Click += new System.EventHandler(this._btnConsultarCliente_Click);
             // 
             // FrmClientes
             // 

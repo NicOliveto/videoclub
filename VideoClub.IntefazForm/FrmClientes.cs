@@ -63,5 +63,28 @@ namespace VideoClub.IntefazForm
         {
 
         }
+
+        private void _btnConsultarCliente_Click(object sender, EventArgs e)
+        {
+            {
+                int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+                Cliente cliente = _videoClubNegocio.GetById(idCliente);
+                
+                if (cliente != null)
+                {
+                    _lblClienteParaMostrar.Text = cliente.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("No hay informacion del cliente seleccionado");
+                }
+
+
+
+            }
+        }
+
+        
     }
 }
