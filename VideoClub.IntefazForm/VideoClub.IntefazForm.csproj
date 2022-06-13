@@ -46,14 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCopias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCopias.Designer.cs">
+      <DependentUpon>FrmCopias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresoCliente.Designer.cs">
+      <DependentUpon>FrmIngresoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPeliculas.Designer.cs">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamos.Designer.cs">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validador.cs" />
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

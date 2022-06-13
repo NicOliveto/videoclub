@@ -62,6 +62,13 @@ namespace VideoClub.Negocio
         /*********Metodos de reportes**********/
 
 
+
+
         /*********Metodos de insertado de datos**********/
+
+
+
+
+
     }
 }

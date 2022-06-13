@@ -4,3 +4,9 @@ D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.dll
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub\obj\Debug\VideoClub.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\bin\Debug\VideoClub.dll
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\bin\Debug\VideoClub.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.Entidades.csproj.AssemblyReference.cache
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.Entidades.csproj.CoreCompileInputs.cache
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.dll
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Entidades\obj\Debug\VideoClub.pdb

@@ -13,3 +13,18 @@ D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.Consola\bi
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.Consola\obj\Debug\VideoClub.Consola.csproj.CopyComplete
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.Consola\obj\Debug\VideoClub.Consola.exe
 D:\archivos de programa\repositorio visual studio\VideoClub\VideoClub.Consola\obj\Debug\VideoClub.Consola.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.Consola.exe.config
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.Consola.exe
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.Consola.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.AccesoDatos.dll
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.dll
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\Newtonsoft.Json.dll
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.AccesoDatos.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\VideoClub.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\bin\Debug\Newtonsoft.Json.xml
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.csproj.AssemblyReference.cache
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.csproj.SuggestedBindingRedirects.cache
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.csproj.CoreCompileInputs.cache
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.csproj.CopyComplete
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.exe
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.Consola\obj\Debug\VideoClub.Consola.pdb

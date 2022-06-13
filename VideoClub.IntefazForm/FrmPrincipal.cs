@@ -17,6 +17,11 @@ namespace VideoClub.IntefazForm
             InitializeComponent();
         }
 
+    
+
+
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -27,6 +32,17 @@ namespace VideoClub.IntefazForm
 
         }
 
-      
+        private void _btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes(this);
+            frmClientes.Show();
+
+            this.Hide();
+
+
+
+
+
+        }
     }
 }

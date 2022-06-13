@@ -39,26 +39,27 @@
             // _lblVideoClub
             // 
             this._lblVideoClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblVideoClub.Location = new System.Drawing.Point(31, 9);
+            this._lblVideoClub.Location = new System.Drawing.Point(33, 30);
             this._lblVideoClub.Name = "_lblVideoClub";
-            this._lblVideoClub.Size = new System.Drawing.Size(253, 64);
+            this._lblVideoClub.Size = new System.Drawing.Size(408, 64);
             this._lblVideoClub.TabIndex = 0;
             this._lblVideoClub.Text = "Video Club";
             // 
             // _btnClientes
             // 
             this._btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnClientes.Location = new System.Drawing.Point(66, 96);
+            this._btnClientes.Location = new System.Drawing.Point(68, 131);
             this._btnClientes.Name = "_btnClientes";
             this._btnClientes.Size = new System.Drawing.Size(159, 62);
             this._btnClientes.TabIndex = 1;
             this._btnClientes.Text = "Clientes";
             this._btnClientes.UseVisualStyleBackColor = true;
+            this._btnClientes.Click += new System.EventHandler(this._btnClientes_Click);
             // 
             // _btnPrestamos
             // 
             this._btnPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnPrestamos.Location = new System.Drawing.Point(66, 164);
+            this._btnPrestamos.Location = new System.Drawing.Point(68, 199);
             this._btnPrestamos.Name = "_btnPrestamos";
             this._btnPrestamos.Size = new System.Drawing.Size(159, 62);
             this._btnPrestamos.TabIndex = 2;
@@ -68,7 +69,7 @@
             // _btnpeliculas
             // 
             this._btnpeliculas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnpeliculas.Location = new System.Drawing.Point(66, 232);
+            this._btnpeliculas.Location = new System.Drawing.Point(68, 267);
             this._btnpeliculas.Name = "_btnpeliculas";
             this._btnpeliculas.Size = new System.Drawing.Size(159, 62);
             this._btnpeliculas.TabIndex = 3;
@@ -78,7 +79,7 @@
             // _btnCopias
             // 
             this._btnCopias.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnCopias.Location = new System.Drawing.Point(66, 300);
+            this._btnCopias.Location = new System.Drawing.Point(68, 335);
             this._btnCopias.Name = "_btnCopias";
             this._btnCopias.Size = new System.Drawing.Size(159, 62);
             this._btnCopias.TabIndex = 4;
@@ -88,7 +89,7 @@
             // _btnReportes
             // 
             this._btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnReportes.Location = new System.Drawing.Point(66, 368);
+            this._btnReportes.Location = new System.Drawing.Point(68, 403);
             this._btnReportes.Name = "_btnReportes";
             this._btnReportes.Size = new System.Drawing.Size(159, 62);
             this._btnReportes.TabIndex = 5;
@@ -99,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 484);
+            this.ClientSize = new System.Drawing.Size(530, 507);
             this.Controls.Add(this._btnReportes);
             this.Controls.Add(this._btnCopias);
             this.Controls.Add(this._btnpeliculas);
