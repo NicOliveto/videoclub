@@ -39,7 +39,7 @@ namespace VideoClub.IntefazForm
             _cmbClientes.DataSource = null;
             _cmbClientes.DataSource = lstClientes;
             _cmbClientes.DisplayMember = "ComboDisplay";
-            _cmbClientes.ValueMember = "IdCliente";
+            _cmbClientes.ValueMember = "Id";
 
         }
 

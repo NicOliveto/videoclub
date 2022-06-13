@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace VideoClub.IntefazForm
 {
-    internal static class Validador
+    public static class Validador
     {
+        public static bool ValidarString(string stringParaAnalizar)
+        {
+            if (string.IsNullOrEmpty(stringParaAnalizar))
+                {
+                return false;
+            }
+            else if (stringParaAnalizar.All(char.IsLetter))
+            {
+                return true;
+            }
+
+            return false;
 
 
-
-
-
-
+        }
     }
 }

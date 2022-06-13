@@ -34,7 +34,7 @@ namespace VideoClub.IntefazForm
         {
 
 
-
+            bool a = Validador.ValidarString("hola");
 
 
 

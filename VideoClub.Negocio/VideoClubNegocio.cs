@@ -62,7 +62,7 @@ namespace VideoClub.Negocio
                                              
             foreach (var item in GetListClientes())
             {
-                if (idCliente.ToString() == item.IdCliente)
+                if (idCliente.ToString() == item.Id)
                     return item;
             }
 

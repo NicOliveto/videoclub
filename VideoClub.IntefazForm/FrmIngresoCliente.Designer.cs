@@ -189,6 +189,7 @@
             // 
             // _lblNombreError
             // 
+            this._lblNombreError.ForeColor = System.Drawing.Color.Brown;
             this._lblNombreError.Location = new System.Drawing.Point(522, 41);
             this._lblNombreError.Name = "_lblNombreError";
             this._lblNombreError.Size = new System.Drawing.Size(171, 22);
@@ -196,6 +197,7 @@
             // 
             // _lblApellidoError
             // 
+            this._lblApellidoError.ForeColor = System.Drawing.Color.Brown;
             this._lblApellidoError.Location = new System.Drawing.Point(522, 69);
             this._lblApellidoError.Name = "_lblApellidoError";
             this._lblApellidoError.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -204,6 +206,7 @@
             // 
             // _lblDireccionError
             // 
+            this._lblDireccionError.ForeColor = System.Drawing.Color.Brown;
             this._lblDireccionError.Location = new System.Drawing.Point(522, 97);
             this._lblDireccionError.Name = "_lblDireccionError";
             this._lblDireccionError.Size = new System.Drawing.Size(171, 22);
@@ -211,6 +214,7 @@
             // 
             // _lblDniError
             // 
+            this._lblDniError.ForeColor = System.Drawing.Color.Brown;
             this._lblDniError.Location = new System.Drawing.Point(522, 125);
             this._lblDniError.Name = "_lblDniError";
             this._lblDniError.Size = new System.Drawing.Size(171, 22);
@@ -218,6 +222,7 @@
             // 
             // _lblTelefonoError
             // 
+            this._lblTelefonoError.ForeColor = System.Drawing.Color.Brown;
             this._lblTelefonoError.Location = new System.Drawing.Point(522, 156);
             this._lblTelefonoError.Name = "_lblTelefonoError";
             this._lblTelefonoError.Size = new System.Drawing.Size(171, 22);
@@ -225,6 +230,7 @@
             // 
             // _lblMailError
             // 
+            this._lblMailError.ForeColor = System.Drawing.Color.Brown;
             this._lblMailError.Location = new System.Drawing.Point(522, 184);
             this._lblMailError.Name = "_lblMailError";
             this._lblMailError.Size = new System.Drawing.Size(171, 22);
@@ -232,6 +238,7 @@
             // 
             // _lblFechaNacError
             // 
+            this._lblFechaNacError.ForeColor = System.Drawing.Color.Brown;
             this._lblFechaNacError.Location = new System.Drawing.Point(522, 212);
             this._lblFechaNacError.Name = "_lblFechaNacError";
             this._lblFechaNacError.Size = new System.Drawing.Size(225, 22);
