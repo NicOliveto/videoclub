@@ -30,6 +30,15 @@ namespace VideoClub.IntefazForm
             this.Close();
         }
 
-      
+        private void _btnAltaCliente_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+        }
     }
 }

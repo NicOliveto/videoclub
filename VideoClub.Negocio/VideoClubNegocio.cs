@@ -69,6 +69,25 @@ namespace VideoClub.Negocio
             return null;
         }
 
+        public void Alta(string nombre, string apellido, int dni, string email,
+           string domicilio, string telefono, DateTime fnac)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Nombre = nombre;
+            cliente.Apellido = apellido;
+            cliente.DNI = dni;
+            cliente.FechaNac = fnac;
+            cliente.Mail = email;
+            cliente.Direccion = domicilio;
+            cliente.Telefono = telefono;
+
+            TransactionResult transaction = _clienteDatos.Insertar(cliente);
+
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
+
+
         /*********Metodos de reportes**********/
 
 

@@ -30,6 +30,10 @@ namespace VideoClub.Entidades
             _usuario = usuario;
         }
 
+        public Cliente()
+        {
+        }
+
         public string IdCliente { get { return _idCliente; } set { _idCliente = value; } }
         public string FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
         public bool CliActivo { get { return _cliActivo; } set { _cliActivo = value;} }
