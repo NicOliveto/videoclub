@@ -39,7 +39,11 @@ namespace VideoClub.Entidades
         public bool CliActivo { get { return _cliActivo; } set { _cliActivo = value;} }
         public string Host { get { return _host; } set { _host = value; } }
         public string Usuario { get { return _usuario; } set { _usuario = value; } }
+
+        public string Email { get  { return _mail; } set { _mail = value; } }
         public string ComboDisplay { get => $" /{this.Id}/  {this.Nombre} {this.Apellido}   "; }
+
+       
         internal override string Display()
         {
             return string.Format("{0} ({1})", this._nombre, this._apellido, this.Id);
