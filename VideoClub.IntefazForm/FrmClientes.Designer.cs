@@ -41,6 +41,7 @@
             this._btnIngresarClientes.TabIndex = 0;
             this._btnIngresarClientes.Text = "Ingresar Clientes";
             this._btnIngresarClientes.UseVisualStyleBackColor = true;
+            this._btnIngresarClientes.Click += new System.EventHandler(this._btnIngresarClientes_Click);
             // 
             // _btnConsultarCliente
             // 

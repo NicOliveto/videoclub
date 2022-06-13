@@ -19,3 +19,4 @@ D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazFor
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.csproj.CopyComplete
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.exe
 D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.pdb
+D:\fce uba\CAI\ejercicios\trabajo practico\github\videoclub\VideoClub.IntefazForm\obj\Debug\VideoClub.IntefazForm.FrmIngresoCliente.resources

@@ -30,5 +30,13 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+        private void _btnIngresarClientes_Click(object sender, EventArgs e)
+        {
+            FrmIngresoCliente frmIngresoCliente = new FrmIngresoCliente(this);
+            frmIngresoCliente.Show();
+
+            this.Hide();
+        }
     }
 }
