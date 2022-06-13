@@ -4,25 +4,18 @@ using System.Collections.Specialized;
 using VideoClub.AccesoDatos.Utilidades;
 using VideoClub.Entidades;
 
-namespace EjercicioClientes.AccesoDatos
+namespace VideoClub.AccesoDatos
 {
     public class ClienteDatos
     {
         public List<Cliente> TraerClientes()
         {
-            string json = WebHelper.Get("cliente"); // trae un texto en formato json de una web
+            string json = WebHelper.Get("cliente/881188"); // trae un texto en formato json de una web
             List<Cliente> resultado = MapList(json);
             return resultado;
         }
 
-        public Cliente TraerClientePorId(int usuario)
-        {
-            string json = WebHelper.Get("cliente/" + usuario.ToString()); // trae un texto en formato json de una web
-            Cliente resultado = MapObj(json);
-            return resultado;
-        }
-
-        public Cliente TraerPorTelefono(string telefono)
+        public Cliente TraerClientePorTelefono(string telefono)
         {
             string json = WebHelper.Get("cliente/" + telefono + "/telefono"); // trae un texto en formato json de una web
             Cliente resultado = MapObj(json);
