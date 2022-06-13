@@ -62,6 +62,7 @@
             this._cmbClientes.Name = "_cmbClientes";
             this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 4;
+            this._cmbClientes.SelectedIndexChanged += new System.EventHandler(this._cmbClientes_SelectedIndexChanged);
             // 
             // _lblClienteParaMostrar
             // 

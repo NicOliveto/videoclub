@@ -28,14 +28,22 @@ namespace VideoClub.IntefazForm
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            List < Cliente > lstClientes = _videoClubNegocio.GetListClientes();
+
+            CargarListado();
+           
+
+        }
+        private void CargarListado()
+        {
+            List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
             _cmbClientes.DataSource = null;
             _cmbClientes.DataSource = lstClientes;
             _cmbClientes.DisplayMember = "ComboDisplay";
-           // _cmbClientes.ValueMember = "Id";
-
+            _cmbClientes.ValueMember = "IdCliente";
 
         }
+
+
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
         {
@@ -51,6 +59,9 @@ namespace VideoClub.IntefazForm
             this.Hide();
         }
 
-        
+        private void _cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
