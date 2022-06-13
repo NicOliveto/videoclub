@@ -16,5 +16,12 @@ namespace VideoClub.IntefazForm
         {
             InitializeComponent();
         }
+
+        
+
+        private void _btnActualizarListado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
