@@ -94,11 +94,23 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCopias.resx">
+      <DependentUpon>FrmCopias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCliente.resx">
       <DependentUpon>FrmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeliculas.resx">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamos.resx">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

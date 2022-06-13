@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this._btnIngresarClientes = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // _btnIngresarClientes
+            // 
+            this._btnIngresarClientes.Location = new System.Drawing.Point(53, 71);
+            this._btnIngresarClientes.Name = "_btnIngresarClientes";
+            this._btnIngresarClientes.Size = new System.Drawing.Size(157, 63);
+            this._btnIngresarClientes.TabIndex = 1;
+            this._btnIngresarClientes.Text = "Ingresar Clientes";
+            this._btnIngresarClientes.UseVisualStyleBackColor = true;
+            // 
+            // FrmReportes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this._btnIngresarClientes);
+            this.Name = "FrmReportes";
             this.Text = "FrmReportes";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button _btnIngresarClientes;
     }
 }

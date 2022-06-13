@@ -33,12 +33,82 @@ namespace VideoClub.IntefazForm
         private void _btnAltaCliente_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                if (DatosValidos())
+                {
+                    _videoClubNegocio.AltaCliente(_txtNombre.Text, _txtApellido.Text, 1122335544/*_txtDNI*/, _txtMail.Text, _txtDireccion.Text, _txtTelefono.Text, /*_txtFechaNac*/DateTime.Now.AddDays(-5000));
 
-            bool a = Validador.ValidarString("hola");
+                    Limpiar();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Complete correctamente los campos");
+                }
+
+
+
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error" + ex.Message);
+            }
+
 
 
 
 
         }
+
+        private void Limpiar()
+        {
+            _txtApellido.Text = string.Empty;
+            _txtNombre.Text = string.Empty;
+            _txtDNI.Text = string.Empty;
+            _txtMail.Text = string.Empty;
+            _txtDireccion.Text = string.Empty;
+            _txtTelefono.Text = string.Empty;
+            _txtFechaNac.Text = string.Empty;
+        }
+
+        private bool DatosValidos()
+        {
+            if (!(Validador.ValidarString(_txtNombre.Text)))
+                return false;
+
+            if (!(Validador.ValidarString(_txtApellido.Text)))
+                return false;
+            //if (!(Validador VALIDAR DNI!!!) ) !!!!!!!!!!!
+            //    return false;
+
+            if (!(Validador.ValidarStringEspecial(_txtMail.Text)))
+               return false;
+            
+            if (!(Validador.ValidarStringEspecial(_txtDireccion.Text)))
+                return false;
+            if (!(Validador.ValidarStringNumerico(_txtTelefono.Text)))
+                return false;
+            //if (VALIDAR FECHA NACIMIENTO)     !!!!!!!!
+
+
+
+
+            return true;
+        }
+
+
+
+
+
+
+
     }
 }

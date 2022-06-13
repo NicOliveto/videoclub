@@ -152,7 +152,7 @@
             this._lblTelefono.Name = "_lblTelefono";
             this._lblTelefono.Size = new System.Drawing.Size(171, 22);
             this._lblTelefono.TabIndex = 12;
-            this._lblTelefono.Text = "Teléfono:";
+            this._lblTelefono.Text = "Teléfono: (solo numeros)";
             // 
             // _lblMail
             // 
@@ -241,7 +241,7 @@
             this._lblFechaNacError.ForeColor = System.Drawing.Color.Brown;
             this._lblFechaNacError.Location = new System.Drawing.Point(522, 212);
             this._lblFechaNacError.Name = "_lblFechaNacError";
-            this._lblFechaNacError.Size = new System.Drawing.Size(225, 22);
+            this._lblFechaNacError.Size = new System.Drawing.Size(171, 22);
             this._lblFechaNacError.TabIndex = 23;
             // 
             // FrmIngresoCliente
