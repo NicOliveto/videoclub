@@ -58,6 +58,24 @@
     <Compile Include="FrmCopias.Designer.cs">
       <DependentUpon>FrmCopias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIngresarCopia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarCopia.Designer.cs">
+      <DependentUpon>FrmIngresarCopia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarPelicula.Designer.cs">
+      <DependentUpon>FrmIngresarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarPrestamo.Designer.cs">
+      <DependentUpon>FrmIngresarPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIngresoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
