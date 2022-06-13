@@ -15,10 +15,10 @@ namespace VideoClub.AccesoDatos
             return resultado;
         }
 
-        public Copia TraerCopiaPorId(int idcopia)
+        public List<Copia> TraerCopiaPorIdPelicula(int idpelicula)
         {
-            string json = WebHelper.Get("VideoClub/Copia/" + idcopia.ToString());
-            Copia resultado = MapObj(json);
+            string json = WebHelper.Get("VideoClub/Copia/" + idpelicula.ToString());
+            List<Copia> resultado = MapList(json);
             return resultado;
         }
 

@@ -15,7 +15,7 @@ namespace VideoClub.AccesoDatos
             return resultado;
         }
 
-        public Pelicula TraerPeliculaPorId(int idpelicula)
+        public Pelicula TraerPeliculaPorIdPelicula(int idpelicula)
         {
             string json = WebHelper.Get("VideoClub/Pelicula/" + idpelicula.ToString());
             Pelicula resultado = MapObj(json);
