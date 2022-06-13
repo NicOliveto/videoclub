@@ -49,9 +49,9 @@
       <Project>{87fac555-f3c2-4b08-b08b-50546d01ea14}</Project>
       <Name>VideoClub.AccesoDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VideoClub.Consola\VideoClub.Consola.csproj">
-      <Project>{20ba62ce-9e2d-426a-b712-a1217eb1e6ce}</Project>
-      <Name>VideoClub.Consola</Name>
+    <ProjectReference Include="..\VideoClub.Entidades\VideoClub.Entidades.csproj">
+      <Project>{b308d74f-2ac7-45da-9497-d8e2461ecee8}</Project>
+      <Name>VideoClub.Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

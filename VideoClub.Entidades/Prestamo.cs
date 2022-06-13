@@ -34,7 +34,7 @@ namespace VideoClub.Entidades
         public int Plazo { get { return _plazo; } set { _plazo = value;} }
         public bool Abierto { get { return _abierto; } set { _abierto = value; } }
         public DateTime FechaPrestamo { get { return _fechaPrestamo; } set { _fechaPrestamo = value; } }
-        public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa} set { _fechaDevolucionTentativa = value; } }
+        public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa; } set { _fechaDevolucionTentativa = value; } }
         public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal ; } set { _fechaDevolucionReal = value; } }
         public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value;} }
     }
