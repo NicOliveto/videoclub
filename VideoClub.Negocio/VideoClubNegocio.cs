@@ -69,7 +69,7 @@ namespace VideoClub.Negocio
             return null;
         }
 
-        public void Alta(string nombre, string apellido, int dni, string email,
+        public void AltaCliente(string nombre, string apellido, int dni, string email,
            string domicilio, string telefono, DateTime fnac)
         {
             Cliente cliente = new Cliente();
