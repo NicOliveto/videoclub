@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this._btnIngresarClientes = new System.Windows.Forms.Button();
-            this._btnConsultarCliente = new System.Windows.Forms.Button();
             this._btnMenuPrincipal = new System.Windows.Forms.Button();
+            this._cmbClientes = new System.Windows.Forms.ComboBox();
+            this._lblClienteParaMostrar = new System.Windows.Forms.Label();
+            this._btnConsultarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _btnIngresarClientes
@@ -43,15 +45,6 @@
             this._btnIngresarClientes.UseVisualStyleBackColor = true;
             this._btnIngresarClientes.Click += new System.EventHandler(this._btnIngresarClientes_Click);
             // 
-            // _btnConsultarCliente
-            // 
-            this._btnConsultarCliente.Location = new System.Drawing.Point(65, 151);
-            this._btnConsultarCliente.Name = "_btnConsultarCliente";
-            this._btnConsultarCliente.Size = new System.Drawing.Size(157, 63);
-            this._btnConsultarCliente.TabIndex = 1;
-            this._btnConsultarCliente.Text = "Consultar Cliente";
-            this._btnConsultarCliente.UseVisualStyleBackColor = true;
-            // 
             // _btnMenuPrincipal
             // 
             this._btnMenuPrincipal.Location = new System.Drawing.Point(65, 287);
@@ -62,16 +55,43 @@
             this._btnMenuPrincipal.UseVisualStyleBackColor = true;
             this._btnMenuPrincipal.Click += new System.EventHandler(this._btnMenuPrincipal_Click);
             // 
+            // _cmbClientes
+            // 
+            this._cmbClientes.FormattingEnabled = true;
+            this._cmbClientes.Location = new System.Drawing.Point(293, 147);
+            this._cmbClientes.Name = "_cmbClientes";
+            this._cmbClientes.Size = new System.Drawing.Size(339, 24);
+            this._cmbClientes.TabIndex = 4;
+            // 
+            // _lblClienteParaMostrar
+            // 
+            this._lblClienteParaMostrar.Location = new System.Drawing.Point(290, 195);
+            this._lblClienteParaMostrar.Name = "_lblClienteParaMostrar";
+            this._lblClienteParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblClienteParaMostrar.TabIndex = 5;
+            // 
+            // _btnConsultarCliente
+            // 
+            this._btnConsultarCliente.Location = new System.Drawing.Point(65, 147);
+            this._btnConsultarCliente.Name = "_btnConsultarCliente";
+            this._btnConsultarCliente.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarCliente.TabIndex = 6;
+            this._btnConsultarCliente.Text = "Consultar Cliente";
+            this._btnConsultarCliente.UseVisualStyleBackColor = true;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 450);
-            this.Controls.Add(this._btnMenuPrincipal);
+            this.ClientSize = new System.Drawing.Size(705, 450);
             this.Controls.Add(this._btnConsultarCliente);
+            this.Controls.Add(this._lblClienteParaMostrar);
+            this.Controls.Add(this._cmbClientes);
+            this.Controls.Add(this._btnMenuPrincipal);
             this.Controls.Add(this._btnIngresarClientes);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.ResumeLayout(false);
 
         }
@@ -79,7 +99,9 @@
         #endregion
 
         private System.Windows.Forms.Button _btnIngresarClientes;
-        private System.Windows.Forms.Button _btnConsultarCliente;
         private System.Windows.Forms.Button _btnMenuPrincipal;
+        private System.Windows.Forms.ComboBox _cmbClientes;
+        private System.Windows.Forms.Label _lblClienteParaMostrar;
+        private System.Windows.Forms.Button _btnConsultarCliente;
     }
 }

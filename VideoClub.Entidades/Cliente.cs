@@ -40,5 +40,12 @@ namespace VideoClub.Entidades
         {
             return string.Format("{0} ({1})", this._nombre, this._apellido, this._idCliente);
         }
+
+        public override string ToString()
+        {
+            return this.IdCliente + " " + this.Apellido + ", " + this.Nombre;
+        }
+
+
     }
 }

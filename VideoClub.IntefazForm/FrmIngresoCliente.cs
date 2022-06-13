@@ -24,14 +24,10 @@ namespace VideoClub.IntefazForm
         }
 
 
-
-
-
         private void _btnVolverClientes_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
             this.Close();
-
         }
     }
 }
