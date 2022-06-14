@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace VideoClub.IntefazForm
 {
-    public partial class FrmPeliculas : Form
+    public partial class FrmIngresarPelicula : Form
     {
-        public FrmPeliculas()
+        public FrmIngresarPelicula()
         {
             InitializeComponent();
-        }
-
-        
-
-        private void _btnActualizarListado_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

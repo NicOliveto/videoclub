@@ -33,6 +33,7 @@
             this._cmbClientes = new System.Windows.Forms.ComboBox();
             this._lblClienteParaMostrar = new System.Windows.Forms.Label();
             this._btnConsultarCliente = new System.Windows.Forms.Button();
+            this._btnActualizarListado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _btnIngresarClientes
@@ -59,7 +60,7 @@
             // 
             this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientes.FormattingEnabled = true;
-            this._cmbClientes.Location = new System.Drawing.Point(293, 147);
+            this._cmbClientes.Location = new System.Drawing.Point(228, 147);
             this._cmbClientes.Name = "_cmbClientes";
             this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 4;
@@ -74,7 +75,7 @@
             // 
             // _btnConsultarCliente
             // 
-            this._btnConsultarCliente.Location = new System.Drawing.Point(65, 147);
+            this._btnConsultarCliente.Location = new System.Drawing.Point(65, 127);
             this._btnConsultarCliente.Name = "_btnConsultarCliente";
             this._btnConsultarCliente.Size = new System.Drawing.Size(157, 63);
             this._btnConsultarCliente.TabIndex = 6;
@@ -82,11 +83,22 @@
             this._btnConsultarCliente.UseVisualStyleBackColor = true;
             this._btnConsultarCliente.Click += new System.EventHandler(this._btnConsultarCliente_Click);
             // 
+            // _btnActualizarListado
+            // 
+            this._btnActualizarListado.Location = new System.Drawing.Point(628, 147);
+            this._btnActualizarListado.Name = "_btnActualizarListado";
+            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.TabIndex = 7;
+            this._btnActualizarListado.Text = "Actualizar listado";
+            this._btnActualizarListado.UseVisualStyleBackColor = true;
+            this._btnActualizarListado.Click += new System.EventHandler(this._btnActualizarListado_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 450);
+            this.ClientSize = new System.Drawing.Size(897, 450);
+            this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCliente);
             this.Controls.Add(this._lblClienteParaMostrar);
             this.Controls.Add(this._cmbClientes);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.ComboBox _cmbClientes;
         private System.Windows.Forms.Label _lblClienteParaMostrar;
         private System.Windows.Forms.Button _btnConsultarCliente;
+        private System.Windows.Forms.Button _btnActualizarListado;
     }
 }

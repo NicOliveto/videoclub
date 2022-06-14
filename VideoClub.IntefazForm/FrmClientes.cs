@@ -85,6 +85,9 @@ namespace VideoClub.IntefazForm
             }
         }
 
-        
+        private void _btnActualizarListado_Click(object sender, EventArgs e)
+        {
+            CargarListado();
+        }
     }
 }

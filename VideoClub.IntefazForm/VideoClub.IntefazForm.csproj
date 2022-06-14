@@ -58,6 +58,24 @@
     <Compile Include="FrmCopias.Designer.cs">
       <DependentUpon>FrmCopias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIngresarCopia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarCopia.Designer.cs">
+      <DependentUpon>FrmIngresarCopia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarPelicula.Designer.cs">
+      <DependentUpon>FrmIngresarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarPrestamo.Designer.cs">
+      <DependentUpon>FrmIngresarPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIngresoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,11 +112,32 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCopias.resx">
+      <DependentUpon>FrmCopias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarCopia.resx">
+      <DependentUpon>FrmIngresarCopia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarPelicula.resx">
+      <DependentUpon>FrmIngresarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarPrestamo.resx">
+      <DependentUpon>FrmIngresarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCliente.resx">
       <DependentUpon>FrmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeliculas.resx">
+      <DependentUpon>FrmPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamos.resx">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
