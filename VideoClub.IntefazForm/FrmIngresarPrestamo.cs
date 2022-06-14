@@ -16,5 +16,7 @@ namespace VideoClub.IntefazForm
         {
             InitializeComponent();
         }
+
+       
     }
 }

@@ -115,6 +115,15 @@
     <EmbeddedResource Include="FrmCopias.resx">
       <DependentUpon>FrmCopias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarCopia.resx">
+      <DependentUpon>FrmIngresarCopia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarPelicula.resx">
+      <DependentUpon>FrmIngresarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarPrestamo.resx">
+      <DependentUpon>FrmIngresarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCliente.resx">
       <DependentUpon>FrmIngresoCliente.cs</DependentUpon>
     </EmbeddedResource>

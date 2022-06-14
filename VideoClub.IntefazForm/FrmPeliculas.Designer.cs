@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._btnIngresarClientes = new System.Windows.Forms.Button();
-            this._btnMenuPrincipal = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this._btnIngresarPeliculas = new System.Windows.Forms.Button();
+            this._btnConsultarPeliculas = new System.Windows.Forms.Button();
+            this._btnMenuPrincipal2 = new System.Windows.Forms.Button();
             this._btnActualizarListado = new System.Windows.Forms.Button();
             this._cmbPrestamos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // _btnIngresarClientes
+            // _btnIngresarPeliculas
             // 
-            this._btnIngresarClientes.Location = new System.Drawing.Point(27, 21);
-            this._btnIngresarClientes.Name = "_btnIngresarClientes";
-            this._btnIngresarClientes.Size = new System.Drawing.Size(157, 63);
-            this._btnIngresarClientes.TabIndex = 1;
-            this._btnIngresarClientes.Text = "Ingresar Clientes";
-            this._btnIngresarClientes.UseVisualStyleBackColor = true;
+            this._btnIngresarPeliculas.Location = new System.Drawing.Point(27, 21);
+            this._btnIngresarPeliculas.Name = "_btnIngresarPeliculas";
+            this._btnIngresarPeliculas.Size = new System.Drawing.Size(157, 63);
+            this._btnIngresarPeliculas.TabIndex = 1;
+            this._btnIngresarPeliculas.Text = "Ingresar Peliculas";
+            this._btnIngresarPeliculas.UseVisualStyleBackColor = true;
             // 
-            // _btnMenuPrincipal
+            // _btnConsultarPeliculas
             // 
-            this._btnMenuPrincipal.Location = new System.Drawing.Point(27, 168);
-            this._btnMenuPrincipal.Name = "_btnMenuPrincipal";
-            this._btnMenuPrincipal.Size = new System.Drawing.Size(157, 63);
-            this._btnMenuPrincipal.TabIndex = 3;
-            this._btnMenuPrincipal.Text = "Menu Principal";
-            this._btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this._btnConsultarPeliculas.Location = new System.Drawing.Point(27, 168);
+            this._btnConsultarPeliculas.Name = "_btnConsultarPeliculas";
+            this._btnConsultarPeliculas.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarPeliculas.TabIndex = 3;
+            this._btnConsultarPeliculas.Text = "Consultar Peliculas";
+            this._btnConsultarPeliculas.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // _btnMenuPrincipal2
             // 
-            this.button1.Location = new System.Drawing.Point(27, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 63);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Menu Principal";
-            this.button1.UseVisualStyleBackColor = true;
+            this._btnMenuPrincipal2.Location = new System.Drawing.Point(27, 375);
+            this._btnMenuPrincipal2.Name = "_btnMenuPrincipal2";
+            this._btnMenuPrincipal2.Size = new System.Drawing.Size(157, 63);
+            this._btnMenuPrincipal2.TabIndex = 4;
+            this._btnMenuPrincipal2.Text = "Menu Principal";
+            this._btnMenuPrincipal2.UseVisualStyleBackColor = true;
             // 
             // _btnActualizarListado
             // 
@@ -88,9 +88,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._cmbPrestamos);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this._btnMenuPrincipal);
-            this.Controls.Add(this._btnIngresarClientes);
+            this.Controls.Add(this._btnMenuPrincipal2);
+            this.Controls.Add(this._btnConsultarPeliculas);
+            this.Controls.Add(this._btnIngresarPeliculas);
             this.Name = "FrmPeliculas";
             this.Text = "FrmPeliculas";
             this.ResumeLayout(false);
@@ -99,9 +99,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button _btnIngresarClientes;
-        private System.Windows.Forms.Button _btnMenuPrincipal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _btnIngresarPeliculas;
+        private System.Windows.Forms.Button _btnConsultarPeliculas;
+        private System.Windows.Forms.Button _btnMenuPrincipal2;
         private System.Windows.Forms.Button _btnActualizarListado;
         private System.Windows.Forms.ComboBox _cmbPrestamos;
     }
