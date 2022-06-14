@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +21,11 @@ namespace VideoClub.IntefazForm
             }
 
             return false;
-
         }
 
-
-
-
+        public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
+        {
+            return DateTime.TryParseExact(fecha, "yyyy-mm-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
+        }
     }
 }

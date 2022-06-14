@@ -31,9 +31,9 @@ namespace VideoClub.Negocio
             return clientes;
         }
 
-        public List<Prestamo> GetListPrestamosPorIdPelicula(int idpelicula)
+        public List<Prestamo> GetListPrestamosPorIdPelicula(int idPelicula)
         {
-            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
+            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
             List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
             List<Prestamo> resultado = new List<Prestamo>();
 
@@ -46,21 +46,20 @@ namespace VideoClub.Negocio
             return resultado;
         }
 
-        public Pelicula GetPeliculaPorIdPelicula(int idpelicula)
+        public List<Copia> GetListCopiasPorIdPelicula(int idPelicula)
         {
-            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idpelicula);
-            return pelicula;
-        }
-
-        public List<Copia> GetListCopiasPorIdPelicula(int idpelicula)
-        {
-            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
+            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
             return copias;
         }
 
-        public Cliente GetClienteByIdCliente(int idCliente)
+        public Pelicula GetPeliculaPorIdPelicula(int idPelicula)
         {
-                                             
+            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idPelicula);
+            return pelicula;
+        }
+
+        public Cliente GetClienteByIdCliente(int idCliente)
+        {                                 
             foreach (Cliente cliente in GetListClientes())
             {
                 if (idCliente.ToString() == cliente.Id)
@@ -78,16 +77,9 @@ namespace VideoClub.Negocio
 
         /*********Metodos de insertado de datos**********/
         public void AltaCliente(string nombre, string apellido, int dni, string email, 
-            string domicilio, string telefono, DateTime fnac)
+            string direccion, string telefono, DateTime fechaNac)
         {
-            Cliente cliente = new Cliente();
-            cliente.Nombre = nombre;
-            cliente.Apellido = apellido;
-            cliente.DNI = dni;
-            cliente.FechaNac = fnac;
-            cliente.Mail = email;
-            cliente.Direccion = domicilio;
-            cliente.Telefono = telefono;
+            Cliente cliente = new Cliente(nombre, apellido, direccion, dni, telefono, email, fechaNac);
 
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
 

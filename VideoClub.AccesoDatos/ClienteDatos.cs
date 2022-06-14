@@ -53,7 +53,7 @@ namespace VideoClub.AccesoDatos
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
-            n.Add("id", cliente.Id);
+            // n.Add("id", cliente.Id);
             n.Add("nombre", cliente.Nombre);
             n.Add("apellido", cliente.Apellido);
             n.Add("direccion", cliente.Direccion);
