@@ -16,7 +16,7 @@ namespace VideoClub.Entidades
         private string _genero;
         private int _idPelicula;
 
-        public Pelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idpelicula)
+        public Pelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idPelicula)
         {
             _anio = anio;
             _duracion = duracion;
@@ -24,7 +24,7 @@ namespace VideoClub.Entidades
             _director = director;
             _productora = productora;
             _genero = genero;
-            _idPelicula = idpelicula;
+            _idPelicula = idPelicula;
         }
 
         public int Anio { get { return _anio; } set { _anio = value; } }

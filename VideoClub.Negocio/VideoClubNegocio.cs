@@ -31,9 +31,9 @@ namespace VideoClub.Negocio
             return clientes;
         }
 
-        public List<Prestamo> GetListPrestamosPorIdPelicula(int idpelicula)
+        public List<Prestamo> GetListPrestamosPorIdPelicula(int idPelicula)
         {
-            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
+            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
             List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
             List<Prestamo> resultado = new List<Prestamo>();
 
@@ -46,45 +46,27 @@ namespace VideoClub.Negocio
             return resultado;
         }
 
-        public Pelicula GetPeliculaPorIdPelicula(int idpelicula)
+        public List<Copia> GetListCopiasPorIdPelicula(int idPelicula)
         {
-            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idpelicula);
+            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
+            return copias;
+        }
+
+        public Pelicula GetPeliculaPorIdPelicula(int idPelicula)
+        {
+            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idPelicula);
             return pelicula;
         }
 
-        public List<Copia> GetListCopiasPorIdPelicula(int idpelicula)
-        {
-            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idpelicula);
-            return copias;
-        }
-        public Cliente GetById(int idCliente)
-        {
-                                             
-            foreach (var item in GetListClientes())
+        public Cliente GetClienteByIdCliente(int idCliente)
+        {                                 
+            foreach (Cliente cliente in GetListClientes())
             {
-                if (idCliente.ToString() == item.Id)
-                    return item;
+                if (idCliente.ToString() == cliente.Id)
+                    return cliente;
             }
 
             return null;
-        }
-
-        public void AltaCliente(string nombre, string apellido, int dni, string email,
-           string domicilio, string telefono, DateTime fnac)
-        {
-            Cliente cliente = new Cliente();
-            cliente.Nombre = nombre;
-            cliente.Apellido = apellido;
-            cliente.DNI = dni;
-            cliente.FechaNac = fnac;
-            cliente.Mail = email;
-            cliente.Direccion = domicilio;
-            cliente.Telefono = telefono;
-
-            TransactionResult transaction = _clienteDatos.Insertar(cliente);
-
-            if (!transaction.isOk)
-                throw new Exception(transaction.error);
         }
 
 
@@ -94,10 +76,43 @@ namespace VideoClub.Negocio
 
 
         /*********Metodos de insertado de datos**********/
+        public void AltaCliente(string nombre, string apellido, int dni, string email, 
+            string direccion, string telefono, DateTime fechaNac)
+        {
+            Cliente cliente = new Cliente(nombre, apellido, direccion, dni, telefono, email, fechaNac);
 
+            TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
 
+        public void AltaPrestamo(int idCliente, int idCopia, int plazo, bool abierto, DateTime fechaPrestamo, DateTime fechaDevTentativa, 
+            DateTime fechaDevReal, int idPrestamo)
+        {
+            Prestamo prestamo = new Prestamo(idCliente, idCopia, plazo, abierto, fechaPrestamo, fechaDevTentativa, fechaDevReal, idPrestamo);
+            TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
 
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
 
+        public void AltaPelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idPelicula)
+        {
+            Pelicula pelicula = new Pelicula(anio, duracion, titulo, director, productora, genero, idPelicula);
+            TransactionResult transaction = _peliculaDatos.Insertar(pelicula);
+
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
+
+        public void AltaCopia(int idPelicula, string observaciones, double precio, DateTime fechaAlta, int idCopia)
+        {
+            Copia copia = new Copia(idPelicula, observaciones, precio, fechaAlta, idCopia);
+            TransactionResult transaction = _copiaDatos.Insertar(copia);
+
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
+        }
     }
 }

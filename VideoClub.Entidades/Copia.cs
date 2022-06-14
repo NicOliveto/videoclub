@@ -14,13 +14,13 @@ namespace VideoClub.Entidades
         private DateTime _fechaAlta;
         private int _idCopia;
 
-        public Copia (int idpelicula, string observaciones, double precio, DateTime fechaalta, int idcopia)
+        public Copia (int idPelicula, string observaciones, double precio, DateTime fechaAlta, int idCopia)
         {
-            _idPelicula = idpelicula;
+            _idPelicula = idPelicula;
             _observaciones = observaciones; 
             _precio = precio;
-            _fechaAlta = fechaalta;
-            _idCopia = idcopia;
+            _fechaAlta = fechaAlta;
+            _idCopia = idCopia;
         }
 
         public int IdPelicula { get { return _idPelicula; } set { _idPelicula = value; } }

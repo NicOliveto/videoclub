@@ -14,8 +14,7 @@ namespace VideoClub.Entidades
         protected string _host;
         protected string _usuario;
 
-        public Cliente(string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechanac,
-            string idcliente, bool cliactivo, string host, string usuario)
+        public Cliente(string nombre, string apellido, string direccion, int dni, string telefono, string mail, DateTime fechaNac)
         {
             _nombre = nombre;
             _apellido = apellido;
@@ -23,15 +22,7 @@ namespace VideoClub.Entidades
             _dni = dni;
             _telefono = telefono;
             _mail = mail;
-            _fechaNac = fechanac;
-            _idCliente = idcliente;
-            _cliActivo = cliactivo;
-            _host = host;
-            _usuario = usuario;
-        }
-
-        public Cliente()
-        {
+            _fechaNac = fechaNac;
         }
 
         public string Id { get { return _idCliente; } set { _idCliente = value; } }
@@ -39,22 +30,13 @@ namespace VideoClub.Entidades
         public bool CliActivo { get { return _cliActivo; } set { _cliActivo = value;} }
         public string Host { get { return _host; } set { _host = value; } }
         public string Usuario { get { return _usuario; } set { _usuario = value; } }
-
         public string Email { get  { return _mail; } set { _mail = value; } }
-        public string ComboDisplay { get => $" /{this.Id}/  {this.Nombre} {this.Apellido}   "; }
-
-       
+        public string ComboDisplay { get => $"  /{this._idCliente}/  {this._nombre} {this._apellido}  "; }
+   
         internal override string Display()
         {
-            return string.Format("{0} ({1})", this._nombre, this._apellido, this.Id);
+            return "Id cliente: " + this._idCliente + "\n Apellido:" + this._apellido + "\n Nombre:" + this._nombre + "\n Direccion" + this._direccion +
+                "\n DNI:" + this._dni + "\n Teléfono: " + this._telefono + "\n Mail:" + this._mail + "\n Fecha nacimiento" + this._fechaNac;
         }
-
-        public override string ToString()
-        {
-            return "Id cliente: " + this.Id + "\n Apellido:" + this.Apellido + "\n Nombre:" + this.Nombre + "\n Direccion" + this.Direccion +
-                "\n DNI:" + this.DNI + "\n Teléfono: " + this.Telefono + "\n Mail:" + this.Mail + "\n Fecha nacimiento" + this.FechaNac;
-        }
-
-
     }
 }

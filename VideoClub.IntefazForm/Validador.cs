@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,6 @@ namespace VideoClub.IntefazForm
             }
 
             return false;
-
         }
 
         public static bool ValidarStringEspecial(string direccion)
@@ -41,7 +41,6 @@ namespace VideoClub.IntefazForm
             else return false;
 
         }
-
 
         public static int ConvertirAInteger(int minimo, int maximo, string numeroString)
         {
@@ -69,6 +68,10 @@ namespace VideoClub.IntefazForm
 
         }
 
+        public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
+        {
+            return DateTime.TryParseExact(fecha, "yyyy-mm-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
+        }
 
 
 
@@ -83,6 +86,7 @@ namespace VideoClub.IntefazForm
         //        pudeConvertir = Int32.TryParse(numeroString, out numero);
 
          //}
+
 
 
     }
