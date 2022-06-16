@@ -52,16 +52,31 @@ namespace VideoClub.IntefazForm
 
         private void _btnpeliculas_Click(object sender, EventArgs e)
         {
+            FrmPeliculas frmPeliculas = new FrmPeliculas(this);
+            frmPeliculas.Show();
+            this.Hide();
+
 
         }
 
         private void _btnCopias_Click(object sender, EventArgs e)
         {
+            FrmCopias frmcopias = new FrmCopias(this);
+            frmcopias.Show();
+            this.Hide();
+
+
 
         }
 
         private void _btnReportes_Click(object sender, EventArgs e)
         {
+            FrmReportes frmReportes = new FrmReportes(this);
+            frmReportes.Show();
+            this.Hide();
+
+
+
 
         }
     }

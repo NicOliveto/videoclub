@@ -79,6 +79,7 @@
             this._btnMenuPrincipal.TabIndex = 9;
             this._btnMenuPrincipal.Text = "Menu Principal";
             this._btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this._btnMenuPrincipal.Click += new System.EventHandler(this._btnMenuPrincipal_Click);
             // 
             // FrmPrestamos
             // 

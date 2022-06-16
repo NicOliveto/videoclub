@@ -61,6 +61,7 @@
             this._btnMenuPrincipal2.TabIndex = 4;
             this._btnMenuPrincipal2.Text = "Menu Principal";
             this._btnMenuPrincipal2.UseVisualStyleBackColor = true;
+            this._btnMenuPrincipal2.Click += new System.EventHandler(this._btnMenuPrincipal2_Click);
             // 
             // _btnActualizarListado
             // 
@@ -70,7 +71,6 @@
             this._btnActualizarListado.TabIndex = 10;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
-            this._btnActualizarListado.Click += new System.EventHandler(this._btnActualizarListado_Click);
             // 
             // _cmbPrestamos
             // 
