@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
 {
     public partial class FrmPrestamos : Form
     {
-        public FrmPrestamos()
+        
+        private VideoClubNegocio _videoClubNegocio;
+
+
+        public FrmPrestamos(Form padre)
         {
             InitializeComponent();
+
+            _videoClubNegocio = new VideoClubNegocio();
+
+            this.Owner = padre;
         }
     }
-}
+    }
+

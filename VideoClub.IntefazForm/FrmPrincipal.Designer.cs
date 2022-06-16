@@ -65,6 +65,7 @@
             this._btnPrestamos.TabIndex = 2;
             this._btnPrestamos.Text = "Préstamos";
             this._btnPrestamos.UseVisualStyleBackColor = true;
+            this._btnPrestamos.Click += new System.EventHandler(this._btnPrestamos_Click);
             // 
             // _btnpeliculas
             // 
@@ -75,6 +76,7 @@
             this._btnpeliculas.TabIndex = 3;
             this._btnpeliculas.Text = "Películas";
             this._btnpeliculas.UseVisualStyleBackColor = true;
+            this._btnpeliculas.Click += new System.EventHandler(this._btnpeliculas_Click);
             // 
             // _btnCopias
             // 
@@ -85,6 +87,7 @@
             this._btnCopias.TabIndex = 4;
             this._btnCopias.Text = "Copias";
             this._btnCopias.UseVisualStyleBackColor = true;
+            this._btnCopias.Click += new System.EventHandler(this._btnCopias_Click);
             // 
             // _btnReportes
             // 
@@ -95,6 +98,7 @@
             this._btnReportes.TabIndex = 5;
             this._btnReportes.Text = "Reportes";
             this._btnReportes.UseVisualStyleBackColor = true;
+            this._btnReportes.Click += new System.EventHandler(this._btnReportes_Click);
             // 
             // FrmPrincipal
             // 
