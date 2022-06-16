@@ -37,5 +37,13 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+        private void _btnIngresarCopias_Click(object sender, EventArgs e)
+        {
+            FrmIngresarCopia frmIngresarCopia = new FrmIngresarCopia(this);
+            frmIngresarCopia.Show();
+            this.Hide();
+
+        }
     }
 }

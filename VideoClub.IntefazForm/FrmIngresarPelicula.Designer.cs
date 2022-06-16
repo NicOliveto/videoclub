@@ -207,6 +207,7 @@
             this._btnVolver.TabIndex = 24;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = true;
+            this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
             // FrmIngresarPelicula
             // 

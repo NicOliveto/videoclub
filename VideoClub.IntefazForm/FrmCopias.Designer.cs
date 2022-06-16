@@ -88,6 +88,7 @@
             this._btnIngresarCopias.TabIndex = 8;
             this._btnIngresarCopias.Text = "Ingresar Copias";
             this._btnIngresarCopias.UseVisualStyleBackColor = true;
+            this._btnIngresarCopias.Click += new System.EventHandler(this._btnIngresarCopias_Click);
             // 
             // FrmCopias
             // 

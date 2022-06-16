@@ -11,10 +11,10 @@ using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
 {
-    public partial class FrmIngresoCliente : Form
+    public partial class FrmIngrearCliente : Form
     {
         private VideoClubNegocio _videoClubNegocio;
-        public FrmIngresoCliente(Form padre)
+        public FrmIngrearCliente(Form padre)
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnVolverClientes_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
+            this.Owner.Show();            
             this.Close();
         }
 

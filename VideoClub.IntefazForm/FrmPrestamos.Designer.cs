@@ -43,6 +43,7 @@
             this._btnIngresarPrestamos.TabIndex = 1;
             this._btnIngresarPrestamos.Text = "Ingresar Prestamos";
             this._btnIngresarPrestamos.UseVisualStyleBackColor = true;
+            this._btnIngresarPrestamos.Click += new System.EventHandler(this._btnIngresarPrestamos_Click);
             // 
             // _btnConsultarPrestamo
             // 

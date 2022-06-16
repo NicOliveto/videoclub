@@ -53,7 +53,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnIngresarClientes_Click(object sender, EventArgs e)
         {
-            FrmIngresoCliente frmIngresoCliente = new FrmIngresoCliente(this);
+            FrmIngrearCliente frmIngresoCliente = new FrmIngrearCliente(this);
             frmIngresoCliente.Show();
 
             this.Hide();

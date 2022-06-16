@@ -38,10 +38,12 @@
             // 
             // _lblVideoClub
             // 
+            this._lblVideoClub.BackColor = System.Drawing.Color.Transparent;
             this._lblVideoClub.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblVideoClub.Location = new System.Drawing.Point(33, 30);
+            this._lblVideoClub.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this._lblVideoClub.Location = new System.Drawing.Point(28, 46);
             this._lblVideoClub.Name = "_lblVideoClub";
-            this._lblVideoClub.Size = new System.Drawing.Size(408, 64);
+            this._lblVideoClub.Size = new System.Drawing.Size(254, 64);
             this._lblVideoClub.TabIndex = 0;
             this._lblVideoClub.Text = "Video Club";
             // 
@@ -104,7 +106,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 507);
+            this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.FondoFrmPrincipal;
+            this.ClientSize = new System.Drawing.Size(382, 507);
             this.Controls.Add(this._btnReportes);
             this.Controls.Add(this._btnCopias);
             this.Controls.Add(this._btnpeliculas);

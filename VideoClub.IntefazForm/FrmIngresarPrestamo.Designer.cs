@@ -55,6 +55,7 @@
             this._btnVolverPrestamo.TabIndex = 16;
             this._btnVolverPrestamo.Text = "Volver";
             this._btnVolverPrestamo.UseVisualStyleBackColor = true;
+            this._btnVolverPrestamo.Click += new System.EventHandler(this._btnVolverPrestamo_Click);
             // 
             // _cmbClientes
             // 

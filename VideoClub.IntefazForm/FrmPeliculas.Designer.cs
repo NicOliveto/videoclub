@@ -43,6 +43,7 @@
             this._btnIngresarPeliculas.TabIndex = 1;
             this._btnIngresarPeliculas.Text = "Ingresar Peliculas";
             this._btnIngresarPeliculas.UseVisualStyleBackColor = true;
+            this._btnIngresarPeliculas.Click += new System.EventHandler(this._btnIngresarPeliculas_Click);
             // 
             // _btnConsultarPeliculas
             // 
