@@ -42,7 +42,7 @@
             // 
             // _btnConsultarCopias
             // 
-            this._btnConsultarCopias.Location = new System.Drawing.Point(330, 251);
+            this._btnConsultarCopias.Location = new System.Drawing.Point(231, 375);
             this._btnConsultarCopias.Name = "_btnConsultarCopias";
             this._btnConsultarCopias.Size = new System.Drawing.Size(157, 63);
             this._btnConsultarCopias.TabIndex = 14;
@@ -68,7 +68,7 @@
             // 
             // _btnVolver
             // 
-            this._btnVolver.Location = new System.Drawing.Point(40, 375);
+            this._btnVolver.Location = new System.Drawing.Point(12, 375);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(157, 63);
             this._btnVolver.TabIndex = 16;

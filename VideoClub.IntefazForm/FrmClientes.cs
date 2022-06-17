@@ -42,7 +42,7 @@ namespace VideoClub.IntefazForm
             _cmbClientes.ValueMember = "Id";
 
         }
-
+        
 
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -59,10 +59,7 @@ namespace VideoClub.IntefazForm
             this.Hide();
         }
 
-        private void _cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void _btnConsultarCliente_Click(object sender, EventArgs e)
         {

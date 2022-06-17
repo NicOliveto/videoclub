@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using VideoClub.Entidades;
 using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
@@ -32,6 +34,26 @@ namespace VideoClub.IntefazForm
             this.Hide();
 
         }
+
+        private void FrmPrestamos_Load(object sender, EventArgs e)
+        {
+            CargarListado();
+
+        }
+
+        private void CargarListado()
+        {
+            List<Prestamo> lstPrestamosAbiertos = _videoClubNegocio.GetListPrestamosAbiertos();
+            _cmbPrestamosAbiertos.DataSource = null;
+            _cmbPrestamosAbiertos.DataSource = lstPrestamosAbiertos;
+            _cmbPrestamosAbiertos.DisplayMember = "ComboDisplay";
+            _cmbPrestamosAbiertos.ValueMember = "Id";
+
+        }
+
+
+
+
     }
-    }
+}
 

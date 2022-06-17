@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this._btnIngresarPrestamos = new System.Windows.Forms.Button();
-            this._btnConsultarPrestamo = new System.Windows.Forms.Button();
-            this._cmbPrestamos = new System.Windows.Forms.ComboBox();
+            this._btnConsultarPrestamoActual = new System.Windows.Forms.Button();
+            this._cmbPrestamosAbiertos = new System.Windows.Forms.ComboBox();
             this._btnActualizarListado = new System.Windows.Forms.Button();
             this._btnMenuPrincipal = new System.Windows.Forms.Button();
+            this._cbmPrestamosCerrados = new System.Windows.Forms.ComboBox();
+            this._btnConsultarPrestamoCerrado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _btnIngresarPrestamos
@@ -45,23 +47,23 @@
             this._btnIngresarPrestamos.UseVisualStyleBackColor = true;
             this._btnIngresarPrestamos.Click += new System.EventHandler(this._btnIngresarPrestamos_Click);
             // 
-            // _btnConsultarPrestamo
+            // _btnConsultarPrestamoActual
             // 
-            this._btnConsultarPrestamo.Location = new System.Drawing.Point(21, 133);
-            this._btnConsultarPrestamo.Name = "_btnConsultarPrestamo";
-            this._btnConsultarPrestamo.Size = new System.Drawing.Size(157, 63);
-            this._btnConsultarPrestamo.TabIndex = 2;
-            this._btnConsultarPrestamo.Text = "Consultar Prestamo";
-            this._btnConsultarPrestamo.UseVisualStyleBackColor = true;
+            this._btnConsultarPrestamoActual.Location = new System.Drawing.Point(21, 133);
+            this._btnConsultarPrestamoActual.Name = "_btnConsultarPrestamoActual";
+            this._btnConsultarPrestamoActual.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarPrestamoActual.TabIndex = 2;
+            this._btnConsultarPrestamoActual.Text = "Consultar Prestamo Abierto";
+            this._btnConsultarPrestamoActual.UseVisualStyleBackColor = true;
             // 
-            // _cmbPrestamos
+            // _cmbPrestamosAbiertos
             // 
-            this._cmbPrestamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._cmbPrestamos.FormattingEnabled = true;
-            this._cmbPrestamos.Location = new System.Drawing.Point(198, 153);
-            this._cmbPrestamos.Name = "_cmbPrestamos";
-            this._cmbPrestamos.Size = new System.Drawing.Size(339, 24);
-            this._cmbPrestamos.TabIndex = 5;
+            this._cmbPrestamosAbiertos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbPrestamosAbiertos.FormattingEnabled = true;
+            this._cmbPrestamosAbiertos.Location = new System.Drawing.Point(198, 153);
+            this._cmbPrestamosAbiertos.Name = "_cmbPrestamosAbiertos";
+            this._cmbPrestamosAbiertos.Size = new System.Drawing.Size(339, 24);
+            this._cmbPrestamosAbiertos.TabIndex = 5;
             // 
             // _btnActualizarListado
             // 
@@ -82,18 +84,39 @@
             this._btnMenuPrincipal.UseVisualStyleBackColor = true;
             this._btnMenuPrincipal.Click += new System.EventHandler(this._btnMenuPrincipal_Click);
             // 
+            // _cbmPrestamosCerrados
+            // 
+            this._cbmPrestamosCerrados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cbmPrestamosCerrados.FormattingEnabled = true;
+            this._cbmPrestamosCerrados.Location = new System.Drawing.Point(922, 153);
+            this._cbmPrestamosCerrados.Name = "_cbmPrestamosCerrados";
+            this._cbmPrestamosCerrados.Size = new System.Drawing.Size(339, 24);
+            this._cbmPrestamosCerrados.TabIndex = 11;
+            // 
+            // _btnConsultarPrestamoCerrado
+            // 
+            this._btnConsultarPrestamoCerrado.Location = new System.Drawing.Point(745, 133);
+            this._btnConsultarPrestamoCerrado.Name = "_btnConsultarPrestamoCerrado";
+            this._btnConsultarPrestamoCerrado.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarPrestamoCerrado.TabIndex = 10;
+            this._btnConsultarPrestamoCerrado.Text = "Consultar Prestamo Cerrado";
+            this._btnConsultarPrestamoCerrado.UseVisualStyleBackColor = true;
+            // 
             // FrmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 432);
+            this.ClientSize = new System.Drawing.Size(1294, 432);
+            this.Controls.Add(this._cbmPrestamosCerrados);
+            this.Controls.Add(this._btnConsultarPrestamoCerrado);
             this.Controls.Add(this._btnMenuPrincipal);
             this.Controls.Add(this._btnActualizarListado);
-            this.Controls.Add(this._cmbPrestamos);
-            this.Controls.Add(this._btnConsultarPrestamo);
+            this.Controls.Add(this._cmbPrestamosAbiertos);
+            this.Controls.Add(this._btnConsultarPrestamoActual);
             this.Controls.Add(this._btnIngresarPrestamos);
             this.Name = "FrmPrestamos";
             this.Text = "FrmPrestamos";
+            this.Load += new System.EventHandler(this.FrmPrestamos_Load);
             this.ResumeLayout(false);
 
         }
@@ -101,9 +124,11 @@
         #endregion
 
         private System.Windows.Forms.Button _btnIngresarPrestamos;
-        private System.Windows.Forms.Button _btnConsultarPrestamo;
-        private System.Windows.Forms.ComboBox _cmbPrestamos;
+        private System.Windows.Forms.Button _btnConsultarPrestamoActual;
+        private System.Windows.Forms.ComboBox _cmbPrestamosAbiertos;
         private System.Windows.Forms.Button _btnActualizarListado;
         private System.Windows.Forms.Button _btnMenuPrincipal;
+        private System.Windows.Forms.ComboBox _cbmPrestamosCerrados;
+        private System.Windows.Forms.Button _btnConsultarPrestamoCerrado;
     }
 }

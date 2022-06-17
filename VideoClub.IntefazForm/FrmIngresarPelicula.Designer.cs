@@ -101,7 +101,7 @@
             // 
             // _btnAltaPelicula
             // 
-            this._btnAltaPelicula.Location = new System.Drawing.Point(98, 343);
+            this._btnAltaPelicula.Location = new System.Drawing.Point(291, 373);
             this._btnAltaPelicula.Name = "_btnAltaPelicula";
             this._btnAltaPelicula.Size = new System.Drawing.Size(166, 65);
             this._btnAltaPelicula.TabIndex = 39;
@@ -201,7 +201,7 @@
             // 
             // _btnVolver
             // 
-            this._btnVolver.Location = new System.Drawing.Point(353, 343);
+            this._btnVolver.Location = new System.Drawing.Point(12, 373);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(166, 65);
             this._btnVolver.TabIndex = 24;

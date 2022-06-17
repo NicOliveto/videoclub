@@ -56,7 +56,7 @@
             // 
             // _btnVolverClientes
             // 
-            this._btnVolverClientes.Location = new System.Drawing.Point(305, 341);
+            this._btnVolverClientes.Location = new System.Drawing.Point(12, 406);
             this._btnVolverClientes.Name = "_btnVolverClientes";
             this._btnVolverClientes.Size = new System.Drawing.Size(166, 65);
             this._btnVolverClientes.TabIndex = 0;
@@ -172,7 +172,7 @@
             // 
             // _btnAltaCliente
             // 
-            this._btnAltaCliente.Location = new System.Drawing.Point(50, 341);
+            this._btnAltaCliente.Location = new System.Drawing.Point(243, 406);
             this._btnAltaCliente.Name = "_btnAltaCliente";
             this._btnAltaCliente.Size = new System.Drawing.Size(166, 65);
             this._btnAltaCliente.TabIndex = 15;
@@ -244,7 +244,7 @@
             this._lblFechaNacError.Size = new System.Drawing.Size(171, 22);
             this._lblFechaNacError.TabIndex = 23;
             // 
-            // FrmIngresoCliente
+            // FrmIngrearCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,7 +273,7 @@
             this.Controls.Add(this._txtApellido);
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this._btnVolverClientes);
-            this.Name = "FrmIngresoCliente";
+            this.Name = "FrmIngrearCliente";
             this.Text = "FrmIngresoCliente";
             this.ResumeLayout(false);
             this.PerformLayout();

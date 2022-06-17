@@ -69,6 +69,7 @@
             this._cmbCopias.Name = "_cmbCopias";
             this._cmbCopias.Size = new System.Drawing.Size(339, 24);
             this._cmbCopias.TabIndex = 10;
+       
             // 
             // _btnMenuPrincipal
             // 

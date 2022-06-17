@@ -64,7 +64,7 @@
             this._cmbClientes.Name = "_cmbClientes";
             this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 4;
-            this._cmbClientes.SelectedIndexChanged += new System.EventHandler(this._cmbClientes_SelectedIndexChanged);
+          
             // 
             // _lblClienteParaMostrar
             // 
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 450);
+            this.ClientSize = new System.Drawing.Size(897, 439);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCliente);
             this.Controls.Add(this._lblClienteParaMostrar);

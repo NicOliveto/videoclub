@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.FondoFrmPrincipal;
-            this.ClientSize = new System.Drawing.Size(382, 507);
+            this.ClientSize = new System.Drawing.Size(359, 507);
             this.Controls.Add(this._btnReportes);
             this.Controls.Add(this._btnCopias);
             this.Controls.Add(this._btnpeliculas);

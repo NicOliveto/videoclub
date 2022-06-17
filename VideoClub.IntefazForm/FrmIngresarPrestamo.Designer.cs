@@ -40,7 +40,7 @@
             // 
             // _btnAltaPrestamo
             // 
-            this._btnAltaPrestamo.Location = new System.Drawing.Point(56, 350);
+            this._btnAltaPrestamo.Location = new System.Drawing.Point(222, 373);
             this._btnAltaPrestamo.Name = "_btnAltaPrestamo";
             this._btnAltaPrestamo.Size = new System.Drawing.Size(166, 65);
             this._btnAltaPrestamo.TabIndex = 17;
@@ -49,7 +49,7 @@
             // 
             // _btnVolverPrestamo
             // 
-            this._btnVolverPrestamo.Location = new System.Drawing.Point(311, 350);
+            this._btnVolverPrestamo.Location = new System.Drawing.Point(12, 373);
             this._btnVolverPrestamo.Name = "_btnVolverPrestamo";
             this._btnVolverPrestamo.Size = new System.Drawing.Size(166, 65);
             this._btnVolverPrestamo.TabIndex = 16;

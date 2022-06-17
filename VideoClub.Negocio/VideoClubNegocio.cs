@@ -69,6 +69,10 @@ namespace VideoClub.Negocio
             return null;
         }
 
+        public List<Prestamo> GetListPrestamosAbiertos()
+        {
+            return null;
+        }
 
         /*********Metodos de reportes**********/
 

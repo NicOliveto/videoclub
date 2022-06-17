@@ -37,5 +37,7 @@ namespace VideoClub.Entidades
         public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa; } set { _fechaDevolucionTentativa = value; } }
         public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal ; } set { _fechaDevolucionReal = value; } }
         public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value;} }
+
+      //  public string ComboDisplay { get => $"  /{this._idPrestamo}/  {this._nombre} {this._apellido}  "; }
     }
 }

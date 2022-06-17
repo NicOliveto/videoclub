@@ -45,5 +45,7 @@ namespace VideoClub.IntefazForm
             this.Hide();
 
         }
+
+        
     }
 }
