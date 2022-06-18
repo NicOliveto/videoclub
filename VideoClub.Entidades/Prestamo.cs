@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace VideoClub.Entidades
 {
+      
     public class Prestamo
     {
         private int _idCliente;
@@ -38,6 +40,6 @@ namespace VideoClub.Entidades
         public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal ; } set { _fechaDevolucionReal = value; } }
         public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value;} }
 
-      //  public string ComboDisplay { get => $"  /{this._idPrestamo}/  {this._nombre} {this._apellido}  "; }
+       // public string ComboDisplay { get => $"  /{this._idPrestamo}/  {this._nombre} {this._apellido}  {GetClienteByIdCliente(2)} "; }
     }
 }

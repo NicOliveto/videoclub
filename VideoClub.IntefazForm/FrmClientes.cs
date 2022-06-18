@@ -30,7 +30,7 @@ namespace VideoClub.IntefazForm
         {
 
             CargarListado();
-           
+            
 
         }
         private void CargarListado()
@@ -66,7 +66,8 @@ namespace VideoClub.IntefazForm
             {
                 int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
                 Cliente cliente = _videoClubNegocio.GetClienteByIdCliente(idCliente);
-                
+                              
+
                 if (cliente != null)
                 {
                     _lblClienteParaMostrar.Text = cliente.ToString();
@@ -77,7 +78,7 @@ namespace VideoClub.IntefazForm
                     MessageBox.Show("No hay informacion del cliente seleccionado");
                 }
 
-
+               
 
             }
         }
