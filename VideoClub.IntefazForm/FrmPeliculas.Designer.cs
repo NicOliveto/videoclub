@@ -32,7 +32,8 @@
             this._btnConsultarPeliculas = new System.Windows.Forms.Button();
             this._btnMenuPrincipal2 = new System.Windows.Forms.Button();
             this._btnActualizarListado = new System.Windows.Forms.Button();
-            this._cmbPrestamos = new System.Windows.Forms.ComboBox();
+            this._cmbPeliculas = new System.Windows.Forms.ComboBox();
+            this._lblPeliculaParaMostrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnIngresarPeliculas
@@ -53,6 +54,7 @@
             this._btnConsultarPeliculas.TabIndex = 3;
             this._btnConsultarPeliculas.Text = "Consultar Peliculas";
             this._btnConsultarPeliculas.UseVisualStyleBackColor = true;
+            this._btnConsultarPeliculas.Click += new System.EventHandler(this._btnConsultarPeliculas_Click);
             // 
             // _btnMenuPrincipal2
             // 
@@ -72,28 +74,38 @@
             this._btnActualizarListado.TabIndex = 10;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
+            this._btnActualizarListado.Click += new System.EventHandler(this._btnActualizarListado_Click);
             // 
-            // _cmbPrestamos
+            // _cmbPeliculas
             // 
-            this._cmbPrestamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._cmbPrestamos.FormattingEnabled = true;
-            this._cmbPrestamos.Location = new System.Drawing.Point(208, 188);
-            this._cmbPrestamos.Name = "_cmbPrestamos";
-            this._cmbPrestamos.Size = new System.Drawing.Size(339, 24);
-            this._cmbPrestamos.TabIndex = 9;
+            this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbPeliculas.FormattingEnabled = true;
+            this._cmbPeliculas.Location = new System.Drawing.Point(208, 188);
+            this._cmbPeliculas.Name = "_cmbPeliculas";
+            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
+            this._cmbPeliculas.TabIndex = 9;
+            // 
+            // _lblPeliculaParaMostrar
+            // 
+            this._lblPeliculaParaMostrar.Location = new System.Drawing.Point(205, 251);
+            this._lblPeliculaParaMostrar.Name = "_lblPeliculaParaMostrar";
+            this._lblPeliculaParaMostrar.Size = new System.Drawing.Size(342, 187);
+            this._lblPeliculaParaMostrar.TabIndex = 11;
             // 
             // FrmPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this._lblPeliculaParaMostrar);
             this.Controls.Add(this._btnActualizarListado);
-            this.Controls.Add(this._cmbPrestamos);
+            this.Controls.Add(this._cmbPeliculas);
             this.Controls.Add(this._btnMenuPrincipal2);
             this.Controls.Add(this._btnConsultarPeliculas);
             this.Controls.Add(this._btnIngresarPeliculas);
             this.Name = "FrmPeliculas";
             this.Text = "FrmPeliculas";
+            this.Load += new System.EventHandler(this.FrmPeliculas_Load);
             this.ResumeLayout(false);
 
         }
@@ -104,6 +116,7 @@
         private System.Windows.Forms.Button _btnConsultarPeliculas;
         private System.Windows.Forms.Button _btnMenuPrincipal2;
         private System.Windows.Forms.Button _btnActualizarListado;
-        private System.Windows.Forms.ComboBox _cmbPrestamos;
+        private System.Windows.Forms.ComboBox _cmbPeliculas;
+        private System.Windows.Forms.Label _lblPeliculaParaMostrar;
     }
 }

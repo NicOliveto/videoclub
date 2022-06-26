@@ -33,6 +33,16 @@ namespace VideoClub.Entidades
         public string Director { get { return _director; } set { _director = value; } }
         public string Productora { get { return _productora; } set { _productora = value; } }
         public string Genero { get { return _genero; } set { _genero = value; } }
-        public int IdPelicula { get { return _idPelicula; } set { _idPelicula = value; } }
+        public int Id { get { return _idPelicula; } set { _idPelicula = value; } }
+        public string ComboDisplay { get => $"  ({this._idPelicula}) Pelicula:  {this._titulo} Director: {this._director} "; }
+
+        public override string ToString()
+        {
+            string retorno;
+            retorno = "Pelicula:" + this._titulo + "\n Año: " + this._anio + "\n Duración: " + this._duracion + "\n Director: " + this._director +
+                "\n Preductora: " + this._productora + "\n Género: " + this._genero;
+            return retorno;
+        }
+
     }
 }

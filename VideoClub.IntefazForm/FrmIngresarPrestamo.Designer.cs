@@ -31,7 +31,7 @@
             this._btnAltaPrestamo = new System.Windows.Forms.Button();
             this._btnVolverPrestamo = new System.Windows.Forms.Button();
             this._cmbClientes = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this._cmbPeliculas = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this._lblClientePrestamo = new System.Windows.Forms.Label();
             this._lblPlazoPrestamo = new System.Windows.Forms.Label();
@@ -66,14 +66,14 @@
             this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 18;
             // 
-            // comboBox1
+            // _cmbPeliculas
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(222, 93);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(339, 24);
-            this.comboBox1.TabIndex = 19;
+            this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbPeliculas.FormattingEnabled = true;
+            this._cmbPeliculas.Location = new System.Drawing.Point(222, 93);
+            this._cmbPeliculas.Name = "_cmbPeliculas";
+            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
+            this._cmbPeliculas.TabIndex = 19;
             // 
             // textBox1
             // 
@@ -115,12 +115,13 @@
             this.Controls.Add(this._lblPlazoPrestamo);
             this.Controls.Add(this._lblClientePrestamo);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this._cmbPeliculas);
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._btnAltaPrestamo);
             this.Controls.Add(this._btnVolverPrestamo);
             this.Name = "FrmIngresarPrestamo";
             this.Text = "FrmIngresarPrestamo";
+            this.Load += new System.EventHandler(this.FrmIngresarPrestamo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,7 +132,7 @@
         private System.Windows.Forms.Button _btnAltaPrestamo;
         private System.Windows.Forms.Button _btnVolverPrestamo;
         private System.Windows.Forms.ComboBox _cmbClientes;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox _cmbPeliculas;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label _lblClientePrestamo;
         private System.Windows.Forms.Label _lblPlazoPrestamo;

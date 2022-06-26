@@ -29,11 +29,11 @@ namespace VideoClub.IntefazForm
         private void FrmClientes_Load(object sender, EventArgs e)
         {
 
-            CargarListado();
+            CargarListadoClientes();
             
 
         }
-        private void CargarListado()
+        private void CargarListadoClientes()
         {
             List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
             _cmbClientes.DataSource = null;
@@ -63,10 +63,9 @@ namespace VideoClub.IntefazForm
 
         private void _btnConsultarCliente_Click(object sender, EventArgs e)
         {
-            {
+            
                 int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
-                Cliente cliente = _videoClubNegocio.GetClienteByIdCliente(idCliente);
-                              
+                Cliente cliente = _videoClubNegocio.GetClienteByIdCliente(idCliente);                             
 
                 if (cliente != null)
                 {
@@ -76,16 +75,13 @@ namespace VideoClub.IntefazForm
                 else
                 {
                     MessageBox.Show("No hay informacion del cliente seleccionado");
-                }
-
-               
-
-            }
+                }          
+                           
         }
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
-            CargarListado();
+            CargarListadoClientes();
         }
     }
 }

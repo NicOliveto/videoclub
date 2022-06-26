@@ -68,11 +68,57 @@ namespace VideoClub.Negocio
 
             return null;
         }
-
-        public List<Prestamo> GetListPrestamosAbiertos()
+        public List<Prestamo> GetListPrestamos()
         {
+            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
+            return prestamos;
+        }
+
+        public Prestamo GetPrestamoPorIdPrestamo(int IdPrestamo)
+        {
+            foreach (Prestamo prestamo in GetListPrestamos())
+            {
+                if (prestamo.IdPrestamo == IdPrestamo)
+                    return prestamo;
+            }
             return null;
         }
+        public List<Prestamo> GetListPrestamosAbiertos()
+        {
+            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
+            List<Prestamo> PrestamosAbiertos = new List<Prestamo>();
+            foreach (Prestamo prestamo in prestamos)
+            {
+                if(prestamo.Abierto == true)
+                {
+                    PrestamosAbiertos.Add(prestamo);
+                }
+            }
+
+            return PrestamosAbiertos;
+        }
+        public List<Prestamo> GetListPrestamosCerrados()
+        {
+
+            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
+            List<Prestamo> PrestamosCerrados = new List<Prestamo>();
+            foreach (Prestamo prestamo in prestamos)
+            {
+                if (prestamo.Abierto == false)
+                {
+                    PrestamosCerrados.Add(prestamo);
+                }
+            }
+
+            return PrestamosCerrados;
+        }
+        public List<Pelicula> GetListPeliculas()
+        {
+            List<Pelicula> peliculas = _peliculaDatos.TraerPeliculas();
+            return peliculas;
+        }
+
+
 
         /*********Metodos de reportes**********/
 

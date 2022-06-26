@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VideoClub.Entidades
 {
-      
+
     public class Prestamo
     {
         private int _idCliente;
@@ -33,13 +33,33 @@ namespace VideoClub.Entidades
 
         public int IdCliente { get { return _idCliente; } set { _idCliente = value; } }
         public int IdCopia { get { return _idCopia; } set { _idCopia = value; } }
-        public int Plazo { get { return _plazo; } set { _plazo = value;} }
+        public int Plazo { get { return _plazo; } set { _plazo = value; } }
         public bool Abierto { get { return _abierto; } set { _abierto = value; } }
         public DateTime FechaPrestamo { get { return _fechaPrestamo; } set { _fechaPrestamo = value; } }
         public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa; } set { _fechaDevolucionTentativa = value; } }
-        public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal ; } set { _fechaDevolucionReal = value; } }
-        public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value;} }
+        public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal; } set { _fechaDevolucionReal = value; } }
+        public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value; } }
+        public string ToStringAbierto()
+        {
+            string retorno;
+            retorno = "CORREGIR(prestamoabierto)!!!!!!\n Fecha del prestamo: " + this.FechaPrestamo +"\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
+            //retorno = "ID Cliente: " this_idCliente  + " \n ID Copia: " this.IdCopia + "\n Plazo: " + this.Plazo + "\n Fecha del prestamo: " + this.FechaPrestamo +
+            //    "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
+           return retorno;
+        }
+        public string ToStringCerrado()
+        {
+            string retorno;
+            retorno = "CORREGIR(prestamo cerrado)!!!!" + "\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
+            //retorno = "ID Cliente: " this_idCliente + " \n ID Copia: " this.IdCopia + "\n Plazo: " + this.Plazo + "\n Fecha del prestamo: " + this.FechaPrestamo +
+            //   "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
+            return retorno;
+        }
 
-       // public string ComboDisplay { get => $"  /{this._idPrestamo}/  {this._nombre} {this._apellido}  {GetClienteByIdCliente(2)} "; }
+
+        public string ComboDisplay { get => $"  ID Prestamo: {this._idPrestamo}  ID Cliente: {this._idCliente}  ID Copia: {this._idCopia}   "; }
+
+
     }
+
 }

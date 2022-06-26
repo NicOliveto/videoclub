@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClub.Entidades;
 using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
@@ -29,5 +30,20 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+        private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
+        {
+            CargarListadoClientes();
+
+        }
+        private void CargarListadoClientes()
+        {
+            List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
+            _cmbClientes.DataSource = null;
+            _cmbClientes.DataSource = lstClientes;
+            _cmbClientes.DisplayMember = "ComboDisplay";
+            _cmbClientes.ValueMember = "Id";
+        }
+
+       
     }
 }
