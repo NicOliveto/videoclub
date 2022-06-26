@@ -30,6 +30,11 @@ namespace VideoClub.Negocio
             List<Cliente> clientes = _clienteDatos.TraerClientes();
             return clientes;
         }
+        public List<Copia> GetListCopias()
+        {
+            List<Copia> copias = _copiaDatos.TraerCopias();
+            return copias;
+        }
 
         public List<Prestamo> GetListPrestamosPorIdPelicula(int idPelicula)
         {

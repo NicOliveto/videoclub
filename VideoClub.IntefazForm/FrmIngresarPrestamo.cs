@@ -33,7 +33,7 @@ namespace VideoClub.IntefazForm
         private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
         {
             CargarListadoClientes();
-
+            CargarListadoPeliculas();
         }
         private void CargarListadoClientes()
         {
@@ -43,7 +43,14 @@ namespace VideoClub.IntefazForm
             _cmbClientes.DisplayMember = "ComboDisplay";
             _cmbClientes.ValueMember = "Id";
         }
+        private void CargarListadoPeliculas()
+        {
+            List<Pelicula> lstPeliculas = _videoClubNegocio.GetListPeliculas();
+            _cmbPeliculas.DataSource = null;
+            _cmbPeliculas.DataSource = lstPeliculas;
+            _cmbPeliculas.DisplayMember = "ComboDisplay";
+            _cmbPeliculas.ValueMember = "Id";
+        }
 
-       
     }
 }

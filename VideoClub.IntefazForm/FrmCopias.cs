@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClub.Entidades;
 using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
@@ -22,14 +23,7 @@ namespace VideoClub.IntefazForm
 
             _videoClubNegocio = new VideoClubNegocio();
 
-            this.Owner = padre;
-
-
-
-
-
-
-          
+            this.Owner = padre;          
         }
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -46,6 +40,24 @@ namespace VideoClub.IntefazForm
 
         }
 
-        
+        private void _btnActualizarListado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarListadoClientes()
+        {
+            List<Copia> lstCopias = _videoClubNegocio.GetListCopias();
+            _cmbCopias.DataSource = null;
+            _cmbCopias.DataSource = lstCopias;
+            _cmbCopias.DisplayMember = "ComboDisplay";
+            _cmbCopias.ValueMember = "Id";
+
+        }
+
+        private void FrmCopias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

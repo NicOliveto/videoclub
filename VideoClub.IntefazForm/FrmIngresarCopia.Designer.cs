@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this._btnConsultarCopias = new System.Windows.Forms.Button();
-            this._cmbCopias = new System.Windows.Forms.ComboBox();
+            this._cmbPeliculas = new System.Windows.Forms.ComboBox();
             this._lblSelecPeli = new System.Windows.Forms.Label();
             this._btnVolver = new System.Windows.Forms.Button();
             this._lblObservaciones = new System.Windows.Forms.Label();
@@ -49,14 +49,14 @@
             this._btnConsultarCopias.Text = "Crear Copias";
             this._btnConsultarCopias.UseVisualStyleBackColor = true;
             // 
-            // _cmbCopias
+            // _cmbPeliculas
             // 
-            this._cmbCopias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._cmbCopias.FormattingEnabled = true;
-            this._cmbCopias.Location = new System.Drawing.Point(231, 62);
-            this._cmbCopias.Name = "_cmbCopias";
-            this._cmbCopias.Size = new System.Drawing.Size(339, 24);
-            this._cmbCopias.TabIndex = 13;
+            this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbPeliculas.FormattingEnabled = true;
+            this._cmbPeliculas.Location = new System.Drawing.Point(231, 62);
+            this._cmbPeliculas.Name = "_cmbPeliculas";
+            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
+            this._cmbPeliculas.TabIndex = 13;
             // 
             // _lblSelecPeli
             // 
@@ -135,9 +135,10 @@
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._lblSelecPeli);
             this.Controls.Add(this._btnConsultarCopias);
-            this.Controls.Add(this._cmbCopias);
+            this.Controls.Add(this._cmbPeliculas);
             this.Name = "FrmIngresarCopia";
             this.Text = "FrmIngresarCopia";
+            this.Load += new System.EventHandler(this.FrmIngresarCopia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +147,7 @@
         #endregion
 
         private System.Windows.Forms.Button _btnConsultarCopias;
-        private System.Windows.Forms.ComboBox _cmbCopias;
+        private System.Windows.Forms.ComboBox _cmbPeliculas;
         private System.Windows.Forms.Label _lblSelecPeli;
         private System.Windows.Forms.Button _btnVolver;
         private System.Windows.Forms.Label _lblObservaciones;

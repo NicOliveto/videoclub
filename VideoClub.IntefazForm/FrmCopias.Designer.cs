@@ -30,7 +30,7 @@
         {
             this._btnActualizarListado = new System.Windows.Forms.Button();
             this._btnConsultarCopias = new System.Windows.Forms.Button();
-            this._lblCopiasParaMostrar = new System.Windows.Forms.Label();
+            this._lblCopiaParaMostrar = new System.Windows.Forms.Label();
             this._cmbCopias = new System.Windows.Forms.ComboBox();
             this._btnMenuPrincipal = new System.Windows.Forms.Button();
             this._btnIngresarCopias = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this._btnActualizarListado.TabIndex = 13;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
+            this._btnActualizarListado.Click += new System.EventHandler(this._btnActualizarListado_Click);
             // 
             // _btnConsultarCopias
             // 
@@ -54,12 +55,12 @@
             this._btnConsultarCopias.Text = "Consultar Copias";
             this._btnConsultarCopias.UseVisualStyleBackColor = true;
             // 
-            // _lblCopiasParaMostrar
+            // _lblCopiaParaMostrar
             // 
-            this._lblCopiasParaMostrar.Location = new System.Drawing.Point(279, 204);
-            this._lblCopiasParaMostrar.Name = "_lblCopiasParaMostrar";
-            this._lblCopiasParaMostrar.Size = new System.Drawing.Size(339, 195);
-            this._lblCopiasParaMostrar.TabIndex = 11;
+            this._lblCopiaParaMostrar.Location = new System.Drawing.Point(217, 196);
+            this._lblCopiaParaMostrar.Name = "_lblCopiaParaMostrar";
+            this._lblCopiaParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblCopiaParaMostrar.TabIndex = 11;
             // 
             // _cmbCopias
             // 
@@ -69,7 +70,6 @@
             this._cmbCopias.Name = "_cmbCopias";
             this._cmbCopias.Size = new System.Drawing.Size(339, 24);
             this._cmbCopias.TabIndex = 10;
-       
             // 
             // _btnMenuPrincipal
             // 
@@ -98,12 +98,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCopias);
-            this.Controls.Add(this._lblCopiasParaMostrar);
+            this.Controls.Add(this._lblCopiaParaMostrar);
             this.Controls.Add(this._cmbCopias);
             this.Controls.Add(this._btnMenuPrincipal);
             this.Controls.Add(this._btnIngresarCopias);
             this.Name = "FrmCopias";
             this.Text = "FrmCopias";
+            this.Load += new System.EventHandler(this.FrmCopias_Load);
             this.ResumeLayout(false);
 
         }
@@ -112,7 +113,7 @@
 
         private System.Windows.Forms.Button _btnActualizarListado;
         private System.Windows.Forms.Button _btnConsultarCopias;
-        private System.Windows.Forms.Label _lblCopiasParaMostrar;
+        private System.Windows.Forms.Label _lblCopiaParaMostrar;
         private System.Windows.Forms.ComboBox _cmbCopias;
         private System.Windows.Forms.Button _btnMenuPrincipal;
         private System.Windows.Forms.Button _btnIngresarCopias;

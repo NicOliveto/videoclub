@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VideoClub.Entidades;
 using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
@@ -29,5 +30,19 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+        private void FrmIngresarCopia_Load(object sender, EventArgs e)
+        {
+            CargarListadoPeliculas();
+        }
+        private void CargarListadoPeliculas()
+        {
+            List<Pelicula> lstPeliculas = _videoClubNegocio.GetListPeliculas();
+            _cmbPeliculas.DataSource = null;
+            _cmbPeliculas.DataSource = lstPeliculas;
+            _cmbPeliculas.DisplayMember = "ComboDisplay";
+            _cmbPeliculas.ValueMember = "Id";
+        }
+
     }
 }

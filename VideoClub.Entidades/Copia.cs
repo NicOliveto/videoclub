@@ -27,6 +27,14 @@ namespace VideoClub.Entidades
         public string Observaciones { get { return _observaciones; } set { _observaciones = value; } }
         public double Precio { get { return _precio; } set { _precio = value; } }
         public DateTime FechaAlta { get { return _fechaAlta; } set { }  }
-        public int IdCopia { get { return _idCopia; } set { _idCopia = value; } } 
+        public int IdCopia { get { return _idCopia; } set { _idCopia = value; } }
+        public string ComboDisplay { get => $" Id Copia: ({this._idCopia}) Id Pelicula:  {this._idPelicula} "; }
+        public override string ToString()
+        {
+            string retorno;
+            retorno = "Observaciones: " + this._observaciones + "\n Precio: " + this._precio + "\n Fecha Alta: " + this._fechaAlta;
+            return retorno;
+
+        }
     }
 }
