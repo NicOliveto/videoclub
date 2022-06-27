@@ -51,7 +51,7 @@ namespace VideoClub.AccesoDatos
             n.Add("director", pelicula.Director);
             n.Add("productora", pelicula.Productora);
             n.Add("genero", pelicula.Genero);
-            n.Add("id", pelicula.Id.ToString());
+            n.Add("id", "881188");
             return n;
         }
     }

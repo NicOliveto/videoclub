@@ -69,5 +69,15 @@ namespace VideoClub.IntefazForm.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frmfondoConsulas {
+            get {
+                object obj = ResourceManager.GetObject("frmfondoConsulas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

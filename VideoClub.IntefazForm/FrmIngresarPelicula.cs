@@ -37,7 +37,7 @@ namespace VideoClub.IntefazForm
             {
                 if (DatosValidos())
                 {
-                    _videoClubNegocio.AltaPelicula(Auxiliar.ConvertirAInteger(_txtAnio.Text), Auxiliar.ConvertirAInteger(_txtDuracion.Text), _txtTitulo.Text, _txtDirector.Text, _txtProductora.Text, _txtGenero.Text, 881188);
+                    _videoClubNegocio.AltaPelicula(Auxiliar.ConvertirAInteger(_txtAnio.Text), Auxiliar.ConvertirAInteger(_txtDuracion.Text), _txtTitulo.Text, _txtDirector.Text, _txtProductora.Text, _txtGenero.Text);
                     Limpiar();
                 }
                 else
@@ -72,6 +72,9 @@ namespace VideoClub.IntefazForm
         private bool DatosValidos()
         {
             bool esValido = true;
+            int duracionMinimaPelicula = 10;
+            int duracionMaximaPelicula = 300;
+            int anioMinimoPelicula = 1810;
 
             if (!(Validador.ValidarStringEspecial(_txtTitulo.Text)))
             {
@@ -91,13 +94,13 @@ namespace VideoClub.IntefazForm
                 _txtGenero.BackColor = Color.Red;
             } else _txtGenero.BackColor = Color.White;
 
-            if (!(Validador.ValidarStringNumericoMinMax(_txtDuracion.Text,10, 300)))
+            if (!(Validador.ValidarStringNumericoMinMax(_txtDuracion.Text,duracionMinimaPelicula,duracionMaximaPelicula)))
             {
                 esValido=false;
                 _txtDuracion.BackColor = Color.Red;
             } else _txtDuracion.BackColor= Color.White;
 
-           if (!(Validador.ValidarStringNumericoMinMax(_txtAnio.Text, 1850, DateTime.Now.Year)))
+           if (!(Validador.ValidarStringNumericoMinMax(_txtAnio.Text, anioMinimoPelicula, DateTime.Now.Year)))
             {   
                 esValido = false;
                 _txtAnio.BackColor = Color.Red;

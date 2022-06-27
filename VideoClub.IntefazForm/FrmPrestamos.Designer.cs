@@ -154,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.frmfondoConsulas;
             this.ClientSize = new System.Drawing.Size(1294, 432);
             this.Controls.Add(this._lblVerCliente);
             this.Controls.Add(this.label1);

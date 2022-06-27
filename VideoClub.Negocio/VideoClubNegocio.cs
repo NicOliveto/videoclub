@@ -174,9 +174,9 @@ namespace VideoClub.Negocio
                 throw new Exception(transaction.error);
         }
 
-        public void AltaPelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idPelicula)
+        public void AltaPelicula(int anio, int duracion, string titulo, string director, string productora, string genero)
         {
-            Pelicula pelicula = new Pelicula(anio, duracion, titulo, director, productora, genero, idPelicula);
+            Pelicula pelicula = new Pelicula(anio, duracion, titulo, director, productora, genero);
             TransactionResult transaction = _peliculaDatos.Insertar(pelicula);
 
             if (!transaction.isOk)

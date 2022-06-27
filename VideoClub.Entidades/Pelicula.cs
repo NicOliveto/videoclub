@@ -16,15 +16,14 @@ namespace VideoClub.Entidades
         private string _genero;
         private int _idPelicula;
 
-        public Pelicula(int anio, int duracion, string titulo, string director, string productora, string genero, int idPelicula)
+        public Pelicula(int anio, int duracion, string titulo, string director, string productora, string genero)
         {
             _anio = anio;
             _duracion = duracion;
             _titulo = titulo;
             _director = director;
             _productora = productora;
-            _genero = genero;
-            _idPelicula = idPelicula;
+            _genero = genero;            
         }
 
         public int Anio { get { return _anio; } set { _anio = value; } }
