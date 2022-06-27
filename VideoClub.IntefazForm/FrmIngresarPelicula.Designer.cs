@@ -60,7 +60,7 @@
             this._lblGenero.Name = "_lblGenero";
             this._lblGenero.Size = new System.Drawing.Size(171, 22);
             this._lblGenero.TabIndex = 37;
-            this._lblGenero.Text = "Genero:";
+            this._lblGenero.Text = "Género:";
             // 
             // _lblProductora
             // 
@@ -76,7 +76,7 @@
             this._lblDuracion.Name = "_lblDuracion";
             this._lblDuracion.Size = new System.Drawing.Size(171, 22);
             this._lblDuracion.TabIndex = 35;
-            this._lblDuracion.Text = "Duracion:";
+            this._lblDuracion.Text = "Duracion (en minutos):";
             // 
             // _lblAnio
             // 
@@ -101,7 +101,7 @@
             this._lblTitulo.Name = "_lblTitulo";
             this._lblTitulo.Size = new System.Drawing.Size(171, 22);
             this._lblTitulo.TabIndex = 32;
-            this._lblTitulo.Text = "Titulo:";
+            this._lblTitulo.Text = "Título:";
             // 
             // _txtGenero
             // 
