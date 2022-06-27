@@ -25,24 +25,69 @@ namespace VideoClub.Negocio
 
 
         /*********Metodos de consultas de datos**********/
-        public List<Cliente> GetListClientes()
+        public List<Cliente> ConsultarClientes()
         {
             List<Cliente> clientes = _clienteDatos.TraerClientes();
             return clientes;
         }
-        public List<Copia> GetListCopias()
+
+        public List<Copia> ConsultarCopias()
         {
             List<Copia> copias = _copiaDatos.TraerCopias();
             return copias;
         }
 
-        public List<Prestamo> GetListPrestamosPorIdPelicula(int idPelicula)
+        public List<Pelicula> ConsultarPeliculas()
+        {
+            List<Pelicula> peliculas = _peliculaDatos.TraerPeliculas();
+            return peliculas;
+        }
+
+        public List<Prestamo> ConsultarPrestamos()
+        {
+            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
+            return prestamos;
+        }
+
+        public Cliente ConsultarClientePorIdCliente(int idCliente)
+        {
+            foreach (Cliente cliente in ConsultarClientes())
+            {
+                if (idCliente.ToString() == cliente.Id)
+                    return cliente;
+            }
+
+            return null;
+        }
+
+        public List<Copia> ConsultarCopiasPorIdPelicula(int idPelicula)
         {
             List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
-            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
+            return copias;
+        }
+
+        public Pelicula ConsultarPeliculaPorIdPelicula(int idPelicula)
+        {
+            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idPelicula);
+            return pelicula;
+        }
+
+        public Prestamo ConsultarPrestamoPorIdPrestamo(int idPrestamo)
+        {
+            foreach (Prestamo prestamo in ConsultarPrestamos())
+            {
+                if (prestamo.IdPrestamo == idPrestamo)
+                    return prestamo;
+            }
+            return null;
+        }
+
+        public List<Prestamo> ConsultarPrestamosPorIdPelicula(int idPelicula)
+        {
+            List<Prestamo> prestamos = ConsultarPrestamos();
             List<Prestamo> resultado = new List<Prestamo>();
 
-            foreach (Copia copia in copias)
+            foreach (Copia copia in ConsultarCopiasPorIdPelicula(idPelicula))
             {
                 List<Prestamo> lst = prestamos.FindAll(x => x.IdCopia == copia.IdCopia && x.Abierto == true);
                 resultado.AddRange(lst);
@@ -51,83 +96,33 @@ namespace VideoClub.Negocio
             return resultado;
         }
 
-        public List<Copia> GetListCopiasPorIdPelicula(int idPelicula)
+        public List<Prestamo> ConsultarPrestamosPorCondicion(bool condicion)
         {
-            List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
-            return copias;
-        }
-
-        public Pelicula GetPeliculaPorIdPelicula(int idPelicula)
-        {
-            Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idPelicula);
-            return pelicula;
-        }
-
-        public Cliente GetClienteByIdCliente(int idCliente)
-        {                                 
-            foreach (Cliente cliente in GetListClientes())
+            List<Prestamo> prestamos = new List<Prestamo>();
+            foreach (Prestamo prestamo in ConsultarPrestamos())
             {
-                if (idCliente.ToString() == cliente.Id)
-                    return cliente;
+                if (prestamo.Abierto == condicion)
+                {
+                    prestamos.Add(prestamo);
+                }
             }
 
-            return null;
-        }
-        public List<Prestamo> GetListPrestamos()
-        {
-            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
             return prestamos;
         }
 
-        public Prestamo GetPrestamoPorIdPrestamo(int IdPrestamo)
+        public List<Prestamo> ConsultarPrestamosPorIdCliente(int idcliente)
         {
-            foreach (Prestamo prestamo in GetListPrestamos())
+            List<Prestamo> resultado = new List<Prestamo>();
+            foreach (Prestamo prestamo in ConsultarPrestamos())
             {
-                if (prestamo.IdPrestamo == IdPrestamo)
-                    return prestamo;
-            }
-            return null;
-        }
-        public List<Prestamo> GetListPrestamosAbiertos()
-        {
-            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
-            List<Prestamo> PrestamosAbiertos = new List<Prestamo>();
-            foreach (Prestamo prestamo in prestamos)
-            {
-                if(prestamo.Abierto == true)
+                if (idcliente == prestamo.IdCliente)
                 {
-                    PrestamosAbiertos.Add(prestamo);
+                    resultado.Add(prestamo);
                 }
             }
 
-            return PrestamosAbiertos;
+            return resultado;
         }
-        public List<Prestamo> GetListPrestamosCerrados()
-        {
-
-            List<Prestamo> prestamos = _prestamoDatos.TraerPrestamos();
-            List<Prestamo> PrestamosCerrados = new List<Prestamo>();
-            foreach (Prestamo prestamo in prestamos)
-            {
-                if (prestamo.Abierto == false)
-                {
-                    PrestamosCerrados.Add(prestamo);
-                }
-            }
-
-            return PrestamosCerrados;
-        }
-        public List<Pelicula> GetListPeliculas()
-        {
-            List<Pelicula> peliculas = _peliculaDatos.TraerPeliculas();
-            return peliculas;
-        }
-
-
-
-        /*********Metodos de reportes**********/
-
-
 
 
         /*********Metodos de insertado de datos**********/

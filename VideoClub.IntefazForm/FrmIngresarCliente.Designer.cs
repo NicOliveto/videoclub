@@ -1,6 +1,6 @@
 ﻿namespace VideoClub.IntefazForm
 {
-    partial class FrmIngrearCliente
+    partial class FrmIngresarCliente
     {
         /// <summary>
         /// Required designer variable.

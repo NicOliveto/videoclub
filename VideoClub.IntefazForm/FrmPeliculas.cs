@@ -52,7 +52,7 @@ namespace VideoClub.IntefazForm
 
         private void CargarListadoPeliculas()
         {
-            List<Pelicula> lstPeliculas = _videoClubNegocio.GetListPeliculas();
+            List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
             _cmbPeliculas.DataSource = null;
             _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";
@@ -62,7 +62,7 @@ namespace VideoClub.IntefazForm
         private void _btnConsultarPeliculas_Click(object sender, EventArgs e)
         {
             int idPelicula = Convert.ToInt32(_cmbPeliculas.SelectedValue);
-            Pelicula pelicula = _videoClubNegocio.GetPeliculaPorIdPelicula(idPelicula);
+            Pelicula pelicula = _videoClubNegocio.ConsultarPeliculaPorIdPelicula(idPelicula);
 
             if (pelicula != null)
             {

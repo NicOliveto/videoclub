@@ -40,18 +40,21 @@
             // 
             // _btnAltaPrestamo
             // 
-            this._btnAltaPrestamo.Location = new System.Drawing.Point(222, 373);
+            this._btnAltaPrestamo.Location = new System.Drawing.Point(250, 466);
+            this._btnAltaPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnAltaPrestamo.Name = "_btnAltaPrestamo";
-            this._btnAltaPrestamo.Size = new System.Drawing.Size(166, 65);
+            this._btnAltaPrestamo.Size = new System.Drawing.Size(187, 81);
             this._btnAltaPrestamo.TabIndex = 17;
             this._btnAltaPrestamo.Text = "Alta Prestamo";
             this._btnAltaPrestamo.UseVisualStyleBackColor = true;
+            this._btnAltaPrestamo.Click += new System.EventHandler(this._btnAltaPrestamo_click);
             // 
             // _btnVolverPrestamo
             // 
-            this._btnVolverPrestamo.Location = new System.Drawing.Point(12, 373);
+            this._btnVolverPrestamo.Location = new System.Drawing.Point(14, 466);
+            this._btnVolverPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnVolverPrestamo.Name = "_btnVolverPrestamo";
-            this._btnVolverPrestamo.Size = new System.Drawing.Size(166, 65);
+            this._btnVolverPrestamo.Size = new System.Drawing.Size(187, 81);
             this._btnVolverPrestamo.TabIndex = 16;
             this._btnVolverPrestamo.Text = "Volver";
             this._btnVolverPrestamo.UseVisualStyleBackColor = true;
@@ -61,56 +64,59 @@
             // 
             this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientes.FormattingEnabled = true;
-            this._cmbClientes.Location = new System.Drawing.Point(222, 49);
+            this._cmbClientes.Location = new System.Drawing.Point(250, 61);
+            this._cmbClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._cmbClientes.Name = "_cmbClientes";
-            this._cmbClientes.Size = new System.Drawing.Size(339, 24);
+            this._cmbClientes.Size = new System.Drawing.Size(381, 28);
             this._cmbClientes.TabIndex = 18;
             // 
             // _cmbPeliculas
             // 
             this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbPeliculas.FormattingEnabled = true;
-            this._cmbPeliculas.Location = new System.Drawing.Point(222, 93);
+            this._cmbPeliculas.Location = new System.Drawing.Point(250, 116);
+            this._cmbPeliculas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._cmbPeliculas.Name = "_cmbPeliculas";
-            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
+            this._cmbPeliculas.Size = new System.Drawing.Size(381, 28);
             this._cmbPeliculas.TabIndex = 19;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(222, 137);
+            this.textBox1.Location = new System.Drawing.Point(250, 171);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 22);
+            this.textBox1.Size = new System.Drawing.Size(381, 26);
             this.textBox1.TabIndex = 20;
             // 
             // _lblClientePrestamo
             // 
-            this._lblClientePrestamo.Location = new System.Drawing.Point(39, 49);
+            this._lblClientePrestamo.Location = new System.Drawing.Point(44, 61);
             this._lblClientePrestamo.Name = "_lblClientePrestamo";
-            this._lblClientePrestamo.Size = new System.Drawing.Size(153, 23);
+            this._lblClientePrestamo.Size = new System.Drawing.Size(172, 29);
             this._lblClientePrestamo.TabIndex = 21;
             this._lblClientePrestamo.Text = "Cliente:";
             // 
             // _lblPlazoPrestamo
             // 
-            this._lblPlazoPrestamo.Location = new System.Drawing.Point(39, 140);
+            this._lblPlazoPrestamo.Location = new System.Drawing.Point(44, 175);
             this._lblPlazoPrestamo.Name = "_lblPlazoPrestamo";
-            this._lblPlazoPrestamo.Size = new System.Drawing.Size(183, 23);
+            this._lblPlazoPrestamo.Size = new System.Drawing.Size(206, 29);
             this._lblPlazoPrestamo.TabIndex = 22;
             this._lblPlazoPrestamo.Text = "Plazo (días) de prestamo:";
             // 
             // _lblPeliculaPrestamo
             // 
-            this._lblPeliculaPrestamo.Location = new System.Drawing.Point(39, 93);
+            this._lblPeliculaPrestamo.Location = new System.Drawing.Point(44, 116);
             this._lblPeliculaPrestamo.Name = "_lblPeliculaPrestamo";
-            this._lblPeliculaPrestamo.Size = new System.Drawing.Size(153, 23);
+            this._lblPeliculaPrestamo.Size = new System.Drawing.Size(172, 29);
             this._lblPeliculaPrestamo.TabIndex = 23;
             this._lblPeliculaPrestamo.Text = "Pelicula: ";
             // 
             // FrmIngresarPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this._lblPeliculaPrestamo);
             this.Controls.Add(this._lblPlazoPrestamo);
             this.Controls.Add(this._lblClientePrestamo);
@@ -119,6 +125,7 @@
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._btnAltaPrestamo);
             this.Controls.Add(this._btnVolverPrestamo);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmIngresarPrestamo";
             this.Text = "FrmIngresarPrestamo";
             this.Load += new System.EventHandler(this.FrmIngresarPrestamo_Load);

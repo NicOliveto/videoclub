@@ -35,7 +35,7 @@ namespace VideoClub.IntefazForm
         }
         private void CargarListadoClientes()
         {
-            List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
+            List<Cliente> lstClientes = _videoClubNegocio.ConsultarClientes();
             _cmbClientes.DataSource = null;
             _cmbClientes.DataSource = lstClientes;
             _cmbClientes.DisplayMember = "ComboDisplay";
@@ -53,7 +53,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnIngresarClientes_Click(object sender, EventArgs e)
         {
-            FrmIngrearCliente frmIngresoCliente = new FrmIngrearCliente(this);
+            FrmIngresarCliente frmIngresoCliente = new FrmIngresarCliente(this);
             frmIngresoCliente.Show();
 
             this.Hide();
@@ -62,21 +62,19 @@ namespace VideoClub.IntefazForm
        
 
         private void _btnConsultarCliente_Click(object sender, EventArgs e)
-        {
-            
-                int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
-                Cliente cliente = _videoClubNegocio.GetClienteByIdCliente(idCliente);                             
+        {         
+            int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+            Cliente cliente = _videoClubNegocio.ConsultarClientePorIdCliente(idCliente);                             
 
-                if (cliente != null)
-                {
-                    _lblClienteParaMostrar.Text = cliente.ToString();
+            if (cliente != null)
+            {
+                _lblClienteParaMostrar.Text = cliente.ToString();
 
-                }
-                else
-                {
-                    MessageBox.Show("No hay informacion del cliente seleccionado");
-                }          
-                           
+            }
+            else
+            {
+                MessageBox.Show("No hay informacion del cliente seleccionado");
+            }                      
         }
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)

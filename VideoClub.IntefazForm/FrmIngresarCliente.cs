@@ -11,10 +11,10 @@ using VideoClub.Negocio;
 
 namespace VideoClub.IntefazForm
 {
-    public partial class FrmIngrearCliente : Form
+    public partial class FrmIngresarCliente : Form
     {
         private VideoClubNegocio _videoClubNegocio;
-        public FrmIngrearCliente(Form padre)
+        public FrmIngresarCliente(Form padre)
         {
             InitializeComponent();
 
@@ -22,7 +22,6 @@ namespace VideoClub.IntefazForm
 
             this.Owner = padre;
         }
-
 
         private void _btnVolverClientes_Click(object sender, EventArgs e)
         {
@@ -32,7 +31,6 @@ namespace VideoClub.IntefazForm
 
         private void _btnAltaCliente_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (DatosValidos())
@@ -40,32 +38,17 @@ namespace VideoClub.IntefazForm
                     _videoClubNegocio.AltaCliente(_txtNombre.Text, _txtApellido.Text, 1122335544/*_txtDNI*/, _txtMail.Text, _txtDireccion.Text, _txtTelefono.Text, /*_txtFechaNac*/DateTime.Now.AddDays(-5000));
 
                     Limpiar();
-
-
                 }
                 else
                 {
                     MessageBox.Show("Complete correctamente los campos");
                 }
-
-
-
-
-
-
-
-
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Error" + ex.Message);
             }
-
-
-
-
-
         }
 
         private void Limpiar()
@@ -86,6 +69,7 @@ namespace VideoClub.IntefazForm
 
             if (!(Validador.ValidarString(_txtApellido.Text)))
                 return false;
+
             //if (!(Validador VALIDAR DNI!!!) ) !!!!!!!!!!!
             //    return false;
 
@@ -94,21 +78,13 @@ namespace VideoClub.IntefazForm
             
             if (!(Validador.ValidarStringEspecial(_txtDireccion.Text)))
                 return false;
+
             if (!(Validador.ValidarStringNumerico(_txtTelefono.Text)))
                 return false;
+
             //if (VALIDAR FECHA NACIMIENTO)     !!!!!!!!
-
-
-
 
             return true;
         }
-
-
-
-
-
-
-
     }
 }

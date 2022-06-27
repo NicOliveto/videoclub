@@ -47,7 +47,7 @@ namespace VideoClub.IntefazForm
 
         private void CargarListadoClientes()
         {
-            List<Copia> lstCopias = _videoClubNegocio.GetListCopias();
+            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopias();
             _cmbCopias.DataSource = null;
             _cmbCopias.DataSource = lstCopias;
             _cmbCopias.DisplayMember = "ComboDisplay";
