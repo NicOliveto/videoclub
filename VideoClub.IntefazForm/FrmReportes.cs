@@ -24,8 +24,6 @@ namespace VideoClub.IntefazForm
         {
             CargarListadoClientes();
             CargarListadoPeliculas();
-            LimpiarCopia();
-            LimpiarPrestamo();
         }
 
         private void CargarListadoClientes()
@@ -66,6 +64,8 @@ namespace VideoClub.IntefazForm
                 _lstPrestamos.DataSource = null;
                 _lstPrestamos.DataSource = prestamos;
             }
+
+            LimpiarPrestamo();
         }
 
         private void _btnCopiasPorPelicula_Click(object sender, EventArgs e)

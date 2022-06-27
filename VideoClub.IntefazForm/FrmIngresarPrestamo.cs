@@ -33,6 +33,22 @@ namespace VideoClub.IntefazForm
 
         private void _btnAltaPrestamo_click(object sender, EventArgs e)
         {
+            try
+            {
+                int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+                int idCopia = Convert.ToInt32(_cmbCopias.SelectedValue);
+                int plazo = Convert.ToInt32(_lblPlazoPrestamo.Text);
+                DateTime fechaPrestamo = DateTime.Now;
+                DateTime fechaDevTentativa = fechaPrestamo.AddDays(plazo);
+                DateTime fechaDevReal = fechaPrestamo.AddDays(plazo);
+
+                _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo, 
+                    fechaDevTentativa, fechaDevReal);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
         }
 
         private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
@@ -53,10 +69,30 @@ namespace VideoClub.IntefazForm
         private void CargarListadoPeliculas()
         {
             List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
-            _cmbPeliculas.DataSource = null;
-            _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";
             _cmbPeliculas.ValueMember = "Id";
+            _cmbPeliculas.DataSource = null;
+            _cmbPeliculas.DataSource = lstPeliculas;
+        }
+
+        private void CargarListadoCopias(int idpelicula)
+        {
+            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasDisponiblesPorIdPelicula(idpelicula);
+            _cmbCopias.DataSource = null;
+            _cmbCopias.DataSource = lstCopias;
+            _cmbCopias.DisplayMember = "ComboDisplay";
+            _cmbCopias.ValueMember = "Id";
+
+            if (lstCopias.Count == 0)
+                MessageBox.Show("No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString());
+        }
+
+        private void _cmbPeliculas_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (_cmbPeliculas.SelectedIndex != -1)
+            {
+                CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
+            }
         }
     }
 }
