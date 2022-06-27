@@ -86,5 +86,40 @@ namespace VideoClub.IntefazForm
 
             return true;
         }
+
+        private string ConstructorMensaje()
+        {
+            string message = "Los siguientes campos no pueden quedar vacios: \n";
+            if (string.IsNullOrEmpty(_txtNombre.Text))
+            {
+                message += _lblNombre.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtApellido.Text))
+            {
+                message += _lblApellido.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtDireccion.Text))
+            {
+                message += _lblDireccion.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtDNI.Text))
+            {
+                message += _lblDni.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtMail.Text))
+            {
+                message += _lblMail.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtTelefono.Text))
+            {
+                message += _lblTelefono.Text + "\n";
+            }
+            if (string.IsNullOrEmpty(_txtFechaNac.Text))
+            {
+                message += _lblFechaNac.Text + "\n";
+            }
+
+            return message;
+        }
     }
 }
