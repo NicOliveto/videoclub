@@ -49,7 +49,7 @@ namespace VideoClub.AccesoDatos
             n.Add("observaciones", copia.Observaciones);
             n.Add("precio", copia.Precio.ToString());
             n.Add("fechaAlta", copia.FechaAlta.ToString());
-            n.Add("id", copia.IdCopia.ToString());
+            n.Add("id", copia.Id.ToString());
             return n;
         }
     }

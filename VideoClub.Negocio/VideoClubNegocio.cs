@@ -60,6 +60,17 @@ namespace VideoClub.Negocio
             return null;
         }
 
+        public Copia ConsultarCopiaPorIdCopia(int idCopia)
+        {
+            foreach (Copia copia in ConsultarCopias())
+            {
+                if (idCopia == copia.Id)
+                    return copia;
+            }
+
+            return null;
+        }
+
         public List<Copia> ConsultarCopiasPorIdPelicula(int idPelicula)
         {
             List<Copia> copias = _copiaDatos.TraerCopiaPorIdPelicula(idPelicula);
@@ -89,7 +100,7 @@ namespace VideoClub.Negocio
 
             foreach (Copia copia in ConsultarCopiasPorIdPelicula(idPelicula))
             {
-                List<Prestamo> lst = prestamos.FindAll(x => x.IdCopia == copia.IdCopia && x.Abierto == true);
+                List<Prestamo> lst = prestamos.FindAll(x => x.IdCopia == copia.Id && x.Abierto == true);
                 resultado.AddRange(lst);
             }
 

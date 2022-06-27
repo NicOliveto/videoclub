@@ -38,9 +38,10 @@
             // 
             // _btnActualizarListado
             // 
-            this._btnActualizarListado.Location = new System.Drawing.Point(617, 156);
+            this._btnActualizarListado.Location = new System.Drawing.Point(694, 195);
+            this._btnActualizarListado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnActualizarListado.Name = "_btnActualizarListado";
-            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.Size = new System.Drawing.Size(145, 56);
             this._btnActualizarListado.TabIndex = 13;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
@@ -48,34 +49,38 @@
             // 
             // _btnConsultarCopias
             // 
-            this._btnConsultarCopias.Location = new System.Drawing.Point(54, 136);
+            this._btnConsultarCopias.Location = new System.Drawing.Point(61, 170);
+            this._btnConsultarCopias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnConsultarCopias.Name = "_btnConsultarCopias";
-            this._btnConsultarCopias.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarCopias.Size = new System.Drawing.Size(177, 79);
             this._btnConsultarCopias.TabIndex = 12;
             this._btnConsultarCopias.Text = "Consultar Copias";
             this._btnConsultarCopias.UseVisualStyleBackColor = true;
+            this._btnConsultarCopias.Click += new System.EventHandler(this._btnConsultarCopias_Click);
             // 
             // _lblCopiaParaMostrar
             // 
-            this._lblCopiaParaMostrar.Location = new System.Drawing.Point(217, 196);
+            this._lblCopiaParaMostrar.Location = new System.Drawing.Point(244, 245);
             this._lblCopiaParaMostrar.Name = "_lblCopiaParaMostrar";
-            this._lblCopiaParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblCopiaParaMostrar.Size = new System.Drawing.Size(381, 244);
             this._lblCopiaParaMostrar.TabIndex = 11;
             // 
             // _cmbCopias
             // 
             this._cmbCopias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbCopias.FormattingEnabled = true;
-            this._cmbCopias.Location = new System.Drawing.Point(217, 156);
+            this._cmbCopias.Location = new System.Drawing.Point(244, 195);
+            this._cmbCopias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._cmbCopias.Name = "_cmbCopias";
-            this._cmbCopias.Size = new System.Drawing.Size(339, 24);
+            this._cmbCopias.Size = new System.Drawing.Size(381, 28);
             this._cmbCopias.TabIndex = 10;
             // 
             // _btnMenuPrincipal
             // 
-            this._btnMenuPrincipal.Location = new System.Drawing.Point(54, 296);
+            this._btnMenuPrincipal.Location = new System.Drawing.Point(61, 370);
+            this._btnMenuPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnMenuPrincipal.Name = "_btnMenuPrincipal";
-            this._btnMenuPrincipal.Size = new System.Drawing.Size(157, 63);
+            this._btnMenuPrincipal.Size = new System.Drawing.Size(177, 79);
             this._btnMenuPrincipal.TabIndex = 9;
             this._btnMenuPrincipal.Text = "Menu Principal";
             this._btnMenuPrincipal.UseVisualStyleBackColor = true;
@@ -83,9 +88,10 @@
             // 
             // _btnIngresarCopias
             // 
-            this._btnIngresarCopias.Location = new System.Drawing.Point(54, 51);
+            this._btnIngresarCopias.Location = new System.Drawing.Point(61, 64);
+            this._btnIngresarCopias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnIngresarCopias.Name = "_btnIngresarCopias";
-            this._btnIngresarCopias.Size = new System.Drawing.Size(157, 63);
+            this._btnIngresarCopias.Size = new System.Drawing.Size(177, 79);
             this._btnIngresarCopias.TabIndex = 8;
             this._btnIngresarCopias.Text = "Ingresar Copias";
             this._btnIngresarCopias.UseVisualStyleBackColor = true;
@@ -93,15 +99,16 @@
             // 
             // FrmCopias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCopias);
             this.Controls.Add(this._lblCopiaParaMostrar);
             this.Controls.Add(this._cmbCopias);
             this.Controls.Add(this._btnMenuPrincipal);
             this.Controls.Add(this._btnIngresarCopias);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmCopias";
             this.Text = "FrmCopias";
             this.Load += new System.EventHandler(this.FrmCopias_Load);
