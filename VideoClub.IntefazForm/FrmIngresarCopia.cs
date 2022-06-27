@@ -14,8 +14,8 @@ namespace VideoClub.IntefazForm
 {
     public partial class FrmIngresarCopia : Form
     {
-
         private VideoClubNegocio _videoClubNegocio;
+
         public FrmIngresarCopia(Form padre)
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace VideoClub.IntefazForm
         {
             CargarListadoPeliculas();
         }
+
         private void CargarListadoPeliculas()
         {
             List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
