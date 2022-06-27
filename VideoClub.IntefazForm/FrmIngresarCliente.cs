@@ -31,6 +31,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnAltaCliente_Click(object sender, EventArgs e)
         {
+           // DateTime fechaValida;
             try
             {
                 if (DatosValidos())
@@ -114,10 +115,10 @@ namespace VideoClub.IntefazForm
             } else _txtTelefono.BackColor= Color.White;
 
 
-            //if (!(Validador.ValidarFecha(_txtFechaNac.Text, aux))) VALIDAR QUE SEA 
+            //if (!(Validador.ValidarFecha(_txtFechaNac.Text, out fechaValida)))
             //{
-            //esValido = false;
-             //  _txtFechaNac.BackColor = Color.Red;
+            //    esValido = false;
+            //    _txtFechaNac.BackColor = Color.Red;
 
             //} else _txtFechaNac.BackColor = Color.White;
 

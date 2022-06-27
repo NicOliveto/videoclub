@@ -30,5 +30,30 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+        private void _btnAltaPelicula_Click(object sender, EventArgs e) { }
+        //{
+        //    try
+        //    {
+        //        if 
+
+
+
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
+
+
+
+
+
+
+
     }
 }

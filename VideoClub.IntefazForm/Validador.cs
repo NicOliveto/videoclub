@@ -49,6 +49,7 @@ namespace VideoClub.IntefazForm
 
         }
 
+
        
 
         public static bool ValidarFecha(string fecha, out DateTime fechaValidada)

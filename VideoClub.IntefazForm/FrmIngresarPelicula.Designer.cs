@@ -107,6 +107,7 @@
             this._btnAltaPelicula.TabIndex = 39;
             this._btnAltaPelicula.Text = "Alta Pelicula";
             this._btnAltaPelicula.UseVisualStyleBackColor = true;
+            this._btnAltaPelicula.Click += new System.EventHandler(this._btnAltaPelicula_Click);
             // 
             // _lblGenero
             // 
