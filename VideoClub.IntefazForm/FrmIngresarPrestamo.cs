@@ -35,15 +35,26 @@ namespace VideoClub.IntefazForm
         {
             try
             {
-                int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
-                int idCopia = Convert.ToInt32(_cmbCopias.SelectedValue);
-                int plazo = Convert.ToInt32(_lblPlazoPrestamo.Text);
-                DateTime fechaPrestamo = DateTime.Now;
-                DateTime fechaDevTentativa = fechaPrestamo.AddDays(plazo);
-                DateTime fechaDevReal = fechaPrestamo.AddDays(plazo);
+                if (Validador.ValidarStringNumerico(_tbPlazo.Text))
+                {
+                    int plazo = Convert.ToInt32(_tbPlazo.Text);
+                    int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+                    int idCopia = Convert.ToInt32(_cmbCopias.SelectedValue);
+                    DateTime fechaPrestamo = DateTime.Now;
+                    DateTime fechaDevTentativa = fechaPrestamo.AddDays(plazo);
+                    DateTime fechaDevReal = fechaPrestamo.AddDays(plazo);
 
-                _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo, 
-                    fechaDevTentativa, fechaDevReal);
+                    _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo,
+                        fechaDevTentativa, fechaDevReal);
+
+                    MessageBox.Show("Alta realizada correctamente");
+                    _tbPlazo.Text = string.Empty;
+                }
+                else 
+                {
+                    _tbPlazo.BackColor = Color.Red;
+                    MessageBox.Show("Complete el campo plazo correctamente"); 
+                }
             }
             catch (Exception ex)
             {
@@ -93,6 +104,12 @@ namespace VideoClub.IntefazForm
             {
                 CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
             }
+        }
+
+        private void _tbPlazo_TextChanged(object sender, EventArgs e)
+        {
+            if(_tbPlazo.BackColor != Color.White)
+                _tbPlazo.BackColor = Color.White;
         }
     }
 }

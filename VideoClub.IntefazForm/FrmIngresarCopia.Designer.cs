@@ -46,8 +46,9 @@
             this._btnConsultarCopias.Name = "_btnConsultarCopias";
             this._btnConsultarCopias.Size = new System.Drawing.Size(177, 79);
             this._btnConsultarCopias.TabIndex = 14;
-            this._btnConsultarCopias.Text = "Crear Copias";
+            this._btnConsultarCopias.Text = "Crear Copia";
             this._btnConsultarCopias.UseVisualStyleBackColor = true;
+            this._btnConsultarCopias.Click += new System.EventHandler(this._btnConsultarCopias_Click);
             // 
             // _cmbPeliculas
             // 
@@ -116,6 +117,7 @@
             this._txtPrecio.Name = "_txtPrecio";
             this._txtPrecio.Size = new System.Drawing.Size(381, 26);
             this._txtPrecio.TabIndex = 22;
+            this._txtPrecio.TextChanged += new System.EventHandler(this._txtPrecio_TextChanged);
             // 
             // FrmIngresarCopia
             // 

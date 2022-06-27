@@ -23,9 +23,9 @@ namespace VideoClub.IntefazForm
             return false;
         }
 
-        public static bool ValidarStringEspecial(string direccion)
+        public static bool ValidarStringEspecial(string stringParaAnalizar)
         {
-            if (string.IsNullOrEmpty(direccion))
+            if (string.IsNullOrEmpty(stringParaAnalizar))
             {
                 return false;
             }
@@ -33,24 +33,18 @@ namespace VideoClub.IntefazForm
         }
 
         public static bool ValidarStringNumerico(string numero)
-        {
-            
+        {     
             if (string.IsNullOrEmpty(numero))
             {
                 return false;
             }
-
 
             if (numero.All(char.IsDigit))
             {
                 return true;
             }
             else return false;
-
         }
-
-
-       
 
         public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
         {
@@ -74,9 +68,14 @@ namespace VideoClub.IntefazForm
                 //No se pudo convertir los números a formato númerico
                 return false;
             }
+
             //DNI Validado
-            return true;
-            
+            return true;          
+        }
+
+        public static bool ValidarPrecio (string precio, out double numeroPrecio)
+        {
+            return double.TryParse(precio, out numeroPrecio);
         }
     }
 }

@@ -32,7 +32,7 @@
             this._btnVolverPrestamo = new System.Windows.Forms.Button();
             this._cmbClientes = new System.Windows.Forms.ComboBox();
             this._cmbPeliculas = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._tbPlazo = new System.Windows.Forms.TextBox();
             this._lblClientePrestamo = new System.Windows.Forms.Label();
             this._lblPlazoPrestamo = new System.Windows.Forms.Label();
             this._lblPeliculaPrestamo = new System.Windows.Forms.Label();
@@ -83,13 +83,15 @@
             this._cmbPeliculas.TabIndex = 19;
             this._cmbPeliculas.SelectedValueChanged += new System.EventHandler(this._cmbPeliculas_SelectedValueChanged);
             // 
-            // textBox1
+            // _tbPlazo
             // 
-            this.textBox1.Location = new System.Drawing.Point(250, 226);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(381, 26);
-            this.textBox1.TabIndex = 20;
+            this._tbPlazo.BackColor = System.Drawing.SystemColors.Window;
+            this._tbPlazo.Location = new System.Drawing.Point(250, 226);
+            this._tbPlazo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._tbPlazo.Name = "_tbPlazo";
+            this._tbPlazo.Size = new System.Drawing.Size(381, 26);
+            this._tbPlazo.TabIndex = 20;
+            this._tbPlazo.TextChanged += new System.EventHandler(this._tbPlazo_TextChanged);
             // 
             // _lblClientePrestamo
             // 
@@ -143,7 +145,7 @@
             this.Controls.Add(this._lblPeliculaPrestamo);
             this.Controls.Add(this._lblPlazoPrestamo);
             this.Controls.Add(this._lblClientePrestamo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this._tbPlazo);
             this.Controls.Add(this._cmbPeliculas);
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._btnAltaPrestamo);
@@ -163,7 +165,7 @@
         private System.Windows.Forms.Button _btnVolverPrestamo;
         private System.Windows.Forms.ComboBox _cmbClientes;
         private System.Windows.Forms.ComboBox _cmbPeliculas;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox _tbPlazo;
         private System.Windows.Forms.Label _lblClientePrestamo;
         private System.Windows.Forms.Label _lblPlazoPrestamo;
         private System.Windows.Forms.Label _lblPeliculaPrestamo;
