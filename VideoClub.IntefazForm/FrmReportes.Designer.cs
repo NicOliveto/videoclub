@@ -168,7 +168,6 @@
             this._lblIdCopia.Name = "_lblIdCopia";
             this._lblIdCopia.Size = new System.Drawing.Size(227, 20);
             this._lblIdCopia.TabIndex = 16;
-            this._lblIdCopia.Text = "_lblIdCopia";
             // 
             // _lblPrecio
             // 
@@ -177,7 +176,6 @@
             this._lblPrecio.Name = "_lblPrecio";
             this._lblPrecio.Size = new System.Drawing.Size(227, 20);
             this._lblPrecio.TabIndex = 17;
-            this._lblPrecio.Text = "_lblPrecio";
             // 
             // _lblFechaAlta
             // 
@@ -186,7 +184,6 @@
             this._lblFechaAlta.Name = "_lblFechaAlta";
             this._lblFechaAlta.Size = new System.Drawing.Size(227, 20);
             this._lblFechaAlta.TabIndex = 18;
-            this._lblFechaAlta.Text = "_lblFechaAlta";
             // 
             // _lblObservaciones
             // 
@@ -195,7 +192,6 @@
             this._lblObservaciones.Name = "_lblObservaciones";
             this._lblObservaciones.Size = new System.Drawing.Size(227, 80);
             this._lblObservaciones.TabIndex = 19;
-            this._lblObservaciones.Text = "_lblObservaciones";
             // 
             // label5
             // 
@@ -213,7 +209,6 @@
             this._lblIdCopiaPrestamo.Name = "_lblIdCopiaPrestamo";
             this._lblIdCopiaPrestamo.Size = new System.Drawing.Size(227, 20);
             this._lblIdCopiaPrestamo.TabIndex = 21;
-            this._lblIdCopiaPrestamo.Text = "_lblIdCopiaPrestamo";
             // 
             // label6
             // 
@@ -249,7 +244,6 @@
             this._lblFechaPrestamo.Name = "_lblFechaPrestamo";
             this._lblFechaPrestamo.Size = new System.Drawing.Size(227, 20);
             this._lblFechaPrestamo.TabIndex = 25;
-            this._lblFechaPrestamo.Text = "_lblFechaPrestamo";
             // 
             // _lblFechaDevolucionReal
             // 
@@ -258,7 +252,6 @@
             this._lblFechaDevolucionReal.Name = "_lblFechaDevolucionReal";
             this._lblFechaDevolucionReal.Size = new System.Drawing.Size(227, 20);
             this._lblFechaDevolucionReal.TabIndex = 26;
-            this._lblFechaDevolucionReal.Text = "_lblFechaDevolucionReal";
             // 
             // _lblFechaDevolucionTentativa
             // 
@@ -267,7 +260,6 @@
             this._lblFechaDevolucionTentativa.Name = "_lblFechaDevolucionTentativa";
             this._lblFechaDevolucionTentativa.Size = new System.Drawing.Size(227, 20);
             this._lblFechaDevolucionTentativa.TabIndex = 27;
-            this._lblFechaDevolucionTentativa.Text = "_lblFechaDevolucionTentativa";
             // 
             // FrmReportes
             // 

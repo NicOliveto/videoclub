@@ -149,9 +149,9 @@ namespace VideoClub.Negocio
         }
 
         public void AltaPrestamo(int idCliente, int idCopia, int plazo, bool abierto, DateTime fechaPrestamo, DateTime fechaDevTentativa, 
-            DateTime fechaDevReal, int idPrestamo)
+            DateTime fechaDevReal)
         {
-            Prestamo prestamo = new Prestamo(idCliente, idCopia, plazo, abierto, fechaPrestamo, fechaDevTentativa, fechaDevReal, idPrestamo);
+            Prestamo prestamo = new Prestamo(idCliente, idCopia, plazo, abierto, fechaPrestamo, fechaDevTentativa, fechaDevReal);
             TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
 
             if (!transaction.isOk)

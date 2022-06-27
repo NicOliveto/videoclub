@@ -33,12 +33,29 @@ namespace VideoClub.IntefazForm
 
         private void _btnAltaPrestamo_click(object sender, EventArgs e)
         {
+            try
+            {
+                int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+                int idCopia = Convert.ToInt32(_cmbCopias.SelectedValue);
+                int plazo = Convert.ToInt32(_lblPlazoPrestamo.Text);
+                DateTime fechaPrestamo = DateTime.Now;
+                DateTime fechaDevTentativa = fechaPrestamo.AddDays(plazo);
+                DateTime fechaDevReal = fechaPrestamo.AddDays(plazo);
+
+                _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo, 
+                    fechaDevTentativa, fechaDevReal);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
         }
 
         private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
         {
             CargarListadoClientes();
             CargarListadoPeliculas();
+            CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
         }
 
         private void CargarListadoClientes()
@@ -57,6 +74,15 @@ namespace VideoClub.IntefazForm
             _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";
             _cmbPeliculas.ValueMember = "Id";
+        }
+
+        private void CargarListadoCopias(int idpelicula)
+        {
+            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasPorIdPelicula(idpelicula);
+            _cmbCopias.DataSource = null;
+            _cmbCopias.DataSource = lstCopias;
+            _cmbCopias.DisplayMember = "ComboDisplay";
+            _cmbCopias.ValueMember = "Id";
         }
     }
 }

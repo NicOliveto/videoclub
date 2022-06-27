@@ -36,6 +36,8 @@
             this._lblClientePrestamo = new System.Windows.Forms.Label();
             this._lblPlazoPrestamo = new System.Windows.Forms.Label();
             this._lblPeliculaPrestamo = new System.Windows.Forms.Label();
+            this._lblCopiaPrestamo = new System.Windows.Forms.Label();
+            this._cmbCopias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // _btnAltaPrestamo
@@ -82,7 +84,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(250, 171);
+            this.textBox1.Location = new System.Drawing.Point(250, 226);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(381, 26);
@@ -98,7 +100,7 @@
             // 
             // _lblPlazoPrestamo
             // 
-            this._lblPlazoPrestamo.Location = new System.Drawing.Point(44, 175);
+            this._lblPlazoPrestamo.Location = new System.Drawing.Point(44, 226);
             this._lblPlazoPrestamo.Name = "_lblPlazoPrestamo";
             this._lblPlazoPrestamo.Size = new System.Drawing.Size(206, 29);
             this._lblPlazoPrestamo.TabIndex = 22;
@@ -112,11 +114,31 @@
             this._lblPeliculaPrestamo.TabIndex = 23;
             this._lblPeliculaPrestamo.Text = "Pelicula: ";
             // 
+            // _lblCopiaPrestamo
+            // 
+            this._lblCopiaPrestamo.Location = new System.Drawing.Point(44, 171);
+            this._lblCopiaPrestamo.Name = "_lblCopiaPrestamo";
+            this._lblCopiaPrestamo.Size = new System.Drawing.Size(172, 29);
+            this._lblCopiaPrestamo.TabIndex = 27;
+            this._lblCopiaPrestamo.Text = "Copia: ";
+            // 
+            // _cmbCopias
+            // 
+            this._cmbCopias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbCopias.FormattingEnabled = true;
+            this._cmbCopias.Location = new System.Drawing.Point(250, 171);
+            this._cmbCopias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._cmbCopias.Name = "_cmbCopias";
+            this._cmbCopias.Size = new System.Drawing.Size(381, 28);
+            this._cmbCopias.TabIndex = 26;
+            // 
             // FrmIngresarPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this._lblCopiaPrestamo);
+            this.Controls.Add(this._cmbCopias);
             this.Controls.Add(this._lblPeliculaPrestamo);
             this.Controls.Add(this._lblPlazoPrestamo);
             this.Controls.Add(this._lblClientePrestamo);
@@ -144,5 +166,7 @@
         private System.Windows.Forms.Label _lblClientePrestamo;
         private System.Windows.Forms.Label _lblPlazoPrestamo;
         private System.Windows.Forms.Label _lblPeliculaPrestamo;
+        private System.Windows.Forms.Label _lblCopiaPrestamo;
+        private System.Windows.Forms.ComboBox _cmbCopias;
     }
 }
