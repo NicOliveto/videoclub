@@ -82,6 +82,9 @@ namespace VideoClub.IntefazForm
             _cmbCopias.DataSource = lstCopias;
             _cmbCopias.DisplayMember = "ComboDisplay";
             _cmbCopias.ValueMember = "Id";
+
+            if (lstCopias.Count == 0)
+                MessageBox.Show("No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString());
         }
 
         private void _cmbPeliculas_SelectedValueChanged(object sender, EventArgs e)
