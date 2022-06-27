@@ -70,16 +70,38 @@ namespace VideoClub.IntefazForm
             {
                 esValido = false;
                 _txtTitulo.BackColor = Color.Red;
-            }// else true
+            } else _txtTitulo.BackColor = Color.White;
 
+            if (!(Validador.ValidarString(_txtProductora.Text)))
+            {
+                esValido = false;
+                _txtProductora.BackColor = Color.Red;
+            } else _txtProductora.BackColor = Color.White;
 
-            //if (!(Validador.ValidarString(_txtNombre.Text)))
-            //{
-            //    esValido = false;
-            //    _txtNombre.BackColor = Color.Red;
-            //}
-            //else _txtNombre.BackColor = Color.White;
+            if (!(Validador.ValidarString(_txtGenero.Text)))
+            {
+                esValido = false;
+                _txtGenero.BackColor = Color.Red;
+            } else _txtGenero.BackColor = Color.White;
 
+            if (!(Validador.ValidarStringNumericoMinMax(_txtDuracion.Text,10, 300)))
+            {
+                esValido=false;
+                _txtDuracion.BackColor = Color.Red;
+            } else _txtDuracion.BackColor= Color.White;
+
+           if (!(Validador.ValidarStringNumericoMinMax(_txtAnio.Text, 1850, DateTime.Now.Year)))
+            {   
+                esValido = false;
+                _txtAnio.BackColor = Color.Red;
+            } else _txtAnio.BackColor = Color.White;
+
+           if (!(Validador.ValidarString(_txtDirector.Text)))
+            {
+                esValido = false;
+                _txtDirector.BackColor = Color.Red;
+            } else _txtDirector.BackColor = Color.White;
+                               
 
 
             return esValido;

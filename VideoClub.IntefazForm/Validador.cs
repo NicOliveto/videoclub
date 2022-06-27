@@ -78,5 +78,27 @@ namespace VideoClub.IntefazForm
             return true;
             
         }
+
+
+        public static bool ValidarStringNumericoMinMax (string numeroString, int min, int max)
+        {
+            bool pudeConvertir;
+            bool retorno = true; ;
+            int numero;
+            pudeConvertir = Int32.TryParse(numeroString, out numero);
+            if (pudeConvertir)
+            {
+                if (numero < min || numero > max)
+                {
+                    retorno = false;
+                }
+            } else retorno = false;
+
+
+
+            return retorno;
+
+
+        }
     }
 }
