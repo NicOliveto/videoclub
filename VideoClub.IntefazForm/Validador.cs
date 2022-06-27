@@ -47,9 +47,7 @@ namespace VideoClub.IntefazForm
             int numero = minimo - 1;
             bool pudeConvertir;
 
-
             pudeConvertir = Int32.TryParse(numeroString, out numero);
-
 
             if (!(pudeConvertir))
             {
@@ -63,9 +61,7 @@ namespace VideoClub.IntefazForm
                 return numero;
             }
 
-
             return numero;
-
         }
 
         public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
@@ -73,26 +69,28 @@ namespace VideoClub.IntefazForm
             return DateTime.TryParseExact(fecha, "yyyy-mm-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
         }
 
+        public static int ValidarDni(string numeroString)
+        {
+            int numero = -1;
 
+            //Comprobamos si el DNI tiene 9 digitos
+            if (numeroString.Length != 9)
+            {
+                //No es un DNI Valido
+                return numero;
+            }
 
+            //Intentamos convertir los números del DNI a integer
+            bool pudeConvertir = int.TryParse(numeroString, out int numeroDni);
+            if (!pudeConvertir)
+            {
+                //No se pudo convertir los números a formato númerico
+                return numero;
+            }
 
-        //public static int ValidarDni (string DNIstring)
-        //{
-        //    int retorno = -1;
-        //    bool pudeConvertir;
-
-        //    if (DNIstring.All(char.IsDigit))
-        //    {
-        //        pudeConvertir = Int32.TryParse(numeroString, out numero);
-
-         //}
-
-
-
+            numero = numeroDni;
+            //DNI Valido
+            return numero;
+        }
     }
-
-
-    
-
-
 }

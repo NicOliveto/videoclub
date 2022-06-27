@@ -14,8 +14,8 @@ namespace VideoClub.IntefazForm
 {
     public partial class FrmIngresarPrestamo : Form
     {
-
         private VideoClubNegocio _videoClubNegocio;
+
         public FrmIngresarPrestamo(Form padre)
         {
             InitializeComponent();
@@ -30,27 +30,33 @@ namespace VideoClub.IntefazForm
             this.Owner.Show();
             this.Close();
         }
+
+        private void _btnAltaPrestamo_click(object sender, EventArgs e)
+        {
+        }
+
         private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
         {
             CargarListadoClientes();
             CargarListadoPeliculas();
         }
+
         private void CargarListadoClientes()
         {
-            List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
+            List<Cliente> lstClientes = _videoClubNegocio.ConsultarClientes();
             _cmbClientes.DataSource = null;
             _cmbClientes.DataSource = lstClientes;
             _cmbClientes.DisplayMember = "ComboDisplay";
             _cmbClientes.ValueMember = "Id";
         }
+
         private void CargarListadoPeliculas()
         {
-            List<Pelicula> lstPeliculas = _videoClubNegocio.GetListPeliculas();
+            List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
             _cmbPeliculas.DataSource = null;
             _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";
             _cmbPeliculas.ValueMember = "Id";
         }
-
     }
 }

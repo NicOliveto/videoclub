@@ -37,7 +37,7 @@ namespace VideoClub.IntefazForm
         }
         private void CargarListadoPeliculas()
         {
-            List<Pelicula> lstPeliculas = _videoClubNegocio.GetListPeliculas();
+            List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
             _cmbPeliculas.DataSource = null;
             _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";

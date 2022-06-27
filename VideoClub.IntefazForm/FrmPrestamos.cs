@@ -43,7 +43,7 @@ namespace VideoClub.IntefazForm
         }
         private void CargarListadoClientes()
         {
-            List<Cliente> lstClientes = _videoClubNegocio.GetListClientes();
+            List<Cliente> lstClientes = _videoClubNegocio.ConsultarClientes();
             _cmbClientes.DataSource = null;
             _cmbClientes.DataSource = lstClientes;
             _cmbClientes.DisplayMember = "ComboDisplay";
@@ -54,7 +54,7 @@ namespace VideoClub.IntefazForm
 
         private void CargarListadoPrestamosAbiertos()
         {
-            List<Prestamo> lstPrestamosAbiertos = _videoClubNegocio.GetListPrestamosAbiertos();
+            List<Prestamo> lstPrestamosAbiertos = _videoClubNegocio.ConsultarPrestamosPorCondicion(true);
             _cmbPrestamosAbiertos.DataSource = null;
             _cmbPrestamosAbiertos.DataSource = lstPrestamosAbiertos;
             _cmbPrestamosAbiertos.DisplayMember = "ComboDisplay";
@@ -64,7 +64,7 @@ namespace VideoClub.IntefazForm
 
         private void CargarListadoPrestamosCerrados()
         {
-            List<Prestamo> lstPrestamosCerrados = _videoClubNegocio.GetListPrestamosCerrados();
+            List<Prestamo> lstPrestamosCerrados = _videoClubNegocio.ConsultarPrestamosPorCondicion(false);
             _cmbPrestamosCerrados.DataSource = null;
             _cmbPrestamosCerrados.DataSource = lstPrestamosCerrados;
             _cmbPrestamosCerrados.DisplayMember = "ComboDisplay";
@@ -79,7 +79,7 @@ namespace VideoClub.IntefazForm
         private void _btnConsultarPrestamoAbierto_Click(object sender, EventArgs e)
         {
             int idPrestamo = Convert.ToInt32(_cmbPrestamosAbiertos.SelectedValue);
-            Prestamo prestamo = _videoClubNegocio.GetPrestamoPorIdPrestamo(idPrestamo);
+            Prestamo prestamo = _videoClubNegocio.ConsultarPrestamoPorIdPrestamo(idPrestamo);
             if (prestamo != null)
             {
                 _lblPrestamoAbierto.Text = prestamo.ToStringAbierto();
@@ -94,7 +94,7 @@ namespace VideoClub.IntefazForm
         private void _btnConsultarPrestamoCerrado_Click(object sender, EventArgs e)
         {
             int idPrestamo = Convert.ToInt32(_cmbPrestamosCerrados.SelectedValue);
-            Prestamo prestamo = _videoClubNegocio.GetPrestamoPorIdPrestamo(idPrestamo);
+            Prestamo prestamo = _videoClubNegocio.ConsultarPrestamoPorIdPrestamo(idPrestamo);
             if (prestamo != null)
             {
                 _lblPrestamoCerrado.Text = prestamo.ToStringCerrado();

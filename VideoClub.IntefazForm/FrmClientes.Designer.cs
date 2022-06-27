@@ -38,9 +38,10 @@
             // 
             // _btnIngresarClientes
             // 
-            this._btnIngresarClientes.Location = new System.Drawing.Point(65, 42);
+            this._btnIngresarClientes.Location = new System.Drawing.Point(73, 52);
+            this._btnIngresarClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnIngresarClientes.Name = "_btnIngresarClientes";
-            this._btnIngresarClientes.Size = new System.Drawing.Size(157, 63);
+            this._btnIngresarClientes.Size = new System.Drawing.Size(177, 79);
             this._btnIngresarClientes.TabIndex = 0;
             this._btnIngresarClientes.Text = "Ingresar Clientes";
             this._btnIngresarClientes.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // _btnMenuPrincipal
             // 
-            this._btnMenuPrincipal.Location = new System.Drawing.Point(65, 287);
+            this._btnMenuPrincipal.Location = new System.Drawing.Point(73, 359);
+            this._btnMenuPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnMenuPrincipal.Name = "_btnMenuPrincipal";
-            this._btnMenuPrincipal.Size = new System.Drawing.Size(157, 63);
+            this._btnMenuPrincipal.Size = new System.Drawing.Size(177, 79);
             this._btnMenuPrincipal.TabIndex = 2;
             this._btnMenuPrincipal.Text = "Menu Principal";
             this._btnMenuPrincipal.UseVisualStyleBackColor = true;
@@ -60,24 +62,25 @@
             // 
             this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientes.FormattingEnabled = true;
-            this._cmbClientes.Location = new System.Drawing.Point(228, 147);
+            this._cmbClientes.Location = new System.Drawing.Point(256, 184);
+            this._cmbClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._cmbClientes.Name = "_cmbClientes";
-            this._cmbClientes.Size = new System.Drawing.Size(339, 24);
+            this._cmbClientes.Size = new System.Drawing.Size(381, 28);
             this._cmbClientes.TabIndex = 4;
-          
             // 
             // _lblClienteParaMostrar
             // 
-            this._lblClienteParaMostrar.Location = new System.Drawing.Point(290, 195);
+            this._lblClienteParaMostrar.Location = new System.Drawing.Point(326, 244);
             this._lblClienteParaMostrar.Name = "_lblClienteParaMostrar";
-            this._lblClienteParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblClienteParaMostrar.Size = new System.Drawing.Size(381, 244);
             this._lblClienteParaMostrar.TabIndex = 5;
             // 
             // _btnConsultarCliente
             // 
-            this._btnConsultarCliente.Location = new System.Drawing.Point(65, 127);
+            this._btnConsultarCliente.Location = new System.Drawing.Point(73, 159);
+            this._btnConsultarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnConsultarCliente.Name = "_btnConsultarCliente";
-            this._btnConsultarCliente.Size = new System.Drawing.Size(157, 63);
+            this._btnConsultarCliente.Size = new System.Drawing.Size(177, 79);
             this._btnConsultarCliente.TabIndex = 6;
             this._btnConsultarCliente.Text = "Consultar Cliente";
             this._btnConsultarCliente.UseVisualStyleBackColor = true;
@@ -85,9 +88,10 @@
             // 
             // _btnActualizarListado
             // 
-            this._btnActualizarListado.Location = new System.Drawing.Point(628, 147);
+            this._btnActualizarListado.Location = new System.Drawing.Point(706, 184);
+            this._btnActualizarListado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._btnActualizarListado.Name = "_btnActualizarListado";
-            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.Size = new System.Drawing.Size(145, 56);
             this._btnActualizarListado.TabIndex = 7;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
@@ -95,15 +99,16 @@
             // 
             // FrmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 439);
+            this.ClientSize = new System.Drawing.Size(1009, 549);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCliente);
             this.Controls.Add(this._lblClienteParaMostrar);
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._btnMenuPrincipal);
             this.Controls.Add(this._btnIngresarClientes);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
