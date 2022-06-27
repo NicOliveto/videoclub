@@ -74,7 +74,7 @@ namespace VideoClub.IntefazForm
             int numero = -1;
 
             //Comprobamos si el DNI tiene 9 digitos
-            if (numeroString.Length != 9)
+            if (numeroString.Length != 8 || numeroString.Length != 7)
             {
                 //No es un DNI Valido
                 return numero;

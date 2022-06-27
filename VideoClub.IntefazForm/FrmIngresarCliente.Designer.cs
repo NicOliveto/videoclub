@@ -244,7 +244,7 @@
             this._lblFechaNacError.Size = new System.Drawing.Size(171, 22);
             this._lblFechaNacError.TabIndex = 23;
             // 
-            // FrmIngrearCliente
+            // FrmIngresarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,7 +273,7 @@
             this.Controls.Add(this._txtApellido);
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this._btnVolverClientes);
-            this.Name = "FrmIngrearCliente";
+            this.Name = "FrmIngresarCliente";
             this.Text = "FrmIngresoCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
