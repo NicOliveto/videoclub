@@ -42,27 +42,7 @@ namespace VideoClub.IntefazForm
 
         }
 
-        public static int ConvertirAInteger(int minimo, int maximo, string numeroString)
-        {
-            int numero = minimo - 1;
-            bool pudeConvertir;
-
-            pudeConvertir = Int32.TryParse(numeroString, out numero);
-
-            if (!(pudeConvertir))
-            {
-                numero = -1;
-                return numero;
-            }
-
-            if (numero < minimo || numero > maximo)
-            {
-                numero = -1;
-                return numero;
-            }
-
-            return numero;
-        }
+       
 
         public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
         {
@@ -73,8 +53,8 @@ namespace VideoClub.IntefazForm
         {
             int numero = -1;
 
-            //Comprobamos si el DNI tiene 9 digitos
-            if (numeroString.Length != 9)
+            //Comprobamos si el DNI tiene 8 o 7 digitos
+            if (numeroString.Length != 8 || numeroString.Length != 7)
             {
                 //No es un DNI Valido
                 return numero;
