@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._lblMailError = new System.Windows.Forms.Label();
-            this._lblTelefonoError = new System.Windows.Forms.Label();
-            this._lblDniError = new System.Windows.Forms.Label();
-            this._lblDireccionError = new System.Windows.Forms.Label();
-            this._lblApellidoError = new System.Windows.Forms.Label();
-            this._lblNombreError = new System.Windows.Forms.Label();
             this._btnAltaPelicula = new System.Windows.Forms.Button();
             this._lblGenero = new System.Windows.Forms.Label();
             this._lblProductora = new System.Windows.Forms.Label();
@@ -49,55 +43,6 @@
             this._txtTitulo = new System.Windows.Forms.TextBox();
             this._btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // _lblMailError
-            // 
-            this._lblMailError.ForeColor = System.Drawing.Color.Brown;
-            this._lblMailError.Location = new System.Drawing.Point(570, 186);
-            this._lblMailError.Name = "_lblMailError";
-            this._lblMailError.Size = new System.Drawing.Size(171, 22);
-            this._lblMailError.TabIndex = 45;
-            // 
-            // _lblTelefonoError
-            // 
-            this._lblTelefonoError.ForeColor = System.Drawing.Color.Brown;
-            this._lblTelefonoError.Location = new System.Drawing.Point(570, 158);
-            this._lblTelefonoError.Name = "_lblTelefonoError";
-            this._lblTelefonoError.Size = new System.Drawing.Size(171, 22);
-            this._lblTelefonoError.TabIndex = 44;
-            // 
-            // _lblDniError
-            // 
-            this._lblDniError.ForeColor = System.Drawing.Color.Brown;
-            this._lblDniError.Location = new System.Drawing.Point(570, 127);
-            this._lblDniError.Name = "_lblDniError";
-            this._lblDniError.Size = new System.Drawing.Size(171, 22);
-            this._lblDniError.TabIndex = 43;
-            // 
-            // _lblDireccionError
-            // 
-            this._lblDireccionError.ForeColor = System.Drawing.Color.Brown;
-            this._lblDireccionError.Location = new System.Drawing.Point(570, 99);
-            this._lblDireccionError.Name = "_lblDireccionError";
-            this._lblDireccionError.Size = new System.Drawing.Size(171, 22);
-            this._lblDireccionError.TabIndex = 42;
-            // 
-            // _lblApellidoError
-            // 
-            this._lblApellidoError.ForeColor = System.Drawing.Color.Brown;
-            this._lblApellidoError.Location = new System.Drawing.Point(570, 71);
-            this._lblApellidoError.Name = "_lblApellidoError";
-            this._lblApellidoError.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this._lblApellidoError.Size = new System.Drawing.Size(171, 22);
-            this._lblApellidoError.TabIndex = 41;
-            // 
-            // _lblNombreError
-            // 
-            this._lblNombreError.ForeColor = System.Drawing.Color.Brown;
-            this._lblNombreError.Location = new System.Drawing.Point(570, 46);
-            this._lblNombreError.Name = "_lblNombreError";
-            this._lblNombreError.Size = new System.Drawing.Size(171, 22);
-            this._lblNombreError.TabIndex = 40;
             // 
             // _btnAltaPelicula
             // 
@@ -215,12 +160,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this._lblMailError);
-            this.Controls.Add(this._lblTelefonoError);
-            this.Controls.Add(this._lblDniError);
-            this.Controls.Add(this._lblDireccionError);
-            this.Controls.Add(this._lblApellidoError);
-            this.Controls.Add(this._lblNombreError);
             this.Controls.Add(this._btnAltaPelicula);
             this.Controls.Add(this._lblGenero);
             this.Controls.Add(this._lblProductora);
@@ -243,12 +182,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label _lblMailError;
-        private System.Windows.Forms.Label _lblTelefonoError;
-        private System.Windows.Forms.Label _lblDniError;
-        private System.Windows.Forms.Label _lblDireccionError;
-        private System.Windows.Forms.Label _lblApellidoError;
-        private System.Windows.Forms.Label _lblNombreError;
         private System.Windows.Forms.Button _btnAltaPelicula;
         private System.Windows.Forms.Label _lblGenero;
         private System.Windows.Forms.Label _lblProductora;

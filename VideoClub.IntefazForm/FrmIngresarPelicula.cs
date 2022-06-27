@@ -31,29 +31,62 @@ namespace VideoClub.IntefazForm
             this.Close();
         }
 
-        private void _btnAltaPelicula_Click(object sender, EventArgs e) { }
-        //{
-        //    try
-        //    {
-        //        if 
-
-
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
+        private void _btnAltaPelicula_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
 
 
 
 
+            }
+            catch (Exception ex)
+            {
+
+              MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+
+        private void Limpiar()
+        {
+            _txtTitulo.Text = String.Empty;
+            _txtProductora.Text = String.Empty;
+            _txtGenero.Text = String.Empty;
+            _txtDuracion.Text = String.Empty;   
+            _txtAnio.Text = String.Empty;
+            _txtDirector.Text = String.Empty;
+
+        }
+
+        private bool DatosValidos()
+        {
+            bool esValido = true;
+
+            if (!(Validador.ValidarStringEspecial(_txtTitulo.Text)))
+            {
+                esValido = false;
+                _txtTitulo.BackColor = Color.Red;
+            }// else true
+
+
+            //if (!(Validador.ValidarString(_txtNombre.Text)))
+            //{
+            //    esValido = false;
+            //    _txtNombre.BackColor = Color.Red;
+            //}
+            //else _txtNombre.BackColor = Color.White;
+
+
+
+            return esValido;
+        }
 
 
 
     }
+
 }
