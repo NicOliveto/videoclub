@@ -81,6 +81,7 @@
             this._cmbPeliculas.Name = "_cmbPeliculas";
             this._cmbPeliculas.Size = new System.Drawing.Size(381, 28);
             this._cmbPeliculas.TabIndex = 19;
+            this._cmbPeliculas.SelectedValueChanged += new System.EventHandler(this._cmbPeliculas_SelectedValueChanged);
             // 
             // textBox1
             // 

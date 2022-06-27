@@ -55,7 +55,6 @@ namespace VideoClub.IntefazForm
         {
             CargarListadoClientes();
             CargarListadoPeliculas();
-            CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
         }
 
         private void CargarListadoClientes()
@@ -70,19 +69,27 @@ namespace VideoClub.IntefazForm
         private void CargarListadoPeliculas()
         {
             List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
-            _cmbPeliculas.DataSource = null;
-            _cmbPeliculas.DataSource = lstPeliculas;
             _cmbPeliculas.DisplayMember = "ComboDisplay";
             _cmbPeliculas.ValueMember = "Id";
+            _cmbPeliculas.DataSource = null;
+            _cmbPeliculas.DataSource = lstPeliculas;
         }
 
         private void CargarListadoCopias(int idpelicula)
         {
-            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasPorIdPelicula(idpelicula);
+            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasDisponiblesPorIdPelicula(idpelicula);
             _cmbCopias.DataSource = null;
             _cmbCopias.DataSource = lstCopias;
             _cmbCopias.DisplayMember = "ComboDisplay";
             _cmbCopias.ValueMember = "Id";
+        }
+
+        private void _cmbPeliculas_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (_cmbPeliculas.SelectedIndex != -1)
+            {
+                CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
+            }
         }
     }
 }

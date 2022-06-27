@@ -15,7 +15,7 @@ namespace VideoClub.Negocio
         private PeliculaDatos _peliculaDatos;
         private PrestamoDatos _prestamoDatos;
 
-        public VideoClubNegocio() 
+        public VideoClubNegocio()
         {
             _clienteDatos = new ClienteDatos();
             _copiaDatos = new CopiaDatos();
@@ -77,6 +77,22 @@ namespace VideoClub.Negocio
             return copias;
         }
 
+        public List<Copia> ConsultarCopiasDisponiblesPorIdPelicula(int idPelicula)
+        {
+            List<Prestamo> prestamos = ConsultarPrestamos();
+            List<Copia> resultado = new List<Copia>();
+
+            foreach (Copia copia in ConsultarCopiasPorIdPelicula(idPelicula))
+            {
+                List<Prestamo> lstPrestamos = prestamos.FindAll(x => x.IdCopia == copia.Id && x.Abierto == true);
+
+                if (lstPrestamos.Count == 0)
+                    resultado.Add(copia);
+            }
+
+            return resultado;
+        }
+
         public Pelicula ConsultarPeliculaPorIdPelicula(int idPelicula)
         {
             Pelicula pelicula = _peliculaDatos.TraerPeliculaPorIdPelicula(idPelicula);
@@ -100,7 +116,7 @@ namespace VideoClub.Negocio
 
             foreach (Copia copia in ConsultarCopiasPorIdPelicula(idPelicula))
             {
-                List<Prestamo> lst = prestamos.FindAll(x => x.IdCopia == copia.Id && x.Abierto == true);
+                List<Prestamo> lst = prestamos.FindAll(x => x.IdCopia == copia.Id);  // && x.Abierto == true);
                 resultado.AddRange(lst);
             }
 
