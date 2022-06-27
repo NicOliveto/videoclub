@@ -70,7 +70,7 @@
             // 
             // _lblClienteParaMostrar
             // 
-            this._lblClienteParaMostrar.Location = new System.Drawing.Point(326, 244);
+            this._lblClienteParaMostrar.Location = new System.Drawing.Point(256, 233);
             this._lblClienteParaMostrar.Name = "_lblClienteParaMostrar";
             this._lblClienteParaMostrar.Size = new System.Drawing.Size(381, 244);
             this._lblClienteParaMostrar.TabIndex = 5;

@@ -39,27 +39,17 @@ namespace VideoClub.Entidades
         public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa; } set { _fechaDevolucionTentativa = value; } }
         public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal; } set { _fechaDevolucionReal = value; } }
         public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value; } }
-        public string ToStringAbierto()
-        {
-            string retorno;
-            retorno = "CORREGIR(prestamoabierto)!!!!!!\n Fecha del prestamo: " + this.FechaPrestamo +"\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
-            //retorno = "ID Cliente: " this_idCliente  + " \n ID Copia: " this.IdCopia + "\n Plazo: " + this.Plazo + "\n Fecha del prestamo: " + this.FechaPrestamo +
-            //    "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
-           return retorno;
-        }
-        public string ToStringCerrado()
-        {
-            string retorno;
-            retorno = "CORREGIR(prestamo cerrado)!!!!" + "\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
-            //retorno = "ID Cliente: " this_idCliente + " \n ID Copia: " this.IdCopia + "\n Plazo: " + this.Plazo + "\n Fecha del prestamo: " + this.FechaPrestamo +
-            //   "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
-            return retorno;
-        }
-
-
         public string ComboDisplay { get => $"  ID Prestamo: {this._idPrestamo}  ID Cliente: {this._idCliente}  ID Copia: {this._idCopia}   "; }
 
+        public string ToStringAbierto()
+        {
+           return "CORREGIR(prestamoabierto)!!!!!!\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa; ;
+        }
 
+        public string ToStringCerrado()
+        {
+            return "CORREGIR(prestamo cerrado)!!!!" + "\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal; ;
+        }
     }
 
 }

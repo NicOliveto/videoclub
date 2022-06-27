@@ -14,9 +14,8 @@ namespace VideoClub.IntefazForm
 {
     public partial class FrmCopias : Form
     {
-
-
         private VideoClubNegocio _videoClubNegocio;
+
         public FrmCopias(Form padre)
         {
             InitializeComponent();
@@ -24,6 +23,20 @@ namespace VideoClub.IntefazForm
             _videoClubNegocio = new VideoClubNegocio();
 
             this.Owner = padre;          
+        }
+
+        private void FrmCopias_Load(object sender, EventArgs e)
+        {
+            CargarListadoCopias();
+        }
+
+        private void CargarListadoCopias()
+        {
+            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopias();
+            _cmbCopias.DataSource = null;
+            _cmbCopias.DataSource = lstCopias;
+            _cmbCopias.DisplayMember = "ComboDisplay";
+            _cmbCopias.ValueMember = "Id";
         }
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -37,27 +50,26 @@ namespace VideoClub.IntefazForm
             FrmIngresarCopia frmIngresarCopia = new FrmIngresarCopia(this);
             frmIngresarCopia.Show();
             this.Hide();
-
         }
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
-
+            CargarListadoCopias();
         }
 
-        private void CargarListadoClientes()
+        private void _btnConsultarCopias_Click(object sender, EventArgs e)
         {
-            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopias();
-            _cmbCopias.DataSource = null;
-            _cmbCopias.DataSource = lstCopias;
-            _cmbCopias.DisplayMember = "ComboDisplay";
-            _cmbCopias.ValueMember = "Id";
+            int idCopia = Convert.ToInt32(_cmbCopias.SelectedValue);
+            Copia copia = _videoClubNegocio.ConsultarCopiaPorIdCopia(idCopia);
 
-        }
-
-        private void FrmCopias_Load(object sender, EventArgs e)
-        {
-
+            if (copia != null)
+            {
+                _lblCopiaParaMostrar.Text = copia.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No hay informacion del cliente seleccionado");
+            }
         }
     }
 }
