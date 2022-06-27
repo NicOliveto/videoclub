@@ -34,6 +34,13 @@ namespace VideoClub.IntefazForm
 
         public static bool ValidarStringNumerico(string numero)
         {
+            
+            if (string.IsNullOrEmpty(numero))
+            {
+                return false;
+            }
+
+
             if (numero.All(char.IsDigit))
             {
                 return true;
@@ -49,15 +56,14 @@ namespace VideoClub.IntefazForm
             return DateTime.TryParseExact(fecha, "yyyy-mm-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
         }
 
-        public static int ValidarDni(string numeroString)
-        {
-            int numero = -1;
-
+        public static bool ValidarDni(string numeroString)
+        {        
+            
             //Comprobamos si el DNI tiene 8 o 7 digitos
             if (numeroString.Length != 8 || numeroString.Length != 7)
             {
                 //No es un DNI Valido
-                return numero;
+                return false;
             }
 
             //Intentamos convertir los números del DNI a integer
@@ -65,12 +71,11 @@ namespace VideoClub.IntefazForm
             if (!pudeConvertir)
             {
                 //No se pudo convertir los números a formato númerico
-                return numero;
+                return false;
             }
-
-            numero = numeroDni;
-            //DNI Valido
-            return numero;
+            //DNI Validado
+            return true;
+            
         }
     }
 }

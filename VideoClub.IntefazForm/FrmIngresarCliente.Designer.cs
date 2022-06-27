@@ -44,14 +44,6 @@
             this._lblMail = new System.Windows.Forms.Label();
             this._lblFechaNac = new System.Windows.Forms.Label();
             this._btnAltaCliente = new System.Windows.Forms.Button();
-            this._lblError = new System.Windows.Forms.Label();
-            this._lblNombreError = new System.Windows.Forms.Label();
-            this._lblApellidoError = new System.Windows.Forms.Label();
-            this._lblDireccionError = new System.Windows.Forms.Label();
-            this._lblDniError = new System.Windows.Forms.Label();
-            this._lblTelefonoError = new System.Windows.Forms.Label();
-            this._lblMailError = new System.Windows.Forms.Label();
-            this._lblFechaNacError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnVolverClientes
@@ -180,83 +172,11 @@
             this._btnAltaCliente.UseVisualStyleBackColor = true;
             this._btnAltaCliente.Click += new System.EventHandler(this._btnAltaCliente_Click);
             // 
-            // _lblError
-            // 
-            this._lblError.Location = new System.Drawing.Point(549, 9);
-            this._lblError.Name = "_lblError";
-            this._lblError.Size = new System.Drawing.Size(224, 22);
-            this._lblError.TabIndex = 16;
-            // 
-            // _lblNombreError
-            // 
-            this._lblNombreError.ForeColor = System.Drawing.Color.Brown;
-            this._lblNombreError.Location = new System.Drawing.Point(522, 41);
-            this._lblNombreError.Name = "_lblNombreError";
-            this._lblNombreError.Size = new System.Drawing.Size(171, 22);
-            this._lblNombreError.TabIndex = 17;
-            // 
-            // _lblApellidoError
-            // 
-            this._lblApellidoError.ForeColor = System.Drawing.Color.Brown;
-            this._lblApellidoError.Location = new System.Drawing.Point(522, 69);
-            this._lblApellidoError.Name = "_lblApellidoError";
-            this._lblApellidoError.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this._lblApellidoError.Size = new System.Drawing.Size(171, 22);
-            this._lblApellidoError.TabIndex = 18;
-            // 
-            // _lblDireccionError
-            // 
-            this._lblDireccionError.ForeColor = System.Drawing.Color.Brown;
-            this._lblDireccionError.Location = new System.Drawing.Point(522, 97);
-            this._lblDireccionError.Name = "_lblDireccionError";
-            this._lblDireccionError.Size = new System.Drawing.Size(171, 22);
-            this._lblDireccionError.TabIndex = 19;
-            // 
-            // _lblDniError
-            // 
-            this._lblDniError.ForeColor = System.Drawing.Color.Brown;
-            this._lblDniError.Location = new System.Drawing.Point(522, 125);
-            this._lblDniError.Name = "_lblDniError";
-            this._lblDniError.Size = new System.Drawing.Size(171, 22);
-            this._lblDniError.TabIndex = 20;
-            // 
-            // _lblTelefonoError
-            // 
-            this._lblTelefonoError.ForeColor = System.Drawing.Color.Brown;
-            this._lblTelefonoError.Location = new System.Drawing.Point(522, 156);
-            this._lblTelefonoError.Name = "_lblTelefonoError";
-            this._lblTelefonoError.Size = new System.Drawing.Size(171, 22);
-            this._lblTelefonoError.TabIndex = 21;
-            // 
-            // _lblMailError
-            // 
-            this._lblMailError.ForeColor = System.Drawing.Color.Brown;
-            this._lblMailError.Location = new System.Drawing.Point(522, 184);
-            this._lblMailError.Name = "_lblMailError";
-            this._lblMailError.Size = new System.Drawing.Size(171, 22);
-            this._lblMailError.TabIndex = 22;
-            // 
-            // _lblFechaNacError
-            // 
-            this._lblFechaNacError.ForeColor = System.Drawing.Color.Brown;
-            this._lblFechaNacError.Location = new System.Drawing.Point(522, 212);
-            this._lblFechaNacError.Name = "_lblFechaNacError";
-            this._lblFechaNacError.Size = new System.Drawing.Size(171, 22);
-            this._lblFechaNacError.TabIndex = 23;
-            // 
             // FrmIngresarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 483);
-            this.Controls.Add(this._lblFechaNacError);
-            this.Controls.Add(this._lblMailError);
-            this.Controls.Add(this._lblTelefonoError);
-            this.Controls.Add(this._lblDniError);
-            this.Controls.Add(this._lblDireccionError);
-            this.Controls.Add(this._lblApellidoError);
-            this.Controls.Add(this._lblNombreError);
-            this.Controls.Add(this._lblError);
             this.Controls.Add(this._btnAltaCliente);
             this.Controls.Add(this._lblFechaNac);
             this.Controls.Add(this._lblMail);
@@ -298,13 +218,5 @@
         private System.Windows.Forms.Label _lblMail;
         private System.Windows.Forms.Label _lblFechaNac;
         private System.Windows.Forms.Button _btnAltaCliente;
-        private System.Windows.Forms.Label _lblError;
-        private System.Windows.Forms.Label _lblNombreError;
-        private System.Windows.Forms.Label _lblApellidoError;
-        private System.Windows.Forms.Label _lblDireccionError;
-        private System.Windows.Forms.Label _lblDniError;
-        private System.Windows.Forms.Label _lblTelefonoError;
-        private System.Windows.Forms.Label _lblMailError;
-        private System.Windows.Forms.Label _lblFechaNacError;
     }
 }
