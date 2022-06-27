@@ -24,6 +24,8 @@ namespace VideoClub.IntefazForm
         {
             CargarListadoClientes();
             CargarListadoPeliculas();
+            LimpiarCopia();
+            LimpiarPrestamo();
         }
 
         private void CargarListadoClientes()
@@ -61,6 +63,7 @@ namespace VideoClub.IntefazForm
             }
             else
             {
+                _lstPrestamos.DataSource = null;
                 _lstPrestamos.DataSource = prestamos;
             }
         }
@@ -76,8 +79,47 @@ namespace VideoClub.IntefazForm
             }
             else
             {
+                _lstCopias.DataSource = null;
                 _lstCopias.DataSource = copias;
             }
+
+            LimpiarCopia();
+        }
+
+        private void _lstCopias_Click(object sender, EventArgs e)
+        {
+            Copia copia = (Copia)_lstCopias.SelectedValue;
+
+            _lblIdCopia.Text = copia.Id.ToString();
+            _lblPrecio.Text = copia.Precio.ToString();
+            _lblFechaAlta.Text = copia.FechaAlta.ToString();
+            _lblObservaciones.Text = copia.Observaciones;
+        }
+
+        private void LimpiarCopia()
+        {
+            _lblIdCopia.Text = string.Empty;
+            _lblPrecio.Text = string.Empty;
+            _lblFechaAlta.Text = string.Empty;
+            _lblObservaciones.Text = string.Empty;
+        }
+
+        private void _lstPrestamos_Click(object sender, EventArgs e)
+        {
+            Prestamo prestamo = (Prestamo)_lstPrestamos.SelectedValue;
+
+            _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
+            _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
+            _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
+            _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
+        }
+
+        private void LimpiarPrestamo()
+        {
+            _lblIdCopiaPrestamo.Text = string.Empty;
+            _lblFechaPrestamo.Text = string.Empty;
+            _lblFechaDevolucionReal.Text = string.Empty;
+            _lblFechaDevolucionTentativa.Text = string.Empty;
         }
 
         /*
