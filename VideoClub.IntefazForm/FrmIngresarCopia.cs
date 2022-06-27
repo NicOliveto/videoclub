@@ -45,5 +45,38 @@ namespace VideoClub.IntefazForm
             _cmbPeliculas.ValueMember = "Id";
         }
 
+        private void _btnConsultarCopias_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double precio = 0;
+                if (Validador.ValidarPrecio(_txtPrecio.Text, out precio))
+                {
+                    DateTime fechaAlta = DateTime.Now;
+                    int idpelicula = Convert.ToInt32(_cmbPeliculas.SelectedValue);
+                    _videoClubNegocio.AltaCopia(idpelicula, _txtObservaciones.Text, precio, fechaAlta);
+
+                    MessageBox.Show("Alta realizada correctamente");
+                    _txtObservaciones.Text = string.Empty;
+                    _txtPrecio.Text = string.Empty;
+                }
+                else
+                {
+                    _txtPrecio.BackColor = Color.Red;
+                    MessageBox.Show("Complete correctamente los campos");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
+
+        private void _txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtPrecio.BackColor != Color.White)
+                _txtPrecio.BackColor = Color.White;
+        }
     }
 }

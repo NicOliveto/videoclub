@@ -183,9 +183,9 @@ namespace VideoClub.Negocio
                 throw new Exception(transaction.error);
         }
 
-        public void AltaCopia(int idPelicula, string observaciones, double precio, DateTime fechaAlta, int idCopia)
+        public void AltaCopia(int idPelicula, string observaciones, double precio, DateTime fechaAlta)
         {
-            Copia copia = new Copia(idPelicula, observaciones, precio, fechaAlta, idCopia);
+            Copia copia = new Copia(idPelicula, observaciones, precio, fechaAlta);
             TransactionResult transaction = _copiaDatos.Insertar(copia);
 
             if (!transaction.isOk)
