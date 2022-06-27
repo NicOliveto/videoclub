@@ -35,8 +35,15 @@ namespace VideoClub.IntefazForm
         {
             try
             {
-
-
+                if (DatosValidos())
+                {
+                    _videoClubNegocio.AltaPelicula(Auxiliar.ConvertirAInteger(_txtAnio.Text), Auxiliar.ConvertirAInteger(_txtDuracion.Text), _txtTitulo.Text, _txtDirector.Text, _txtProductora.Text, _txtGenero.Text, 881188);
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Complete correctamente los campos");
+                }
 
 
 

@@ -8,25 +8,11 @@ namespace VideoClub.IntefazForm
 {
     public static class Auxiliar
     {
-        public static int ConvertirAInteger(int minimo, int maximo, string numeroString)
+        public static int ConvertirAInteger(string numeroString)
         {
-            int numero = minimo - 1;
+            int numero; 
             bool pudeConvertir;
-
-            pudeConvertir = Int32.TryParse(numeroString, out numero);
-
-            if (!(pudeConvertir))
-            {
-                numero = -1;
-                return numero;
-            }
-
-            if (numero < minimo || numero > maximo)
-            {
-                numero = -1;
-                return numero;
-            }
-
+            pudeConvertir = Int32.TryParse(numeroString, out numero);                        
             return numero;
         }
 
