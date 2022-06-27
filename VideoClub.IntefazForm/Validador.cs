@@ -82,7 +82,7 @@ namespace VideoClub.IntefazForm
         public static bool ValidarStringNumericoMinMax (string numeroString, int min, int max)
         {
             bool pudeConvertir;
-            bool retorno = true; ;
+            bool retorno = true; 
             int numero;
             pudeConvertir = Int32.TryParse(numeroString, out numero);
             if (pudeConvertir)
