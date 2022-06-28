@@ -62,6 +62,7 @@
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(273, 22);
             this._txtNombre.TabIndex = 1;
+            this._txtNombre.TextChanged += new System.EventHandler(this._txtNombre_TextChanged);
             // 
             // _txtApellido
             // 
@@ -69,6 +70,7 @@
             this._txtApellido.Name = "_txtApellido";
             this._txtApellido.Size = new System.Drawing.Size(273, 22);
             this._txtApellido.TabIndex = 2;
+            this._txtApellido.TextChanged += new System.EventHandler(this._txtApellido_TextChanged);
             // 
             // _txtDireccion
             // 
@@ -76,6 +78,7 @@
             this._txtDireccion.Name = "_txtDireccion";
             this._txtDireccion.Size = new System.Drawing.Size(273, 22);
             this._txtDireccion.TabIndex = 3;
+            this._txtDireccion.TextChanged += new System.EventHandler(this._txtDireccion_TextChanged);
             // 
             // _txtDNI
             // 
@@ -83,6 +86,7 @@
             this._txtDNI.Name = "_txtDNI";
             this._txtDNI.Size = new System.Drawing.Size(273, 22);
             this._txtDNI.TabIndex = 4;
+            this._txtDNI.TextChanged += new System.EventHandler(this._txtDNI_TextChanged);
             // 
             // _txtTelefono
             // 
@@ -90,6 +94,7 @@
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(273, 22);
             this._txtTelefono.TabIndex = 5;
+            this._txtTelefono.TextChanged += new System.EventHandler(this._txtTelefono_TextChanged);
             // 
             // _txtMail
             // 
@@ -97,6 +102,7 @@
             this._txtMail.Name = "_txtMail";
             this._txtMail.Size = new System.Drawing.Size(273, 22);
             this._txtMail.TabIndex = 6;
+            this._txtMail.TextChanged += new System.EventHandler(this._txtMail_TextChanged);
             // 
             // _txtFechaNac
             // 
@@ -104,6 +110,7 @@
             this._txtFechaNac.Name = "_txtFechaNac";
             this._txtFechaNac.Size = new System.Drawing.Size(273, 22);
             this._txtFechaNac.TabIndex = 7;
+            this._txtFechaNac.TextChanged += new System.EventHandler(this._txtFechaNac_TextChanged);
             // 
             // _lblNombre
             // 

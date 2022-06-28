@@ -72,48 +72,93 @@ namespace VideoClub.IntefazForm
                 esValido = false;
                 _txtNombre.BackColor = Color.Red;
             }
-            else _txtNombre.BackColor = Color.White;               
+                        
 
             if (!(Validador.ValidarString(_txtApellido.Text))) 
             {
                 esValido = false;
                 _txtApellido.BackColor = Color.Red;
-            } else _txtApellido.BackColor = Color.White;
+            } 
 
             if (!(Validador.ValidarDni(_txtDNI.Text)))
             {
                 esValido = false;
                 _txtDNI.BackColor = Color.Red;
-            } else _txtDNI.BackColor = Color.White;
+            } 
 
             if (!(Validador.ValidarStringEspecial(_txtMail.Text)))
             {
                 esValido = false;
                 _txtMail.BackColor = Color.Red;
-            } else _txtMail.BackColor = Color.White;
+            } 
                            
             if (!(Validador.ValidarStringEspecial(_txtDireccion.Text)))
             {
                 esValido = false;
                 _txtDireccion.BackColor = Color.Red;
 
-            } else _txtDireccion.BackColor = Color.White;
+            } 
                 
             if (!(Validador.ValidarStringNumerico(_txtTelefono.Text)))
             {
                 esValido = false;
                 _txtTelefono.BackColor = Color.Red;
 
-            } else _txtTelefono.BackColor= Color.White;
+            } 
 
             if (!(Validador.ValidarFecha(_txtFechaNac.Text, out fechaValidada)))
             {
                 esValido = false;
                 _txtFechaNac.BackColor = Color.Red;
 
-            } else _txtFechaNac.BackColor = Color.White;
+            } 
 
             return esValido;
-        }       
+        }
+
+        private void _txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtNombre.BackColor != Color.White)
+                _txtNombre.BackColor = Color.White;
+        }
+
+        private void _txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtApellido.BackColor != Color.White)
+                _txtApellido.BackColor = Color.White;
+        }
+
+        private void _txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtDireccion.BackColor != Color.White)
+                _txtDireccion.BackColor= Color.White;
+
+        }
+
+        private void _txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtDNI.BackColor != Color.White)
+                _txtDNI.BackColor = Color.White;
+
+        }
+
+        private void _txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtTelefono.BackColor != Color.White)
+                _txtTelefono.BackColor = Color.White;
+        }
+
+        private void _txtMail_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtMail.BackColor != Color.White)
+                _txtMail.BackColor = Color.White;
+
+        }
+
+        private void _txtFechaNac_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtFechaNac.BackColor != Color.White)
+                _txtFechaNac.BackColor = Color.White;
+        }
     }
 }

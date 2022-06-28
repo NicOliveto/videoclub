@@ -55,20 +55,21 @@ namespace VideoClub.IntefazForm
         private void CargarListadoPrestamosAbiertos()
         {
             List<Prestamo> lstPrestamosAbiertos = _videoClubNegocio.ConsultarPrestamosPorCondicion(true);
-            _cmbPrestamosAbiertos.DataSource = null;
-            _cmbPrestamosAbiertos.DataSource = lstPrestamosAbiertos;
             _cmbPrestamosAbiertos.DisplayMember = "ComboDisplay";
             _cmbPrestamosAbiertos.ValueMember = "IdPrestamo";
+            _cmbPrestamosAbiertos.DataSource = null;
+            _cmbPrestamosAbiertos.DataSource = lstPrestamosAbiertos;            
 
         }
 
         private void CargarListadoPrestamosCerrados()
         {
             List<Prestamo> lstPrestamosCerrados = _videoClubNegocio.ConsultarPrestamosPorCondicion(false);
-            _cmbPrestamosCerrados.DataSource = null;
-            _cmbPrestamosCerrados.DataSource = lstPrestamosCerrados;
             _cmbPrestamosCerrados.DisplayMember = "ComboDisplay";
             _cmbPrestamosCerrados.ValueMember = "IdPrestamo";
+            _cmbPrestamosCerrados.DataSource = null;
+            _cmbPrestamosCerrados.DataSource = lstPrestamosCerrados;
+            
         }
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)

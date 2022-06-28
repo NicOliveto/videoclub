@@ -38,7 +38,6 @@
             this._lblPrestamoAbierto = new System.Windows.Forms.Label();
             this._lblPrestamoCerrado = new System.Windows.Forms.Label();
             this._cmbClientes = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this._lblVerCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -133,15 +132,6 @@
             this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 14;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
-            // 
             // _lblVerCliente
             // 
             this._lblVerCliente.Location = new System.Drawing.Point(755, 29);
@@ -157,7 +147,6 @@
             this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.frmfondoConsulas;
             this.ClientSize = new System.Drawing.Size(1294, 432);
             this.Controls.Add(this._lblVerCliente);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._lblPrestamoCerrado);
             this.Controls.Add(this._lblPrestamoAbierto);
@@ -172,7 +161,6 @@
             this.Text = "FrmPrestamos";
             this.Load += new System.EventHandler(this.FrmPrestamos_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,7 +176,6 @@
         private System.Windows.Forms.Label _lblPrestamoAbierto;
         private System.Windows.Forms.Label _lblPrestamoCerrado;
         private System.Windows.Forms.ComboBox _cmbClientes;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label _lblVerCliente;
     }
 }

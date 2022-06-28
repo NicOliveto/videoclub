@@ -65,7 +65,7 @@ namespace VideoClub.IntefazForm
         private void FrmIngresarPrestamo_Load(object sender, EventArgs e)
         {
             CargarListadoClientes();
-            CargarListadoPeliculas();
+            CargarListadoPeliculas();            
         }
 
         private void CargarListadoClientes()
@@ -110,6 +110,16 @@ namespace VideoClub.IntefazForm
         {
             if(_tbPlazo.BackColor != Color.White)
                 _tbPlazo.BackColor = Color.White;
+        }
+
+        private void _cmbCopias_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (_cmbCopias.SelectedIndex != -1)
+                
+            {
+                Copia copia = _videoClubNegocio.ConsultarCopiaPorIdCopia(Convert.ToInt32(_cmbCopias.SelectedValue));                
+                _lblPrecioCopia.Text = copia.Precio.ToString();
+            }
         }
     }
 }

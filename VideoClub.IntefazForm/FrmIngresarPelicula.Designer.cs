@@ -109,6 +109,7 @@
             this._txtGenero.Name = "_txtGenero";
             this._txtGenero.Size = new System.Drawing.Size(273, 22);
             this._txtGenero.TabIndex = 30;
+            this._txtGenero.TextChanged += new System.EventHandler(this._txtGenero_TextChanged);
             // 
             // _txtProductora
             // 
@@ -116,6 +117,7 @@
             this._txtProductora.Name = "_txtProductora";
             this._txtProductora.Size = new System.Drawing.Size(273, 22);
             this._txtProductora.TabIndex = 29;
+            this._txtProductora.TextChanged += new System.EventHandler(this._txtProductora_TextChanged);
             // 
             // _txtDuracion
             // 
@@ -123,6 +125,7 @@
             this._txtDuracion.Name = "_txtDuracion";
             this._txtDuracion.Size = new System.Drawing.Size(273, 22);
             this._txtDuracion.TabIndex = 28;
+            this._txtDuracion.TextChanged += new System.EventHandler(this._txtDuracion_TextChanged);
             // 
             // _txtAnio
             // 
@@ -130,6 +133,7 @@
             this._txtAnio.Name = "_txtAnio";
             this._txtAnio.Size = new System.Drawing.Size(273, 22);
             this._txtAnio.TabIndex = 27;
+            this._txtAnio.TextChanged += new System.EventHandler(this._txtAnio_TextChanged);
             // 
             // _txtDirector
             // 
@@ -137,6 +141,7 @@
             this._txtDirector.Name = "_txtDirector";
             this._txtDirector.Size = new System.Drawing.Size(273, 22);
             this._txtDirector.TabIndex = 26;
+            this._txtDirector.TextChanged += new System.EventHandler(this._txtDirector_TextChanged);
             // 
             // _txtTitulo
             // 
@@ -144,6 +149,7 @@
             this._txtTitulo.Name = "_txtTitulo";
             this._txtTitulo.Size = new System.Drawing.Size(273, 22);
             this._txtTitulo.TabIndex = 25;
+            this._txtTitulo.TextChanged += new System.EventHandler(this._txtTitulo_TextChanged);
             // 
             // _btnVolver
             // 

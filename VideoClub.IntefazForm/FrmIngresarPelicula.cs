@@ -75,45 +75,81 @@ namespace VideoClub.IntefazForm
             {
                 esValido = false;
                 _txtTitulo.BackColor = Color.Red;
-            } else _txtTitulo.BackColor = Color.White;
+            } 
 
             if (!(Validador.ValidarString(_txtProductora.Text)))
             {
                 esValido = false;
                 _txtProductora.BackColor = Color.Red;
-            } else _txtProductora.BackColor = Color.White;
+            } 
 
             if (!(Validador.ValidarString(_txtGenero.Text)))
             {
                 esValido = false;
                 _txtGenero.BackColor = Color.Red;
-            } else _txtGenero.BackColor = Color.White;
+            } 
 
             if (!(Validador.ValidarStringNumericoMinMax(_txtDuracion.Text,duracionMinimaPelicula,duracionMaximaPelicula)))
             {
                 esValido=false;
                 _txtDuracion.BackColor = Color.Red;
-            } else _txtDuracion.BackColor= Color.White;
+            } 
 
            if (!(Validador.ValidarStringNumericoMinMax(_txtAnio.Text, anioMinimoPelicula, DateTime.Now.Year)))
             {   
                 esValido = false;
                 _txtAnio.BackColor = Color.Red;
-            } else _txtAnio.BackColor = Color.White;
+            } 
 
            if (!(Validador.ValidarString(_txtDirector.Text)))
             {
                 esValido = false;
                 _txtDirector.BackColor = Color.Red;
-            } else _txtDirector.BackColor = Color.White;
+            } 
                                
 
 
             return esValido;
         }
 
+        private void _txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtTitulo.BackColor != Color.White)
+                _txtTitulo.BackColor = Color.White;
 
+        }
 
+        private void _txtDirector_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtDirector.BackColor != Color.White)
+                _txtDirector.BackColor = Color.White;
+        }
+
+        private void _txtAnio_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtAnio.BackColor != Color.White)
+                _txtAnio.BackColor = Color.White;
+        }
+
+        private void _txtDuracion_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtDuracion.BackColor != Color.White)
+                _txtDuracion.BackColor = Color.White;
+
+        }
+
+        private void _txtProductora_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtProductora.BackColor != Color.White)
+                _txtProductora.BackColor = Color.White;
+
+        }
+
+        private void _txtGenero_TextChanged(object sender, EventArgs e)
+        {
+            if (_txtGenero.BackColor != Color.White)
+                _txtGenero.BackColor = Color.White;
+        }
     }
 
 }
