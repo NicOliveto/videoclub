@@ -49,6 +49,8 @@ namespace VideoClub.IntefazForm
 
                     MessageBox.Show("Alta realizada correctamente");
                     _tbPlazo.Text = string.Empty;
+
+                    CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
                 }
                 else 
                 {
