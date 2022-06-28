@@ -35,6 +35,7 @@
             this._btnMenuPrincipal = new System.Windows.Forms.Button();
             this._btnIngresarCopias = new System.Windows.Forms.Button();
             this._cmbPeliculas = new System.Windows.Forms.ComboBox();
+            this._lblNoHayCopia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnActualizarListado
@@ -103,12 +104,21 @@
             this._cmbPeliculas.TabIndex = 14;
             this._cmbPeliculas.SelectedValueChanged += new System.EventHandler(this._cmbPeliculas_SelectedValueChanged);
             // 
+            // _lblNoHayCopia
+            // 
+            this._lblNoHayCopia.AutoSize = true;
+            this._lblNoHayCopia.Location = new System.Drawing.Point(580, 136);
+            this._lblNoHayCopia.Name = "_lblNoHayCopia";
+            this._lblNoHayCopia.Size = new System.Drawing.Size(0, 16);
+            this._lblNoHayCopia.TabIndex = 15;
+            // 
             // FrmCopias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.frmfondoConsulas;
             this.ClientSize = new System.Drawing.Size(1015, 520);
+            this.Controls.Add(this._lblNoHayCopia);
             this.Controls.Add(this._cmbPeliculas);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCopias);
@@ -120,6 +130,7 @@
             this.Text = "FrmCopias";
             this.Load += new System.EventHandler(this.FrmCopias_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +143,6 @@
         private System.Windows.Forms.Button _btnMenuPrincipal;
         private System.Windows.Forms.Button _btnIngresarCopias;
         private System.Windows.Forms.ComboBox _cmbPeliculas;
+        private System.Windows.Forms.Label _lblNoHayCopia;
     }
 }

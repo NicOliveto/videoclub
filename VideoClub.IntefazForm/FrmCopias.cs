@@ -48,7 +48,12 @@ namespace VideoClub.IntefazForm
             _cmbCopias.ValueMember = "Id";
 
             if (lstCopias.Count == 0)
-                MessageBox.Show("No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString());
+            {
+                _lblNoHayCopia.Text = "No hay copias de esta película";
+            }
+            else _lblNoHayCopia.Text = String.Empty;
+                
+
         }
       
 
