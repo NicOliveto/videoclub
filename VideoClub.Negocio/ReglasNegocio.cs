@@ -33,7 +33,7 @@ namespace VideoClub.Negocio
 
         public static bool PlazoFueraRango(int plazo)
         {
-            if (plazo < 1 && plazo > 15)
+            if (plazo < 1 || plazo > 15)
                 return true;
             else return false;
         }
