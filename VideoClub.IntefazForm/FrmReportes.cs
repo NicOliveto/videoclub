@@ -29,19 +29,19 @@ namespace VideoClub.IntefazForm
         private void CargarListadoClientes()
         {
             List<Cliente> lstClientes = _videoClubNegocio.ConsultarClientes();
-            _cmbPrestamoPorCliente.DataSource = null;
-            _cmbPrestamoPorCliente.DataSource = lstClientes;
             _cmbPrestamoPorCliente.DisplayMember = "ComboDisplay";
             _cmbPrestamoPorCliente.ValueMember = "Id";
+            _cmbPrestamoPorCliente.DataSource = null;
+            _cmbPrestamoPorCliente.DataSource = lstClientes;
         }
 
         private void CargarListadoPeliculas()
         {
             List<Pelicula> lstPeliculas = _videoClubNegocio.ConsultarPeliculas();
-            _cmbCopiasPorPelicula.DataSource = null;
-            _cmbCopiasPorPelicula.DataSource = lstPeliculas;
             _cmbCopiasPorPelicula.DisplayMember = "ComboDisplay";
             _cmbCopiasPorPelicula.ValueMember = "Id";
+            _cmbCopiasPorPelicula.DataSource = null;
+            _cmbCopiasPorPelicula.DataSource = lstPeliculas;
         }
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace VideoClub.IntefazForm
                     _lstPrestamos.DataSource = prestamos;
                 }
 
-                LimpiarPrestamo();
+                //LimpiarPrestamo();
             }
             catch (Exception ex)
             {
@@ -92,7 +92,7 @@ namespace VideoClub.IntefazForm
                     _lstCopias.DataSource = copias;
                 }
 
-                LimpiarCopia();
+                //LimpiarCopia();
             }
             catch(Exception ex)
             {
@@ -106,10 +106,13 @@ namespace VideoClub.IntefazForm
             {
                 Copia copia = (Copia)_lstCopias.SelectedValue;
 
-                _lblIdCopia.Text = copia.Id.ToString();
-                _lblPrecio.Text = copia.Precio.ToString();
-                _lblFechaAlta.Text = copia.FechaAlta.ToString();
-                _lblObservaciones.Text = copia.Observaciones;
+                if (copia != null)
+                {
+                    _lblIdCopia.Text = copia.Id.ToString();
+                    _lblPrecio.Text = copia.Precio.ToString();
+                    _lblFechaAlta.Text = copia.FechaAlta.ToString();
+                    _lblObservaciones.Text = copia.Observaciones;
+                }
             }
             catch (Exception ex)
             {
@@ -123,10 +126,13 @@ namespace VideoClub.IntefazForm
             {
                 Prestamo prestamo = (Prestamo)_lstPrestamos.SelectedValue;
 
-                _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
-                _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
-                _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
-                _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
+                if (prestamo != null)
+                {
+                    _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
+                    _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
+                    _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
+                    _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
+                }
             }
             catch (Exception ex)
             {
@@ -140,6 +146,7 @@ namespace VideoClub.IntefazForm
             _lblPrecio.Text = string.Empty;
             _lblFechaAlta.Text = string.Empty;
             _lblObservaciones.Text = string.Empty;
+            _lstCopias.DataSource = null;
         }
 
         private void LimpiarPrestamo()
@@ -148,6 +155,19 @@ namespace VideoClub.IntefazForm
             _lblFechaPrestamo.Text = string.Empty;
             _lblFechaDevolucionReal.Text = string.Empty;
             _lblFechaDevolucionTentativa.Text = string.Empty;
+            _lstPrestamos.DataSource = null;
+        }
+
+        private void _cmbPrestamoPorCliente_SelectedValueChange(object sender, EventArgs e)
+        {
+            if (_cmbPrestamoPorCliente.SelectedIndex != -1)
+                LimpiarPrestamo();
+        }
+
+        private void _cmbCopiasPorPelicula_SelectedValueChange(object sender, EventArgs e)
+        {
+            if (_cmbCopiasPorPelicula.SelectedIndex != -1)
+                LimpiarCopia();
         }
 
         /*

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VideoClub.AccesoDatos;
 using VideoClub.Entidades;
+using VideoClub.Entidades.Excepciones;
 
 namespace VideoClub.Negocio
 {
@@ -103,7 +104,7 @@ namespace VideoClub.Negocio
         {
             foreach (Prestamo prestamo in ConsultarPrestamos())
             {
-                if (prestamo.IdPrestamo == idPrestamo)
+                if (prestamo.Id == idPrestamo)
                     return prestamo;
             }
             return null;
@@ -140,7 +141,8 @@ namespace VideoClub.Negocio
         public List<Prestamo> ConsultarPrestamosPorIdCliente(int idcliente)
         {
             List<Prestamo> resultado = new List<Prestamo>();
-            foreach (Prestamo prestamo in ConsultarPrestamos())
+            List<Prestamo> prestamos = ConsultarPrestamos();
+            foreach (Prestamo prestamo in prestamos)
             {
                 if (idcliente == prestamo.IdCliente)
                 {
@@ -156,23 +158,25 @@ namespace VideoClub.Negocio
         public void AltaCliente(string nombre, string apellido, int dni, string email, 
             string direccion, string telefono, DateTime fechaNac)
         {
+            if (ReglasNegocio.ClienteExiste(dni, ConsultarClientes()))
+                throw new ClienteExistenteException();
+
+            if (ReglasNegocio.ClienteMenorEdad(fechaNac))
+                throw new ClienteMenorEdadException();
+
             Cliente cliente = new Cliente(nombre, apellido, direccion, dni, telefono, email, fechaNac);
+            TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
-            if (Validador.ClienteNoExiste(cliente.DNI, ConsultarClientes()))
-            {
-                TransactionResult transaction = _clienteDatos.Insertar(cliente);
-
-                if (!transaction.isOk)
-                    throw new Exception(transaction.error);
-
-            }
-            else throw new Exception(); // EXEPCION CLIENTE EXISTENTE
-            
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);          
         }
 
         public void AltaPrestamo(int idCliente, int idCopia, int plazo, bool abierto, DateTime fechaPrestamo, DateTime fechaDevTentativa, 
             DateTime fechaDevReal)
         {
+            if (ReglasNegocio.PlazoFueraRango(plazo))
+                throw new PlazoFueraRangoException();
+
             Prestamo prestamo = new Prestamo(idCliente, idCopia, plazo, abierto, fechaPrestamo, fechaDevTentativa, fechaDevReal);
             TransactionResult transaction = _prestamoDatos.Insertar(prestamo);
 
@@ -182,18 +186,14 @@ namespace VideoClub.Negocio
 
         public void AltaPelicula(int anio, int duracion, string titulo, string director, string productora, string genero)
         {
+            if (ReglasNegocio.PeliculaExiste(titulo, ConsultarPeliculas()))
+                throw new PeliculaExistenteException();
+
             Pelicula pelicula = new Pelicula(anio, duracion, titulo, director, productora, genero);
+            TransactionResult transaction = _peliculaDatos.Insertar(pelicula);
 
-            if (Validador.PeliculaNoExiste(pelicula.Titulo, ConsultarPeliculas()))
-            {
-                TransactionResult transaction = _peliculaDatos.Insertar(pelicula);
-
-                if (!transaction.isOk)
-                    throw new Exception(transaction.error);
-
-            }
-            else throw new Exception(); // PELICULA YA EXISTE!!!
-           
+            if (!transaction.isOk)
+                throw new Exception(transaction.error);
         }
 
         public void AltaCopia(int idPelicula, string observaciones, double precio, DateTime fechaAlta)
