@@ -47,15 +47,17 @@ namespace VideoClub.IntefazForm
             _cmbCopias.DisplayMember = "ComboDisplay";
             _cmbCopias.ValueMember = "Id";
 
+
+
             if (lstCopias.Count == 0)
             {
                 _lblNoHayCopia.Text = "No hay copias de esta película";
             }
             else _lblNoHayCopia.Text = String.Empty;
-                
+
 
         }
-      
+
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
         {

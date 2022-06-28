@@ -107,7 +107,7 @@
             // _lblNoHayCopia
             // 
             this._lblNoHayCopia.AutoSize = true;
-            this._lblNoHayCopia.Location = new System.Drawing.Point(580, 136);
+            this._lblNoHayCopia.Location = new System.Drawing.Point(582, 139);
             this._lblNoHayCopia.Name = "_lblNoHayCopia";
             this._lblNoHayCopia.Size = new System.Drawing.Size(0, 16);
             this._lblNoHayCopia.TabIndex = 15;

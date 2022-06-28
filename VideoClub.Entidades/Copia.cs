@@ -28,6 +28,7 @@ namespace VideoClub.Entidades
         public DateTime FechaAlta { get { return _fechaAlta; } set { }  }
         public int Id { get { return _idCopia; } set { _idCopia = value; } }
         public string ComboDisplay { get => $" Id Copia: ({this._idCopia}) Id Pelicula:  {this._idPelicula} "; }
+            
 
         public override string ToString()
         {
