@@ -105,7 +105,11 @@ namespace VideoClub.IntefazForm
 
 
             if (lstCopias.Count == 0)
+            {
                 _lblMessage.Text = "No hay copias disponibles para alquilar de la pelicula seleccionada";
+                _lblPrecioCopia.Text = String.Empty;
+            }
+                
         }
 
         private void _cmbPeliculas_SelectedValueChanged(object sender, EventArgs e)
