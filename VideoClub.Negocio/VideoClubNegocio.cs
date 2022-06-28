@@ -49,11 +49,11 @@ namespace VideoClub.Negocio
             return prestamos;
         }
 
-        public Cliente ConsultarClientePorIdCliente(int idCliente)
+        public Cliente ConsultarClientePorIdCliente(string idCliente)
         {
             foreach (Cliente cliente in ConsultarClientes())
             {
-                if (idCliente.ToString() == cliente.Id)
+                if (idCliente  == cliente.Id)
                     return cliente;
             }
 

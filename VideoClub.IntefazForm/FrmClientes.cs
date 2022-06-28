@@ -55,7 +55,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnConsultarCliente_Click(object sender, EventArgs e)
         {         
-            int idCliente = Convert.ToInt32(_cmbClientes.SelectedValue);
+            string idCliente = (string)_cmbClientes.SelectedValue;
             Cliente cliente = _videoClubNegocio.ConsultarClientePorIdCliente(idCliente);                             
 
             if (cliente != null)
