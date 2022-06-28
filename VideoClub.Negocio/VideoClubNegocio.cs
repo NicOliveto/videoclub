@@ -166,7 +166,7 @@ namespace VideoClub.Negocio
                     throw new Exception(transaction.error);
 
             }
-            else throw new Exception(); // EXEPCION CLIENTE EXISTENTE
+            else throw new Exception(" El cliente ya está cargado en el sistema"); // EXEPCION CLIENTE EXISTENTE
             
         }
 
@@ -192,7 +192,7 @@ namespace VideoClub.Negocio
                     throw new Exception(transaction.error);
 
             }
-            else throw new Exception(); // PELICULA YA EXISTE!!!
+            else throw new Exception(" la pelicula ya está cargada en el sistema"); // excepcion pelicula ya existe 
            
         }
 

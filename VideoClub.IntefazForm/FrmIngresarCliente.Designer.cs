@@ -58,49 +58,49 @@
             // 
             // _txtNombre
             // 
-            this._txtNombre.Location = new System.Drawing.Point(243, 41);
+            this._txtNombre.Location = new System.Drawing.Point(288, 41);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(273, 22);
             this._txtNombre.TabIndex = 1;
             // 
             // _txtApellido
             // 
-            this._txtApellido.Location = new System.Drawing.Point(243, 69);
+            this._txtApellido.Location = new System.Drawing.Point(288, 69);
             this._txtApellido.Name = "_txtApellido";
             this._txtApellido.Size = new System.Drawing.Size(273, 22);
             this._txtApellido.TabIndex = 2;
             // 
             // _txtDireccion
             // 
-            this._txtDireccion.Location = new System.Drawing.Point(243, 97);
+            this._txtDireccion.Location = new System.Drawing.Point(288, 97);
             this._txtDireccion.Name = "_txtDireccion";
             this._txtDireccion.Size = new System.Drawing.Size(273, 22);
             this._txtDireccion.TabIndex = 3;
             // 
             // _txtDNI
             // 
-            this._txtDNI.Location = new System.Drawing.Point(243, 125);
+            this._txtDNI.Location = new System.Drawing.Point(288, 125);
             this._txtDNI.Name = "_txtDNI";
             this._txtDNI.Size = new System.Drawing.Size(273, 22);
             this._txtDNI.TabIndex = 4;
             // 
             // _txtTelefono
             // 
-            this._txtTelefono.Location = new System.Drawing.Point(243, 153);
+            this._txtTelefono.Location = new System.Drawing.Point(288, 153);
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(273, 22);
             this._txtTelefono.TabIndex = 5;
             // 
             // _txtMail
             // 
-            this._txtMail.Location = new System.Drawing.Point(243, 184);
+            this._txtMail.Location = new System.Drawing.Point(288, 184);
             this._txtMail.Name = "_txtMail";
             this._txtMail.Size = new System.Drawing.Size(273, 22);
             this._txtMail.TabIndex = 6;
             // 
             // _txtFechaNac
             // 
-            this._txtFechaNac.Location = new System.Drawing.Point(243, 212);
+            this._txtFechaNac.Location = new System.Drawing.Point(288, 212);
             this._txtFechaNac.Name = "_txtFechaNac";
             this._txtFechaNac.Size = new System.Drawing.Size(273, 22);
             this._txtFechaNac.TabIndex = 7;
@@ -158,7 +158,7 @@
             // 
             this._lblFechaNac.Location = new System.Drawing.Point(12, 212);
             this._lblFechaNac.Name = "_lblFechaNac";
-            this._lblFechaNac.Size = new System.Drawing.Size(225, 22);
+            this._lblFechaNac.Size = new System.Drawing.Size(252, 22);
             this._lblFechaNac.TabIndex = 14;
             this._lblFechaNac.Text = "Fecha de nacimiento: AAAA-MM-DD";
             // 
