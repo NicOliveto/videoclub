@@ -8,6 +8,7 @@ namespace VideoClub.AccesoDatos
 {
     public class ClienteDatos
     {
+
         public List<Cliente> TraerClientes()
         {
             string json2 = WebHelper.Get("cliente/881188"); // trae un texto en formato json de una web

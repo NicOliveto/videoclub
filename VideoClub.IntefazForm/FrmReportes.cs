@@ -130,7 +130,14 @@ namespace VideoClub.IntefazForm
                 {
                     _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
                     _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
-                    _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
+                    if (prestamo.Abierto == true)
+                    {
+                     _lblFechaDevolucionReal.Text = String.Empty;
+                    } else
+                    {
+                        _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
+                    }
+                                                           
                     _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
                 }
             }
