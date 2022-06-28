@@ -48,7 +48,7 @@
             // 
             // _btnConsultarPeliculas
             // 
-            this._btnConsultarPeliculas.Location = new System.Drawing.Point(27, 168);
+            this._btnConsultarPeliculas.Location = new System.Drawing.Point(27, 116);
             this._btnConsultarPeliculas.Name = "_btnConsultarPeliculas";
             this._btnConsultarPeliculas.Size = new System.Drawing.Size(157, 63);
             this._btnConsultarPeliculas.TabIndex = 3;
@@ -68,9 +68,9 @@
             // 
             // _btnActualizarListado
             // 
-            this._btnActualizarListado.Location = new System.Drawing.Point(594, 177);
+            this._btnActualizarListado.Location = new System.Drawing.Point(27, 197);
             this._btnActualizarListado.Name = "_btnActualizarListado";
-            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.Size = new System.Drawing.Size(157, 63);
             this._btnActualizarListado.TabIndex = 10;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
@@ -80,14 +80,14 @@
             // 
             this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbPeliculas.FormattingEnabled = true;
-            this._cmbPeliculas.Location = new System.Drawing.Point(208, 188);
+            this._cmbPeliculas.Location = new System.Drawing.Point(208, 136);
             this._cmbPeliculas.Name = "_cmbPeliculas";
             this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
             this._cmbPeliculas.TabIndex = 9;
             // 
             // _lblPeliculaParaMostrar
             // 
-            this._lblPeliculaParaMostrar.Location = new System.Drawing.Point(205, 251);
+            this._lblPeliculaParaMostrar.Location = new System.Drawing.Point(205, 181);
             this._lblPeliculaParaMostrar.Name = "_lblPeliculaParaMostrar";
             this._lblPeliculaParaMostrar.Size = new System.Drawing.Size(342, 187);
             this._lblPeliculaParaMostrar.TabIndex = 11;

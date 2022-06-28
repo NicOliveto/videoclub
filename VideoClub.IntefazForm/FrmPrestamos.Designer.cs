@@ -73,9 +73,9 @@
             // 
             // _btnActualizarListado
             // 
-            this._btnActualizarListado.Location = new System.Drawing.Point(579, 153);
+            this._btnActualizarListado.Location = new System.Drawing.Point(21, 202);
             this._btnActualizarListado.Name = "_btnActualizarListado";
-            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.Size = new System.Drawing.Size(157, 63);
             this._btnActualizarListado.TabIndex = 8;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;

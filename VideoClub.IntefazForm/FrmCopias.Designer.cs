@@ -38,9 +38,9 @@
             // 
             // _btnActualizarListado
             // 
-            this._btnActualizarListado.Location = new System.Drawing.Point(617, 156);
+            this._btnActualizarListado.Location = new System.Drawing.Point(54, 205);
             this._btnActualizarListado.Name = "_btnActualizarListado";
-            this._btnActualizarListado.Size = new System.Drawing.Size(129, 45);
+            this._btnActualizarListado.Size = new System.Drawing.Size(157, 63);
             this._btnActualizarListado.TabIndex = 13;
             this._btnActualizarListado.Text = "Actualizar listado";
             this._btnActualizarListado.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             // _btnMenuPrincipal
             // 
-            this._btnMenuPrincipal.Location = new System.Drawing.Point(54, 296);
+            this._btnMenuPrincipal.Location = new System.Drawing.Point(54, 328);
             this._btnMenuPrincipal.Name = "_btnMenuPrincipal";
             this._btnMenuPrincipal.Size = new System.Drawing.Size(157, 63);
             this._btnMenuPrincipal.TabIndex = 9;
