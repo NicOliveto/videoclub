@@ -98,11 +98,10 @@ namespace VideoClub.IntefazForm
         private void CargarListadoCopias(int idpelicula)
         {
             List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasDisponiblesPorIdPelicula(idpelicula);
-            _cmbCopias.DisplayMember = "ComboDisplay";
-            _cmbCopias.ValueMember = "Id";
             _cmbCopias.DataSource = null;
             _cmbCopias.DataSource = lstCopias;
-
+            _cmbCopias.DisplayMember = "ComboDisplay";
+            _cmbCopias.ValueMember = "Id";
 
             if (lstCopias.Count == 0)
                 _lblMessage.Text = "No hay copias disponibles para alquilar de la pelicula seleccionada";
@@ -125,9 +124,10 @@ namespace VideoClub.IntefazForm
 
         private void _cmbCopias_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (_cmbCopias.SelectedIndex != -1)
-                
+            if (_cmbCopias.SelectedIndex != -1)               
             {
+                _cmbCopias.DisplayMember = "ComboDisplay";
+                _cmbCopias.ValueMember = "Id";
                 Copia copia = _videoClubNegocio.ConsultarCopiaPorIdCopia(Convert.ToInt32(_cmbCopias.SelectedValue));                
                 _lblPrecioCopia.Text = copia.Precio.ToString();
             }
