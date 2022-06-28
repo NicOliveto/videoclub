@@ -71,19 +71,19 @@ namespace VideoClub.IntefazForm
             int duracionMaximaPelicula = 300;
             int anioMinimoPelicula = 1810;
 
-            if (!(Validador.ValidarStringEspecial(_txtTitulo.Text)))
+            if (!(Validador.ValidarStringLetrasNumeros(_txtTitulo.Text)))
             {
                 esValido = false;
                 _txtTitulo.BackColor = Color.Red;
             } 
 
-            if (!(Validador.ValidarString(_txtProductora.Text)))
+            if (!(Validador.ValidarStringLetrasNumeros(_txtProductora.Text)))
             {
                 esValido = false;
                 _txtProductora.BackColor = Color.Red;
             } 
 
-            if (!(Validador.ValidarString(_txtGenero.Text)))
+            if (!(Validador.ValidarStringLetras(_txtGenero.Text)))
             {
                 esValido = false;
                 _txtGenero.BackColor = Color.Red;
@@ -101,7 +101,7 @@ namespace VideoClub.IntefazForm
                 _txtAnio.BackColor = Color.Red;
             } 
 
-           if (!(Validador.ValidarString(_txtDirector.Text)))
+           if (!(Validador.ValidarStringLetras(_txtDirector.Text)))
             {
                 esValido = false;
                 _txtDirector.BackColor = Color.Red;

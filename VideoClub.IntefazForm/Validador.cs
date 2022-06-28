@@ -3,19 +3,34 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace VideoClub.IntefazForm
 {
     public static class Validador
     {
-        public static bool ValidarString(string stringParaAnalizar)
+        public static bool ValidarStringLetras(string stringParaAnalizar)
         {
             if (string.IsNullOrEmpty(stringParaAnalizar))
             {
                 return false;
             }
-            else if (stringParaAnalizar.All(x => char.IsLetter(x) || char.IsWhiteSpace(x) || char.IsPunctuation(x)))
+            else if (stringParaAnalizar.All(x => char.IsLetter(x) || char.IsWhiteSpace(x)))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool ValidarStringLetrasNumeros(string stringParaAnalizar)
+        {
+            if (string.IsNullOrEmpty(stringParaAnalizar))
+            {
+                return false;
+            }
+            else if (stringParaAnalizar.All(x => char.IsLetter(x) || char.IsWhiteSpace(x) || char.IsDigit(x)))
             {
                 return true;
             }
@@ -72,7 +87,6 @@ namespace VideoClub.IntefazForm
             return double.TryParse(precio, out numeroPrecio);
         }
 
-
         public static bool ValidarStringNumericoMinMax (string numeroString, int min, int max)
         {
             bool pudeConvertir;
@@ -87,11 +101,70 @@ namespace VideoClub.IntefazForm
                 }
             } else retorno = false;
 
-
-
             return retorno;
+        }
 
+        public static bool ValidarEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
 
+            try
+            {
+                // Normalize the domain
+                email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examines the domain part of the email and normalizes it.
+                string DomainMapper(Match match)
+                {
+                    // Use IdnMapping class to convert Unicode domain names.
+                    var idn = new IdnMapping();
+
+                    // Pull out and process domain name (throws ArgumentException on invalid)
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(email,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+        }
+
+        public static bool ValidarTelefono(string numero)
+        {
+            if (string.IsNullOrEmpty(numero))
+            {
+                return false;
+            }
+
+            if (numero.Length != 10)
+            {
+                return false;
+            }
+
+            if (numero.All(char.IsDigit))
+            {
+                return true;
+            }
+            else return false;
         }
     }
 }
