@@ -43,6 +43,7 @@ namespace VideoClub.IntefazForm
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
             CargarListadoPeliculas();
+            _lblPeliculaParaMostrar.Text = String.Empty;
         }
 
         private void FrmPeliculas_Load(object sender, EventArgs e)

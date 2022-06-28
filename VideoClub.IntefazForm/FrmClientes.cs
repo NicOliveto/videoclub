@@ -72,6 +72,7 @@ namespace VideoClub.IntefazForm
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
             CargarListadoClientes();
+            _lblClienteParaMostrar.Text = string.Empty;
         }
     }
 }
