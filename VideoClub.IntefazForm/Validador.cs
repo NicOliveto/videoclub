@@ -15,7 +15,7 @@ namespace VideoClub.IntefazForm
             {
                 return false;
             }
-            else if (stringParaAnalizar.All(char.IsLetter))
+            else if (stringParaAnalizar.All(x => char.IsLetter(x) || char.IsWhiteSpace(x) || char.IsPunctuation(x)))
             {
                 return true;
             }
@@ -48,29 +48,23 @@ namespace VideoClub.IntefazForm
 
         public static bool ValidarFecha(string fecha, out DateTime fechaValidada)
         {
-            return DateTime.TryParseExact(fecha, "yyyy-mm-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
+            return DateTime.TryParseExact(fecha, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaValidada);
         }
 
         public static bool ValidarDni(string numeroString)
-        {        
-            
+        {                    
             //Comprobamos si el DNI tiene 8 o 7 digitos
-            if (numeroString.Length != 8 || numeroString.Length != 7)
+            if (numeroString.Length < 7 || numeroString.Length > 8)
             {
                 //No es un DNI Valido
                 return false;
             }
 
-            //Intentamos convertir los números del DNI a integer
-            bool pudeConvertir = int.TryParse(numeroString, out int numeroDni);
-            if (!pudeConvertir)
+            if (numeroString.All(char.IsDigit))
             {
-                //No se pudo convertir los números a formato númerico
-                return false;
+                return true;
             }
-
-            //DNI Validado
-            return true;          
+            else return false;        
         }
 
         public static bool ValidarPrecio (string precio, out double numeroPrecio)

@@ -52,48 +52,86 @@ namespace VideoClub.IntefazForm
 
         private void _btnPrestamosPorCliente_Click(object sender, EventArgs e)
         {
-            int idCliente = Convert.ToInt32(_cmbPrestamoPorCliente.SelectedValue);
-            List<Prestamo> prestamos = _videoClubNegocio.ConsultarPrestamosPorIdCliente(idCliente);
-
-            if (prestamos.Count == 0)
+            try
             {
-                MessageBox.Show("El cliente seleccionado no posee prestamos.");
-            }
-            else
-            {
-                _lstPrestamos.DataSource = null;
-                _lstPrestamos.DataSource = prestamos;
-            }
+                int idCliente = Convert.ToInt32(_cmbPrestamoPorCliente.SelectedValue);
+                List<Prestamo> prestamos = _videoClubNegocio.ConsultarPrestamosPorIdCliente(idCliente);
 
-            LimpiarPrestamo();
+                if (prestamos.Count == 0)
+                {
+                    MessageBox.Show("El cliente seleccionado no posee prestamos.");
+                }
+                else
+                {
+                    _lstPrestamos.DataSource = null;
+                    _lstPrestamos.DataSource = prestamos;
+                }
+
+                LimpiarPrestamo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
         }
 
         private void _btnCopiasPorPelicula_Click(object sender, EventArgs e)
         {
-            int idPelicula = Convert.ToInt32(_cmbCopiasPorPelicula.SelectedValue);
-            List<Copia> copias = _videoClubNegocio.ConsultarCopiasPorIdPelicula(idPelicula);
-
-            if (copias.Count == 0)
+            try
             {
-                MessageBox.Show("La película seleccionada no posee copias.");
-            }
-            else
-            {
-                _lstCopias.DataSource = null;
-                _lstCopias.DataSource = copias;
-            }
+                int idPelicula = Convert.ToInt32(_cmbCopiasPorPelicula.SelectedValue);
+                List<Copia> copias = _videoClubNegocio.ConsultarCopiasPorIdPelicula(idPelicula);
 
-            LimpiarCopia();
+                if (copias.Count == 0)
+                {
+                    MessageBox.Show("La película seleccionada no posee copias.");
+                }
+                else
+                {
+                    _lstCopias.DataSource = null;
+                    _lstCopias.DataSource = copias;
+                }
+
+                LimpiarCopia();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
         }
 
         private void _lstCopias_Click(object sender, EventArgs e)
         {
-            Copia copia = (Copia)_lstCopias.SelectedValue;
+            try
+            {
+                Copia copia = (Copia)_lstCopias.SelectedValue;
 
-            _lblIdCopia.Text = copia.Id.ToString();
-            _lblPrecio.Text = copia.Precio.ToString();
-            _lblFechaAlta.Text = copia.FechaAlta.ToString();
-            _lblObservaciones.Text = copia.Observaciones;
+                _lblIdCopia.Text = copia.Id.ToString();
+                _lblPrecio.Text = copia.Precio.ToString();
+                _lblFechaAlta.Text = copia.FechaAlta.ToString();
+                _lblObservaciones.Text = copia.Observaciones;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
+
+        private void _lstPrestamos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Prestamo prestamo = (Prestamo)_lstPrestamos.SelectedValue;
+
+                _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
+                _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
+                _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
+                _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
         }
 
         private void LimpiarCopia()
@@ -102,16 +140,6 @@ namespace VideoClub.IntefazForm
             _lblPrecio.Text = string.Empty;
             _lblFechaAlta.Text = string.Empty;
             _lblObservaciones.Text = string.Empty;
-        }
-
-        private void _lstPrestamos_Click(object sender, EventArgs e)
-        {
-            Prestamo prestamo = (Prestamo)_lstPrestamos.SelectedValue;
-
-            _lblIdCopiaPrestamo.Text = prestamo.IdCopia.ToString();
-            _lblFechaPrestamo.Text = prestamo.FechaPrestamo.ToString();
-            _lblFechaDevolucionReal.Text = prestamo.FechaDevolucionReal.ToString();
-            _lblFechaDevolucionTentativa.Text = prestamo.FechaDevolucionTentativa.ToString();
         }
 
         private void LimpiarPrestamo()

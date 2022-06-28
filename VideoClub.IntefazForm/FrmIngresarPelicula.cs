@@ -38,24 +38,19 @@ namespace VideoClub.IntefazForm
                 if (DatosValidos())
                 {
                     _videoClubNegocio.AltaPelicula(Auxiliar.ConvertirAInteger(_txtAnio.Text), Auxiliar.ConvertirAInteger(_txtDuracion.Text), _txtTitulo.Text, _txtDirector.Text, _txtProductora.Text, _txtGenero.Text);
+                    MessageBox.Show("Alta realizada correctamente");
                     Limpiar();
                 }
                 else
                 {
                     MessageBox.Show("Complete correctamente los campos");
                 }
-
-
-
             }
             catch (Exception ex)
             {
 
               MessageBox.Show(ex.Message);
             }
-
-
-
         }
 
         private void Limpiar()

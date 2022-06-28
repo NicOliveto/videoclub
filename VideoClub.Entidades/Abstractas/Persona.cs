@@ -22,7 +22,7 @@ namespace VideoClub
         public int DNI { get { return _dni; } set { _dni = value; } }
         public string Telefono { get { return _telefono; } set { _telefono = value; } }
         public string Mail { get { return _mail; } set { _mail = value; } }
-        public DateTime FechaNac { get { return _fechaNac; } set { _fechaNac = value;} }
+        public DateTime FechaNacimiento { get { return _fechaNac; } set { _fechaNac = value;} }
 
         internal abstract string Display();
 

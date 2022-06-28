@@ -31,7 +31,7 @@ namespace VideoClub.Entidades
 
         public override string ToString()
         {
-            return "Observaciones: " + this._observaciones + "\n Precio: " + this._precio + "\n Fecha Alta: " + this._fechaAlta;
+            return " Observaciones: " + this._observaciones + "\n Precio: " + this._precio + "\n Fecha Alta: " + this._fechaAlta;
         }
     }
 }

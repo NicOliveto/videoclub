@@ -61,7 +61,7 @@ namespace VideoClub.AccesoDatos
             n.Add("email", cliente.Mail);
             n.Add("dni", cliente.DNI.ToString());
             n.Add("activo", cliente.CliActivo.ToString());
-            n.Add("fechaNacimiento", cliente.FechaNac.ToString("yyyy-MM-dd"));
+            n.Add("fechaNacimiento", cliente.FechaNacimiento.ToString("yyyy-MM-dd"));
             n.Add("usuario", "881188"); // Nro regsitro FCE-UBA Wepfer
             return n;
         }
