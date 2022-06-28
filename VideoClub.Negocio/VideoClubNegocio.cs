@@ -168,7 +168,7 @@ namespace VideoClub.Negocio
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
 
             if (!transaction.isOk)
-                throw new Exception(transaction.error);          
+                throw new Exception(transaction.error);
         }
 
         public void AltaPrestamo(int idCliente, int idCopia, int plazo, bool abierto, DateTime fechaPrestamo, DateTime fechaDevTentativa, 
