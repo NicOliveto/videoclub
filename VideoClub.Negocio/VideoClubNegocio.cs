@@ -148,7 +148,7 @@ namespace VideoClub.Negocio
             List<Prestamo> prestamos = ConsultarPrestamos();
             foreach (Prestamo prestamo in prestamos)
             {
-                if (idcliente == prestamo.IdCliente)
+                if (idcliente == prestamo.IdCliente && prestamo.IdCopia != 0 && prestamo.Plazo !=0)
                 {
                     resultado.Add(prestamo);
                 }
