@@ -74,7 +74,7 @@ namespace VideoClub.IntefazForm
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
-            CargarListadoPrestamosAbiertos();
+           CargarListadoPrestamosAbiertos();
         }
 
         private void _btnConsultarPrestamoAbierto_Click(object sender, EventArgs e)

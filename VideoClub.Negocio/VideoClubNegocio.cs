@@ -129,10 +129,11 @@ namespace VideoClub.Negocio
 
         public List<Prestamo> ConsultarPrestamosPorCondicion(bool condicion)
         {
+
             List<Prestamo> prestamos = new List<Prestamo>();
             foreach (Prestamo prestamo in ConsultarPrestamos())
             {
-                if (prestamo.Abierto == condicion)
+                if (prestamo.Abierto == condicion && prestamo.IdCopia != 0)
                 {
                     prestamos.Add(prestamo);
                 }
