@@ -39,7 +39,7 @@ namespace VideoClub.AccesoDatos
             n.Add("fechaPrestamo", prestamo.FechaPrestamo.ToString());
             n.Add("fechaDevolucionTentativa", prestamo.FechaDevolucionTentativa.ToString());
             n.Add("fechaDevolucionReal", prestamo.FechaDevolucionReal.ToString());
-            n.Add("id", prestamo.IdPrestamo.ToString());
+            n.Add("id", prestamo.Id.ToString());
             return n;
         }
     }

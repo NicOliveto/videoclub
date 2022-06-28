@@ -82,7 +82,7 @@ namespace VideoClub.IntefazForm
             Prestamo prestamo = _videoClubNegocio.ConsultarPrestamoPorIdPrestamo(idPrestamo);
             if (prestamo != null)
             {
-                _lblPrestamoAbierto.Text = prestamo.ToString(true);
+                _lblPrestamoAbierto.Text = prestamo.Display(true);
 
             }
             else
@@ -97,7 +97,7 @@ namespace VideoClub.IntefazForm
             Prestamo prestamo = _videoClubNegocio.ConsultarPrestamoPorIdPrestamo(idPrestamo);
             if (prestamo != null)
             {
-                _lblPrestamoCerrado.Text = prestamo.ToString(false);
+                _lblPrestamoCerrado.Text = prestamo.Display(false);
             }
             else
             {

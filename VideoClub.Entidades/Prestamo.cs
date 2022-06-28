@@ -38,19 +38,26 @@ namespace VideoClub.Entidades
         public DateTime FechaPrestamo { get { return _fechaPrestamo; } set { _fechaPrestamo = value; } }
         public DateTime FechaDevolucionTentativa { get { return _fechaDevolucionTentativa; } set { _fechaDevolucionTentativa = value; } }
         public DateTime FechaDevolucionReal { get { return _fechaDevolucionReal; } set { _fechaDevolucionReal = value; } }
-        public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value; } }
+        public int Id { get { return _idPrestamo; } set { _idPrestamo = value; } }
         public string ComboDisplay { get => $"  ID Prestamo: {this._idPrestamo}  ID Cliente: {this._idCliente}  ID Copia: {this._idCopia}   "; }
 
-        public string ToString(bool condicion)
+        public string Display(bool condicion)
         {
             if (condicion)
             {
-                return " Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
+                return " Fecha del prestamo: " + this._fechaPrestamo + "\n Fecha devolución tentativa:" + this._fechaDevolucionTentativa;
             } 
             else
             {
-                return " Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa: " + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
+                return " Fecha del prestamo: " + this._fechaPrestamo + "\n Fecha devolución tentativa: " + this._fechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
             }
+        }
+
+        public override string ToString()
+        {
+            //return " Plazo: " + this._plazo + "\n Abierto: " + this._abierto ? "SI" : "NO" + "\n Fecha prestamo: " + this._fechaPrestamo + "\n Fecha devolución tentativa:" + this._fechaDevolucionTentativa;
+            return string.Format(" Plazo: {0}\n Abierto: {1}\n Fecha Prestamo: {2}\n Fecha devolucion tentativa: {3}\n",
+                this._plazo, this._abierto ? "SI" : "NO", this._fechaPrestamo, this._fechaDevolucionTentativa);
         }
     }
 }

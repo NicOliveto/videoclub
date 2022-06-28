@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoClub
+namespace VideoClub.Entidades.Abstractas
 {
     public abstract class Persona
     {
