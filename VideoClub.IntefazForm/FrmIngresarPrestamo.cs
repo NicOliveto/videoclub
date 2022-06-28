@@ -43,14 +43,21 @@ namespace VideoClub.IntefazForm
                     DateTime fechaPrestamo = DateTime.Now;
                     DateTime fechaDevTentativa = fechaPrestamo.AddDays(plazo);
                     DateTime fechaDevReal = fechaPrestamo.AddDays(plazo);
+                    if (idCopia == 0)
+                    {
+                        MessageBox.Show("Seleccione una copia");
+                    } else
+                    {
+                        _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo,
+                            fechaDevTentativa, fechaDevReal);
 
-                    _videoClubNegocio.AltaPrestamo(idCliente, idCopia, plazo, true, fechaPrestamo,
-                        fechaDevTentativa, fechaDevReal);
+                        MessageBox.Show("Alta realizada correctamente");
+                        _tbPlazo.Text = string.Empty;
 
-                    MessageBox.Show("Alta realizada correctamente");
-                    _tbPlazo.Text = string.Empty;
+                        CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
 
-                    CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
+                    }
+
                 }
                 else 
                 {
