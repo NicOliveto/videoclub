@@ -60,9 +60,10 @@
             // 
             // _lblCopiaParaMostrar
             // 
+            this._lblCopiaParaMostrar.AutoSize = true;
             this._lblCopiaParaMostrar.Location = new System.Drawing.Point(217, 196);
             this._lblCopiaParaMostrar.Name = "_lblCopiaParaMostrar";
-            this._lblCopiaParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblCopiaParaMostrar.Size = new System.Drawing.Size(0, 16);
             this._lblCopiaParaMostrar.TabIndex = 11;
             // 
             // _cmbCopias

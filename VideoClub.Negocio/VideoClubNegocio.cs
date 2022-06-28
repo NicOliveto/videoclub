@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using VideoClub.AccesoDatos;
@@ -24,6 +25,8 @@ namespace VideoClub.Negocio
             _prestamoDatos = new PrestamoDatos();
         }
 
+      
+    
 
         /*********Metodos de consultas de datos**********/
         public List<Cliente> ConsultarClientes()
@@ -204,5 +207,9 @@ namespace VideoClub.Negocio
             if (!transaction.isOk)
                 throw new Exception(transaction.error);
         }
+
+
+
+
     }
 }

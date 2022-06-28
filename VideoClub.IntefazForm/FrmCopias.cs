@@ -52,6 +52,7 @@ namespace VideoClub.IntefazForm
             if (lstCopias.Count == 0)
             {
                 _lblNoHayCopia.Text = "No hay copias de esta película";
+                _lblCopiaParaMostrar.Text = String.Empty;
             }
             else _lblNoHayCopia.Text = String.Empty;
 

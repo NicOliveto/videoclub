@@ -26,9 +26,19 @@ namespace VideoClub.AccesoDatos.Utilidades
 
         public static string Get(string url)
         {
-            var uri = rutaBase + url;
-            var responseString = client.DownloadString(uri);
-            return responseString;
+            try
+            {
+                var uri = rutaBase + url;
+                var responseString = client.DownloadString(uri);
+                return responseString;
+
+            }
+            catch (Exception ex)
+            {
+
+                return "{ \"isOk\":false,\"id\":-1,\"error\":\"Error en el llamado al servicio\"}";
+            }
+            
         }
 
         public static string Post(string url, NameValueCollection parametros)

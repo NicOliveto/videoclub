@@ -67,9 +67,10 @@
             // 
             // _lblClienteParaMostrar
             // 
+            this._lblClienteParaMostrar.AutoSize = true;
             this._lblClienteParaMostrar.Location = new System.Drawing.Point(228, 186);
             this._lblClienteParaMostrar.Name = "_lblClienteParaMostrar";
-            this._lblClienteParaMostrar.Size = new System.Drawing.Size(339, 195);
+            this._lblClienteParaMostrar.Size = new System.Drawing.Size(0, 16);
             this._lblClienteParaMostrar.TabIndex = 5;
             // 
             // _btnConsultarCliente
@@ -109,6 +110,7 @@
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

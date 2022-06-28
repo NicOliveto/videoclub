@@ -56,7 +56,7 @@ namespace VideoClub.IntefazForm
         {
             List<Prestamo> lstPrestamosAbiertos = _videoClubNegocio.ConsultarPrestamosPorCondicion(true);
             _cmbPrestamosAbiertos.DisplayMember = "ComboDisplay";
-            _cmbPrestamosAbiertos.ValueMember = "IdPrestamo";
+            _cmbPrestamosAbiertos.ValueMember = "Id";
             _cmbPrestamosAbiertos.DataSource = null;
             _cmbPrestamosAbiertos.DataSource = lstPrestamosAbiertos;            
 
@@ -66,7 +66,7 @@ namespace VideoClub.IntefazForm
         {
             List<Prestamo> lstPrestamosCerrados = _videoClubNegocio.ConsultarPrestamosPorCondicion(false);
             _cmbPrestamosCerrados.DisplayMember = "ComboDisplay";
-            _cmbPrestamosCerrados.ValueMember = "IdPrestamo";
+            _cmbPrestamosCerrados.ValueMember = "Id";
             _cmbPrestamosCerrados.DataSource = null;
             _cmbPrestamosCerrados.DataSource = lstPrestamosCerrados;
             

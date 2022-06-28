@@ -87,9 +87,10 @@
             // 
             // _lblPeliculaParaMostrar
             // 
+            this._lblPeliculaParaMostrar.AutoSize = true;
             this._lblPeliculaParaMostrar.Location = new System.Drawing.Point(205, 181);
             this._lblPeliculaParaMostrar.Name = "_lblPeliculaParaMostrar";
-            this._lblPeliculaParaMostrar.Size = new System.Drawing.Size(342, 187);
+            this._lblPeliculaParaMostrar.Size = new System.Drawing.Size(0, 16);
             this._lblPeliculaParaMostrar.TabIndex = 11;
             // 
             // FrmPeliculas
@@ -108,6 +109,7 @@
             this.Text = "FrmPeliculas";
             this.Load += new System.EventHandler(this.FrmPeliculas_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

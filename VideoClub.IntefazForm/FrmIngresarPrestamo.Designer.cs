@@ -45,10 +45,9 @@
             // 
             // _btnAltaPrestamo
             // 
-            this._btnAltaPrestamo.Location = new System.Drawing.Point(250, 466);
-            this._btnAltaPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._btnAltaPrestamo.Location = new System.Drawing.Point(222, 373);
             this._btnAltaPrestamo.Name = "_btnAltaPrestamo";
-            this._btnAltaPrestamo.Size = new System.Drawing.Size(187, 81);
+            this._btnAltaPrestamo.Size = new System.Drawing.Size(166, 65);
             this._btnAltaPrestamo.TabIndex = 17;
             this._btnAltaPrestamo.Text = "Alta Prestamo";
             this._btnAltaPrestamo.UseVisualStyleBackColor = true;
@@ -56,10 +55,9 @@
             // 
             // _btnVolverPrestamo
             // 
-            this._btnVolverPrestamo.Location = new System.Drawing.Point(14, 466);
-            this._btnVolverPrestamo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._btnVolverPrestamo.Location = new System.Drawing.Point(12, 373);
             this._btnVolverPrestamo.Name = "_btnVolverPrestamo";
-            this._btnVolverPrestamo.Size = new System.Drawing.Size(187, 81);
+            this._btnVolverPrestamo.Size = new System.Drawing.Size(166, 65);
             this._btnVolverPrestamo.TabIndex = 16;
             this._btnVolverPrestamo.Text = "Volver";
             this._btnVolverPrestamo.UseVisualStyleBackColor = true;
@@ -69,62 +67,59 @@
             // 
             this._cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbClientes.FormattingEnabled = true;
-            this._cmbClientes.Location = new System.Drawing.Point(250, 61);
-            this._cmbClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._cmbClientes.Location = new System.Drawing.Point(222, 49);
             this._cmbClientes.Name = "_cmbClientes";
-            this._cmbClientes.Size = new System.Drawing.Size(381, 28);
+            this._cmbClientes.Size = new System.Drawing.Size(339, 24);
             this._cmbClientes.TabIndex = 18;
             // 
             // _cmbPeliculas
             // 
             this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbPeliculas.FormattingEnabled = true;
-            this._cmbPeliculas.Location = new System.Drawing.Point(250, 116);
-            this._cmbPeliculas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._cmbPeliculas.Location = new System.Drawing.Point(222, 93);
             this._cmbPeliculas.Name = "_cmbPeliculas";
-            this._cmbPeliculas.Size = new System.Drawing.Size(381, 28);
+            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
             this._cmbPeliculas.TabIndex = 19;
             this._cmbPeliculas.SelectedValueChanged += new System.EventHandler(this._cmbPeliculas_SelectedValueChanged);
             // 
             // _tbPlazo
             // 
             this._tbPlazo.BackColor = System.Drawing.SystemColors.Window;
-            this._tbPlazo.Location = new System.Drawing.Point(250, 226);
-            this._tbPlazo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._tbPlazo.Location = new System.Drawing.Point(222, 181);
             this._tbPlazo.Name = "_tbPlazo";
-            this._tbPlazo.Size = new System.Drawing.Size(381, 26);
+            this._tbPlazo.Size = new System.Drawing.Size(339, 22);
             this._tbPlazo.TabIndex = 20;
             this._tbPlazo.TextChanged += new System.EventHandler(this._tbPlazo_TextChanged);
             // 
             // _lblClientePrestamo
             // 
-            this._lblClientePrestamo.Location = new System.Drawing.Point(44, 61);
+            this._lblClientePrestamo.Location = new System.Drawing.Point(39, 49);
             this._lblClientePrestamo.Name = "_lblClientePrestamo";
-            this._lblClientePrestamo.Size = new System.Drawing.Size(172, 29);
+            this._lblClientePrestamo.Size = new System.Drawing.Size(153, 23);
             this._lblClientePrestamo.TabIndex = 21;
             this._lblClientePrestamo.Text = "Cliente:";
             // 
             // _lblPlazoPrestamo
             // 
-            this._lblPlazoPrestamo.Location = new System.Drawing.Point(44, 226);
+            this._lblPlazoPrestamo.Location = new System.Drawing.Point(39, 181);
             this._lblPlazoPrestamo.Name = "_lblPlazoPrestamo";
-            this._lblPlazoPrestamo.Size = new System.Drawing.Size(206, 29);
+            this._lblPlazoPrestamo.Size = new System.Drawing.Size(183, 23);
             this._lblPlazoPrestamo.TabIndex = 22;
             this._lblPlazoPrestamo.Text = "Plazo (días) de prestamo:";
             // 
             // _lblPeliculaPrestamo
             // 
-            this._lblPeliculaPrestamo.Location = new System.Drawing.Point(44, 116);
+            this._lblPeliculaPrestamo.Location = new System.Drawing.Point(39, 93);
             this._lblPeliculaPrestamo.Name = "_lblPeliculaPrestamo";
-            this._lblPeliculaPrestamo.Size = new System.Drawing.Size(172, 29);
+            this._lblPeliculaPrestamo.Size = new System.Drawing.Size(153, 23);
             this._lblPeliculaPrestamo.TabIndex = 23;
             this._lblPeliculaPrestamo.Text = "Pelicula: ";
             // 
             // _lblCopiaPrestamo
             // 
-            this._lblCopiaPrestamo.Location = new System.Drawing.Point(44, 171);
+            this._lblCopiaPrestamo.Location = new System.Drawing.Point(39, 137);
             this._lblCopiaPrestamo.Name = "_lblCopiaPrestamo";
-            this._lblCopiaPrestamo.Size = new System.Drawing.Size(172, 29);
+            this._lblCopiaPrestamo.Size = new System.Drawing.Size(153, 23);
             this._lblCopiaPrestamo.TabIndex = 27;
             this._lblCopiaPrestamo.Text = "Copia: ";
             // 
@@ -132,41 +127,41 @@
             // 
             this._cmbCopias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbCopias.FormattingEnabled = true;
-            this._cmbCopias.Location = new System.Drawing.Point(250, 171);
-            this._cmbCopias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this._cmbCopias.Location = new System.Drawing.Point(222, 137);
             this._cmbCopias.Name = "_cmbCopias";
-            this._cmbCopias.Size = new System.Drawing.Size(381, 28);
+            this._cmbCopias.Size = new System.Drawing.Size(339, 24);
             this._cmbCopias.TabIndex = 26;
             this._cmbCopias.SelectedValueChanged += new System.EventHandler(this._cmbCopias_SelectedValueChanged);
             // 
             // _lblPrecio
             // 
-            this._lblPrecio.Location = new System.Drawing.Point(665, 175);
+            this._lblPrecio.Location = new System.Drawing.Point(591, 140);
             this._lblPrecio.Name = "_lblPrecio";
-            this._lblPrecio.Size = new System.Drawing.Size(75, 29);
+            this._lblPrecio.Size = new System.Drawing.Size(67, 23);
             this._lblPrecio.TabIndex = 28;
             this._lblPrecio.Text = "Precio: $";
             // 
             // _lblPrecioCopia
             // 
-            this._lblPrecioCopia.Location = new System.Drawing.Point(736, 175);
+            this._lblPrecioCopia.Location = new System.Drawing.Point(654, 140);
             this._lblPrecioCopia.Name = "_lblPrecioCopia";
-            this._lblPrecioCopia.Size = new System.Drawing.Size(60, 29);
+            this._lblPrecioCopia.Size = new System.Drawing.Size(53, 23);
             this._lblPrecioCopia.TabIndex = 29;
             // 
             // _lblMessage
             // 
+            this._lblMessage.AutoSize = true;
             this._lblMessage.BackColor = System.Drawing.SystemColors.ControlLight;
-            this._lblMessage.Location = new System.Drawing.Point(250, 287);
+            this._lblMessage.Location = new System.Drawing.Point(222, 230);
             this._lblMessage.Name = "_lblMessage";
-            this._lblMessage.Size = new System.Drawing.Size(381, 143);
+            this._lblMessage.Size = new System.Drawing.Size(0, 16);
             this._lblMessage.TabIndex = 30;
             // 
             // FrmIngresarPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this._lblMessage);
             this.Controls.Add(this._lblPrecioCopia);
             this.Controls.Add(this._lblPrecio);
@@ -180,7 +175,6 @@
             this.Controls.Add(this._cmbClientes);
             this.Controls.Add(this._btnAltaPrestamo);
             this.Controls.Add(this._btnVolverPrestamo);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmIngresarPrestamo";
             this.Text = "FrmIngresarPrestamo";
             this.Load += new System.EventHandler(this.FrmIngresarPrestamo_Load);

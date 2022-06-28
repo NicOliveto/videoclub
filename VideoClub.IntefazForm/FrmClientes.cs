@@ -24,7 +24,7 @@ namespace VideoClub.IntefazForm
 
             this.Owner = padre;
         }
-
+    
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             CargarListadoClientes();
