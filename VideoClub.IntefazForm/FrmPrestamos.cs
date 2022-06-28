@@ -88,7 +88,7 @@ namespace VideoClub.IntefazForm
             }
             else
             {
-                MessageBox.Show("No hay informacion del cliente seleccionado");
+                MessageBox.Show("No hay informacion del cliente prestamo seleccionado");
             }
         }
 

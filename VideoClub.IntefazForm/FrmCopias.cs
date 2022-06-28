@@ -50,14 +50,7 @@ namespace VideoClub.IntefazForm
             if (lstCopias.Count == 0)
                 MessageBox.Show("No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString());
         }
-        private void CargarListadoCopias()
-        {
-            List<Copia> lstCopias = _videoClubNegocio.ConsultarCopias();
-            _cmbCopias.DataSource = null;
-            _cmbCopias.DataSource = lstCopias;
-            _cmbCopias.DisplayMember = "ComboDisplay";
-            _cmbCopias.ValueMember = "Id";
-        }
+      
 
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
         {
@@ -74,7 +67,10 @@ namespace VideoClub.IntefazForm
 
         private void _btnActualizarListado_Click(object sender, EventArgs e)
         {
-            CargarListadoCopias();
+            if (_cmbPeliculas.SelectedIndex != -1)
+            {
+                CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
+            }
         }
 
         private void _btnConsultarCopias_Click(object sender, EventArgs e)
@@ -88,7 +84,7 @@ namespace VideoClub.IntefazForm
             }
             else
             {
-                MessageBox.Show("No hay informacion del cliente seleccionado");
+                MessageBox.Show("No hay informacion de la copia seleccionada");
             }
         }
 
