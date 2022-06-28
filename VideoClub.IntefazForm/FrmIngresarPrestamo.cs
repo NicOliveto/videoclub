@@ -98,10 +98,11 @@ namespace VideoClub.IntefazForm
         private void CargarListadoCopias(int idpelicula)
         {
             List<Copia> lstCopias = _videoClubNegocio.ConsultarCopiasDisponiblesPorIdPelicula(idpelicula);
-            _cmbCopias.DataSource = null;
-            _cmbCopias.DataSource = lstCopias;
             _cmbCopias.DisplayMember = "ComboDisplay";
             _cmbCopias.ValueMember = "Id";
+            _cmbCopias.DataSource = null;
+            _cmbCopias.DataSource = lstCopias;
+
 
             if (lstCopias.Count == 0)
                 _lblMessage.Text = "No hay copias disponibles para alquilar de la pelicula seleccionada";

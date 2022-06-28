@@ -67,14 +67,13 @@ namespace VideoClub.IntefazForm
         {
             bool esValido = true;
 
-            if (!(Validador.ValidarString(_txtNombre.Text)))
+            if (!(Validador.ValidarStringLetras(_txtNombre.Text)))
             {
                 esValido = false;
                 _txtNombre.BackColor = Color.Red;
             }
                         
-
-            if (!(Validador.ValidarString(_txtApellido.Text))) 
+            if (!(Validador.ValidarStringLetras(_txtApellido.Text))) 
             {
                 esValido = false;
                 _txtApellido.BackColor = Color.Red;
@@ -86,20 +85,20 @@ namespace VideoClub.IntefazForm
                 _txtDNI.BackColor = Color.Red;
             } 
 
-            if (!(Validador.ValidarStringEspecial(_txtMail.Text)))
+            if (!(Validador.ValidarEmail(_txtMail.Text)))
             {
                 esValido = false;
                 _txtMail.BackColor = Color.Red;
             } 
                            
-            if (!(Validador.ValidarStringEspecial(_txtDireccion.Text)))
+            if (!(Validador.ValidarStringLetrasNumeros(_txtDireccion.Text)))
             {
                 esValido = false;
                 _txtDireccion.BackColor = Color.Red;
 
             } 
                 
-            if (!(Validador.ValidarStringNumerico(_txtTelefono.Text)))
+            if (!(Validador.ValidarTelefono(_txtTelefono.Text)))
             {
                 esValido = false;
                 _txtTelefono.BackColor = Color.Red;

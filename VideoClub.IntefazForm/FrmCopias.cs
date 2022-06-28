@@ -59,7 +59,6 @@ namespace VideoClub.IntefazForm
 
         }
 
-
         private void _btnMenuPrincipal_Click(object sender, EventArgs e)
         {
             this.Owner.Show();
