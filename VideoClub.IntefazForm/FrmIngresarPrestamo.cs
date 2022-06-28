@@ -95,13 +95,14 @@ namespace VideoClub.IntefazForm
             _cmbCopias.ValueMember = "Id";
 
             if (lstCopias.Count == 0)
-                MessageBox.Show("No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString());
+                _lblMessage.Text = "No hay copias disponibles para alquilar de " + _cmbPeliculas.SelectedItem.ToString();
         }
 
         private void _cmbPeliculas_SelectedValueChanged(object sender, EventArgs e)
         {
             if (_cmbPeliculas.SelectedIndex != -1)
             {
+                _lblMessage.Text = string.Empty;
                 CargarListadoCopias(Convert.ToInt32(_cmbPeliculas.SelectedValue));
             }
         }
