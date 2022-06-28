@@ -37,7 +37,7 @@ namespace VideoClub.Entidades
 
         public override string ToString()
         {
-            return "Pelicula:" + this._titulo + "\n Año: " + this._anio + "\n Duración: " + this._duracion + "\n Director: " + this._director +
+            return " Pelicula: " + this._titulo + "\n Año: " + this._anio + "\n Duración: " + this._duracion + "\n Director: " + this._director +
                 "\n Preductora: " + this._productora + "\n Género: " + this._genero; ;
         }
     }

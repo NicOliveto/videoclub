@@ -41,15 +41,16 @@ namespace VideoClub.Entidades
         public int IdPrestamo { get { return _idPrestamo; } set { _idPrestamo = value; } }
         public string ComboDisplay { get => $"  ID Prestamo: {this._idPrestamo}  ID Cliente: {this._idCliente}  ID Copia: {this._idCopia}   "; }
 
-        public string ToStringAbierto()
+        public string ToString(bool condicion)
         {
-           return "CORREGIR(prestamoabierto)!!!!!!\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa; ;
-        }
-
-        public string ToStringCerrado()
-        {
-            return "CORREGIR(prestamo cerrado)!!!!" + "\n Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal; ;
+            if (condicion)
+            {
+                return " Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa:" + this.FechaDevolucionTentativa;
+            } 
+            else
+            {
+                return " Fecha del prestamo: " + this.FechaPrestamo + "\n Fecha devolución tentativa: " + this.FechaDevolucionTentativa + "\n Fecha de devolución real: " + this._fechaDevolucionReal;
+            }
         }
     }
-
 }

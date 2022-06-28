@@ -14,6 +14,7 @@ namespace VideoClub.IntefazForm
     public partial class FrmIngresarCliente : Form
     {
         private VideoClubNegocio _videoClubNegocio;
+
         public FrmIngresarCliente(Form padre)
         {
             InitializeComponent();
@@ -31,13 +32,13 @@ namespace VideoClub.IntefazForm
 
         private void _btnAltaCliente_Click(object sender, EventArgs e)
         {
-           // DateTime fechaValida;
             try
             {
-                if (DatosValidos())
+                DateTime fechaValida;
+                if (DatosValidos(out fechaValida))
                 {
-                    _videoClubNegocio.AltaCliente(_txtNombre.Text, _txtApellido.Text, Auxiliar.ConvertirDNI(_txtDNI.Text), _txtMail.Text, _txtDireccion.Text, _txtTelefono.Text, /*_txtFechaNac*/DateTime.Now.AddDays(-5000));
-
+                    _videoClubNegocio.AltaCliente(_txtNombre.Text, _txtApellido.Text, Auxiliar.ConvertirDNI(_txtDNI.Text), _txtMail.Text, _txtDireccion.Text, _txtTelefono.Text, fechaValida);
+                    MessageBox.Show("Alta realizada correctamente");
                     Limpiar();
                 }
                 else
@@ -47,7 +48,6 @@ namespace VideoClub.IntefazForm
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error" + ex.Message);
             }
         }
@@ -63,11 +63,9 @@ namespace VideoClub.IntefazForm
             _txtFechaNac.Text = string.Empty;
         }
 
-        private bool DatosValidos()
+        private bool DatosValidos(out DateTime fechaValidada)
         {
             bool esValido = true;
-            //DateTime aux;
-
 
             if (!(Validador.ValidarString(_txtNombre.Text)))
             {
@@ -82,23 +80,18 @@ namespace VideoClub.IntefazForm
                 _txtApellido.BackColor = Color.Red;
             } else _txtApellido.BackColor = Color.White;
 
-
             if (!(Validador.ValidarDni(_txtDNI.Text)))
             {
                 esValido = false;
                 _txtDNI.BackColor = Color.Red;
             } else _txtDNI.BackColor = Color.White;
 
-            
-                
-
             if (!(Validador.ValidarStringEspecial(_txtMail.Text)))
             {
                 esValido = false;
                 _txtMail.BackColor = Color.Red;
             } else _txtMail.BackColor = Color.White;
-               
-            
+                           
             if (!(Validador.ValidarStringEspecial(_txtDireccion.Text)))
             {
                 esValido = false;
@@ -106,7 +99,6 @@ namespace VideoClub.IntefazForm
 
             } else _txtDireccion.BackColor = Color.White;
                 
-
             if (!(Validador.ValidarStringNumerico(_txtTelefono.Text)))
             {
                 esValido = false;
@@ -114,17 +106,14 @@ namespace VideoClub.IntefazForm
 
             } else _txtTelefono.BackColor= Color.White;
 
+            if (!(Validador.ValidarFecha(_txtFechaNac.Text, out fechaValidada)))
+            {
+                esValido = false;
+                _txtFechaNac.BackColor = Color.Red;
 
-            //if (!(Validador.ValidarFecha(_txtFechaNac.Text, out fechaValida)))
-            //{
-            //    esValido = false;
-            //    _txtFechaNac.BackColor = Color.Red;
-
-            //} else _txtFechaNac.BackColor = Color.White;
+            } else _txtFechaNac.BackColor = Color.White;
 
             return esValido;
-        }
-
-       
+        }       
     }
 }

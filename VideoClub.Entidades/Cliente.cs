@@ -35,8 +35,8 @@ namespace VideoClub.Entidades
    
         internal override string Display()
         {
-            return "Id cliente:" + this._idCliente + "\n Apellido:" + this._apellido + "\n Nombre:" + this._nombre + "\n Direccion" + this._direccion +
-                "\n DNI:" + this._dni + "\n Teléfono: " + this._telefono + "\n Mail:" + this._mail + "\n Fecha nacimiento" + this._fechaNac;
+            return " Id cliente: " + this._idCliente + "\n Apellido: " + this._apellido + "\n Nombre: " + this._nombre + "\n Direccion: " + this._direccion +
+                "\n DNI: " + this._dni + "\n Teléfono: " + this._telefono + "\n Mail: " + this._mail + "\n Fecha nacimiento: " + this._fechaNac;
         }
         
     }

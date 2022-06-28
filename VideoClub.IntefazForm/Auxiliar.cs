@@ -30,8 +30,5 @@ namespace VideoClub.IntefazForm
             //DNI Valido
             return numero;
         }
-
-
-
     }
 }
