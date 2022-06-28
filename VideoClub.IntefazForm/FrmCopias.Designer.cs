@@ -34,6 +34,7 @@
             this._cmbCopias = new System.Windows.Forms.ComboBox();
             this._btnMenuPrincipal = new System.Windows.Forms.Button();
             this._btnIngresarCopias = new System.Windows.Forms.Button();
+            this._cmbPeliculas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // _btnActualizarListado
@@ -67,7 +68,7 @@
             // 
             this._cmbCopias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._cmbCopias.FormattingEnabled = true;
-            this._cmbCopias.Location = new System.Drawing.Point(217, 156);
+            this._cmbCopias.Location = new System.Drawing.Point(217, 169);
             this._cmbCopias.Name = "_cmbCopias";
             this._cmbCopias.Size = new System.Drawing.Size(339, 24);
             this._cmbCopias.TabIndex = 10;
@@ -92,12 +93,23 @@
             this._btnIngresarCopias.UseVisualStyleBackColor = true;
             this._btnIngresarCopias.Click += new System.EventHandler(this._btnIngresarCopias_Click);
             // 
+            // _cmbPeliculas
+            // 
+            this._cmbPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cmbPeliculas.FormattingEnabled = true;
+            this._cmbPeliculas.Location = new System.Drawing.Point(217, 136);
+            this._cmbPeliculas.Name = "_cmbPeliculas";
+            this._cmbPeliculas.Size = new System.Drawing.Size(339, 24);
+            this._cmbPeliculas.TabIndex = 14;
+            this._cmbPeliculas.SelectedValueChanged += new System.EventHandler(this._cmbPeliculas_SelectedValueChanged);
+            // 
             // FrmCopias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VideoClub.IntefazForm.Properties.Resources.frmfondoConsulas;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1015, 520);
+            this.Controls.Add(this._cmbPeliculas);
             this.Controls.Add(this._btnActualizarListado);
             this.Controls.Add(this._btnConsultarCopias);
             this.Controls.Add(this._lblCopiaParaMostrar);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.ComboBox _cmbCopias;
         private System.Windows.Forms.Button _btnMenuPrincipal;
         private System.Windows.Forms.Button _btnIngresarCopias;
+        private System.Windows.Forms.ComboBox _cmbPeliculas;
     }
 }
